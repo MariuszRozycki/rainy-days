@@ -38,9 +38,6 @@ a {
 header {
   background-image: url('../images/texture_rain_475x317.jpeg');
   max-width: 100%;
-}
-
-header {
   position: relative;
 }
 
@@ -67,9 +64,11 @@ header img {
 /* nav | home page */
 nav {
   background-color: #0A3641;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   width: 100%;
 }
+
+
 
 .main-nav__container {
   display: flex;
@@ -124,6 +123,7 @@ nav {
   flex: 1;
   justify-content: center;
   color: #fff;
+  font-size: 1.7rem;
 }
 
 .search-container {
@@ -150,12 +150,13 @@ nav {
   border: none;
   background-color: #fff;
   color:  #0A3641;
+  font-size: 1.2rem;
 }
 
 .login-container button {
   padding: 5px 10px;
   border-radius: 5px;
-  min-width: 70px;
+  min-width: 80px;
 }
 
 .login-container {
@@ -169,6 +170,7 @@ nav {
   order: 3;
   flex: 1;
   color: #fff;
+  font-size: 2.0rem;
 }
 
 
@@ -206,6 +208,8 @@ main::after {
   display: flex;
   flex-direction: column;
   line-height: 120%;
+  position: relative;
+  z-index: 3;
 }
 
 .home-page h1 span {
@@ -225,7 +229,7 @@ main::after {
 
 .circle-big {
   position: absolute;
-  top: 78%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 230px;
@@ -272,13 +276,19 @@ footer {
 
 
 /* media queries | home page */
+@media (min-width: 320px) {
+  .home-page h1 {
+    font-size: 2.7rem;
+  }
+}
+
 @media (min-width: 600px) {
   header img {
     max-width: 160px;
   }
 
   nav {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .main-nav label {
@@ -312,13 +322,26 @@ footer {
   }
 
   .circle-small {
-    font-size: 2em;
+    font-size: 2rem;
   }
 }
 
 @media (min-width: 700px) {
+  nav {
+    font-size: 1rem;
+  }
+
   .home-page h1 {
     font-size: 4rem;
+  }
+
+  .circle {
+    border-width: 40px;
+  }
+
+  .circle-big {
+    width: 350px;
+    height: 350px;
   }
 }
 
@@ -328,7 +351,7 @@ footer {
   }
 
   nav {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .login-container {
@@ -352,11 +375,11 @@ footer {
   }
 
   .circle-small {
-    font-size: 2.2em;
+    font-size: 2.2rem;
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   main {
     height: 80vh;
   }
@@ -377,9 +400,20 @@ footer {
   }
 
   .circle-small {
-    font-size: 2.5em;
+    font-size: 2.5rem;
   }
 }
+
+@media (min-width: 1000px) and (orientation: portrait) {
+  .home-page h1 {
+    font-size: 6rem;
+  }
+
+  .circle-big {
+    width: 400px;
+    height: 400px;
+  }
+}  
 
 
 
