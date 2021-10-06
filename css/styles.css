@@ -1,0 +1,235 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@300;400;600;700&display=swap');
+
+/* global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* header */
+header {
+  background-image: url('../images/texture_rain_475x317.jpeg');
+  width: 100%;
+}
+
+header {
+  position: relative;
+}
+
+header .container {
+  padding: 10px 0;
+ 
+}
+
+header .container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0,0%,95%, 0.8);
+}
+
+header img {
+  max-width: 120px;
+  position: relative;
+  z-index: 2;
+}
+
+/* nav */
+nav {
+  background-color: #0A3641;
+  font-family: 'Palanquin', sans-serif;
+}
+
+nav .container,
+.search-container {
+  display: flex;
+}
+
+nav .container {
+  min-height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+#hamburger-menu,
+.main-nav ul {
+  display: none;
+}
+
+nav label {
+  order: 0;
+  flex: 1;
+  text-align: left;
+}
+
+nav label i {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#hamburger-menu:checked ~ .main-nav ul {
+  display: block;
+}
+
+.main-nav ul {
+  background-color: #0A3641;
+  position: fixed;
+  top: 140px;
+  left: 0;
+  z-index: 1;
+  flex: 1;
+  text-transform: uppercase;
+}
+
+.main-nav li {
+  list-style: none;
+  text-align: left;
+  border-bottom: 1px solid #fff;
+}
+
+.main-nav a {
+  display: inline-block;
+  max-width: 200px;
+  padding: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Palanquin', sans-serif;
+  font-size: 1.2rem;
+}
+
+.main-nav .active {
+  color: #C17E27;
+}
+
+.search-container {
+  flex: 1;
+  align-items: center;
+  order: 1;
+  text-align: right;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px;
+  min-width: 100px;
+  max-width: 200px;
+  margin-right: 10px;
+}
+
+.search-container input,
+.search-container button,
+.login-container button {
+  border: none;
+  background-color: #fff;
+  color: #0A3641;
+  font-size: 0.8rem;
+}
+
+.search-container input {
+  padding-left: 5px;
+  width: 100%;
+}
+
+.search-container input::placeholder {
+  color: #0A3641;
+}
+
+.login-container {
+  order: 2;
+  font-weight: bold;
+  font-family: 'Palanquin', sans-serif;
+  flex: 1;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.login-container button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-size: 0.7rem;
+  min-width: 58px;
+}
+
+.login-container img {
+  display: none;
+  height: 1.3rem;
+  border-radius: 5px;
+}
+
+.shopping-cart {
+  color: #fff;
+  font-size: 1.2rem;
+  order: 3;
+}
+
+/* media queries */
+@media (min-width: 600px) {
+
+  header img {
+    max-width: 200px;
+  }
+
+  nav label {
+    display: none;
+  }
+
+  .search-container {
+    order: 0;
+  }
+
+  .main-nav ul {
+    display: flex;
+    position: static;
+    align-items: center;
+    justify-content: center;
+    flex: 3;
+  }
+
+  .main-nav li {
+    border-bottom: none;
+  }
+
+  .main-nav a {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 800px) {
+  .main-nav .active {
+    border-bottom: 2px solid;
+  }
+
+  .login-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 50px;
+  }
+
+  .login-container img {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
