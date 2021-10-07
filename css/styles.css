@@ -304,24 +304,30 @@ footer {
   color: #fff;
   margin: 0 10px;
   font-size: 1.8rem;
+  transition: .2s;
 }
+
 
 /* page in progres | main */
 .page-in-progress a {
   font-size: 1.8em;
   background-color: #C17E27;
   color: #0A3641;
-  border: 3px solid #0A3641;
+  border: 5px solid #0A3641;
   position: relative;
   z-index: 4;
   padding: 5px 10px;
   top: 40px;
-  border-radius: 5px;
+  border-radius: 15px;
+  font-weight: 700;
 }
+
+
 /* our jackets | main */
 /* about | main */
 /* contact | main */
 /* login | main */
+
 
 /* media queries | home page */
 @media (min-width: 320px) {
@@ -436,6 +442,11 @@ footer {
 
   .circle-small {
     font-size: 2.2rem;
+  }
+
+  .social-media i:hover {
+    color: #C17E27;
+    transform: scale(1.2);
   }
 }
 
