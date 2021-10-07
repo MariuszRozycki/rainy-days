@@ -113,6 +113,10 @@ nav {
   left: 0;
 }
 
+.main-nav__list li:nth-last-of-type(1) {
+  border-bottom: none;
+}
+
 .main-nav__list a {
   color: #fff;
   padding: 10px 20px;
@@ -140,6 +144,7 @@ a.active,
   justify-content: center;
   color: #fff;
   font-size: 1.7rem;
+  cursor: pointer;
 }
 
 .search-container {
