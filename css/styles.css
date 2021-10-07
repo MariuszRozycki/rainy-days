@@ -130,7 +130,7 @@ a.active {
   width: 100%;
   height: 2px;
   content: '';
-  display: block;
+  display: none;
 }
 
 .main-nav label {
@@ -172,12 +172,16 @@ a.active {
   padding: 5px 10px;
   border-radius: 5px;
   min-width: 80px;
+  transition: .2s;
 }
 
-.login-container .login-active {
+.login-container .login-active,
+.login-container button:hover {
   background-color: #C17E27;
   color: #fff;
 }
+
+
 
 .login-container {
   order: 2;
@@ -330,8 +334,17 @@ footer {
     border-bottom: none;
   }
 
+  .main-nav__list .active::after {
+    display: block;
+  }
+
   .main-nav__list a {
     padding: 0;
+    transition: .2s;
+  }
+
+  .main-nav__list a:hover {
+    color: #C17E27;
   }
   
   .home-page h1,
