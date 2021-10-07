@@ -1,8 +1,12 @@
 let button = document.querySelector('.login-container button');
+let cart = document.querySelector('.shopping-cart i');
 
 button.addEventListener('click', () => {
   location.href = 'log-in.html';
 });
+
+
+
 
 let youTube = document.querySelector('.youtube');
 let instagram = document.querySelector('.instagram');

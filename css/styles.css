@@ -118,7 +118,8 @@ nav {
   padding: 10px 20px;
 }
 
-a.active {
+a.active,
+.shopping-cart-active i {
   color: #C17E27;
 }
 
@@ -173,6 +174,7 @@ a.active {
   border-radius: 5px;
   min-width: 80px;
   transition: .2s;
+  cursor: pointer;
 }
 
 .login-container .login-active,
@@ -180,7 +182,6 @@ a.active {
   background-color: #C17E27;
   color: #fff;
 }
-
 
 
 .login-container {
@@ -195,6 +196,14 @@ a.active {
   flex: 1;
   color: #fff;
   font-size: 2.0rem;
+}
+
+.shopping-cart i {
+  transition: .2s;
+}
+
+.shopping-cart i:hover {
+  color: #C17E27;
 }
 
 
@@ -263,7 +272,7 @@ main::after {
 
 .circle-midle {
   border-color: #0A3641;
-  /* box-shadow: 0 0 10px 10px rgba(0, 0, 0, .8); */
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, .8);
 }
 
 .circle-small {
