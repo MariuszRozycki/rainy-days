@@ -263,6 +263,7 @@ main::after {
 
 .circle-midle {
   border-color: #0A3641;
+  /* box-shadow: 0 0 10px 10px rgba(0, 0, 0, .8); */
 }
 
 .circle-small {
@@ -277,6 +278,13 @@ main::after {
   font-weight: 600;
   text-transform: uppercase;
   text-shadow: 5px 10px 10px rgba(0, 0, 0, .8);
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, .8);
+  transition: .2s;
+  cursor: pointer;
+}
+
+.circle-small:hover {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, .8);
 }
 
 
@@ -298,8 +306,22 @@ footer {
   font-size: 1.8rem;
 }
 
-
+/* page in progres | main */
+.page-in-progress a {
+  font-size: 1.8em;
+  background-color: #C17E27;
+  color: #fff;
+  border: 3px solid #0A3641;
+  position: relative;
+  z-index: 4;
+  padding: 5px 10px;
+  top: 40px;
+  border-radius: 5px;
+}
 /* our jackets | main */
+/* about | main */
+/* contact | main */
+/* login | main */
 
 /* media queries | home page */
 @media (min-width: 320px) {
