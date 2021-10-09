@@ -2,7 +2,7 @@
 let button = document.querySelector('.login-container button');
 
 button.addEventListener('click', () => {
-  location.href = 'log-in.html';
+  location.href = '/layout/log-in.html';
 });
 
 
