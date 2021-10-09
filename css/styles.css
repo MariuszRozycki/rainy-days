@@ -14,12 +14,17 @@
 }
 
 body {
- height: 100vh;
+  /* max-width: 1200px; */
+  height: 100vh;
+  margin: auto;
 }
 
 h1,
+h2,
+h3,
+p,
 nav,
-main,
+.welcome,
 .circle-small, 
 a {
   font-family: 'Palanquin', sans-serif;
@@ -35,6 +40,17 @@ a {
   margin: 0 auto;
   text-align: center;
   padding: 30px 10px;
+}
+
+.btn {
+  background-color: #C17E27;
+  color: #0A3641;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 20px;
+  border: 2px solid #0A3641;
+  border-radius: 10px;
+  text-align: center;
 }
 
 /* header | home page */
@@ -166,23 +182,24 @@ a.active,
 .search-container input,
 .search-container button,
 .search-container button i,
-.login-container button {
+.btn_log-in {
   border: none;
   background-color: #fff;
   color:  #0A3641;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
-.login-container button {
+.btn_log-in {
   padding: 5px 10px;
   border-radius: 5px;
   min-width: 80px;
   transition: .2s;
   cursor: pointer;
+  font-weight: normal;
 }
 
 .login-container .login-active,
-.login-container button:hover {
+.btn_log-in:hover {
   background-color: #C17E27;
   color: #fff;
 }
@@ -212,7 +229,7 @@ a.active,
 
 
 /* main | home page */
-main {
+.welcome {
   background-image: url('../images/raindays-home.jpg');
   width: 100%;
   height: 75vh;
@@ -223,7 +240,7 @@ main {
   position: relative;
 }
 
-main::after {
+.welcome::after {
   content: "";
   display: block;
   width: 100%;
@@ -234,7 +251,7 @@ main::after {
   background-color: hsla(0,0%,100%,0.7);
 }
 
-.home-page h1,
+.welcome h1,
 .page-in-progress h1 {
   font-size: 3rem;
   text-align: center;
@@ -248,7 +265,7 @@ main::after {
   line-height: 120%;
 }
 
-.home-page h1 span,
+.welcome h1 span,
 .page-in-progress h1 span {
   font-weight: normal;
   display: none;
@@ -301,6 +318,139 @@ main::after {
 }
 
 
+/* products | main | home page */
+.products {
+  width: 100%;
+  background-image: url(../images/rain-products-bcg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.products::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: hsla(0,0%,95%,0.9);
+}
+
+.products .container > * {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  color: #0A3641;
+}
+
+.products__sub-title,
+.sub-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.products-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  gap: 10px;
+}
+
+.products__product-name {
+  font-size: 2rem;
+}
+
+.products__sub-title strong {
+  display: block;
+}
+
+.item__product-name {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid #0A3641;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, .8);
+
+}
+
+.btn__show-item {
+  font-size: 1.2rem;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, .8);
+  transition: .2s;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+.item__product-price {
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.item__picture {
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.item__picture img {
+  object-fit: cover;
+  width: 80%;
+  height: 100%;
+}
+
+.btn__more-items {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  word-spacing: 6px;
+  font-family: 'Palanquin', sans-serif;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, .8);
+  transition: .2s;
+}
+
+.btn__show-item:hover,
+.btn__more-items:hover {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, .8);
+}
+
+/* info-text | main | home page */
+.info-text > * {
+  color: #0A3641;
+}
+
+.info-text figure {
+  display: none;
+}
+
+.info-text figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.info-text p {
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
 /* footer | home page */
 footer {
   width: 100%;
@@ -344,16 +494,23 @@ footer {
 
 /* media queries | home page */
 @media (min-width: 320px) {
-  .home-page h1,
+  .welcome h1,
   .page-in-progress h1 {
     font-size: 2.7rem;
   }
 }
 
-@media (min-width: 600px) {
-  header img {
-    max-width: 160px;
+@media (min-width:400px) {
+  .products-wrapper {
+    grid-template-columns: 1fr 1fr;
   }
+
+  .item__product-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 600px) {
 
   nav {
     font-size: 0.9rem;
@@ -367,7 +524,7 @@ footer {
     position: static;
     display: flex;
     justify-content: space-evenly;
-    flex: 4;
+    flex: 5;
     order: 1;
   }
 
@@ -388,7 +545,7 @@ footer {
     color: #C17E27;
   }
   
-  .home-page h1,
+  .welcome h1,
   .page-in-progress h1 {
     display: block;
     line-height: 140%;
@@ -402,6 +559,23 @@ footer {
   .circle-small {
     font-size: 2rem;
   }
+
+  .info-text figure {
+    display: block;
+    width: 200px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+
+  .info-text p {
+    font-size: 1.6rem;
+  }
+
+  .social-media i {
+    font-size: 2.6rem;
+    margin: 0 16px;
+  }
 }
 
 @media (min-width: 700px) {
@@ -409,7 +583,7 @@ footer {
     font-size: 1rem;
   }
 
-  .home-page h1,
+  .welcome h1,
   .page-in-progress h1 {
     font-size: 4rem;
   }
@@ -422,6 +596,15 @@ footer {
     width: 350px;
     height: 350px;
   }
+
+  .products-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .item:nth-of-type(4) {
+    display: none;
+  }
+
 }
 
 @media (min-width: 800px) {
@@ -464,11 +647,11 @@ footer {
 }
 
 @media (min-width: 1000px) {
-  main {
+  .welcome {
     height: 80vh;
   }
 
-  .home-page h1 span,
+  .welcome h1 span,
   .page-in-progress h1 span {
     margin: 0 10px;
     display: inline;
@@ -487,10 +670,18 @@ footer {
   .circle-small {
     font-size: 2.5rem;
   }
+
+  .products-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .item:nth-of-type(4) {
+    display: flex;
+  }
 }
 
 @media (min-width: 1000px) and (orientation: portrait) {
-  .home-page h1,
+  .welcome h1,
   .page-in-progress h1 {
     font-size: 6rem;
   }

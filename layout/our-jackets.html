@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rainy Days | Cart</title>
+  <title>Rainy Days | Our Jackets</title>
   <script src="https://kit.fontawesome.com/136bcbc643.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
   <header>
     <div class="container">
-      <a href="index.html"><img src="images/logo.png" alt=""></a>
+      <a href="../layout/index.html"><img src="../images/logo.png" alt="Logo of Rainy Days company"></a>
     </div>
   </header>
 
@@ -26,24 +26,26 @@
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu">
       <ul class="main-nav__list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="our-jackets.html">Our Jackets</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="../layout/index.html">Home</a></li>
+        <li class="active"><a class="active" href="../layout/our-jackets.html">Our Jackets</a></li>
+        <li><a href="../layout/about.html">About</a></li>
+        <li><a href="../layout/contact.html">Contact</a></li>
       </ul>
       <form class="login-container">
-        <button type="button">Log in</button>
-        <a href="log-in.html"><img src="images/login.svg" alt=""></a>
+        <button class="btn btn_log-in" type="button">Log in</button>
+        <a href="../layout/log-in.html"><img src="../images/login.svg" alt="Login alternative. Press to log in"></a>
       </form>
-      <a href="cart.html" class="shopping-cart shopping-cart-active"><i class="fas fa-shopping-cart"></i></a>
+      <i class="fas fa-shopping-cart shopping-cart"></i>
     </div>
   </nav>
 
-  <main class="cart page-in-progress">
-    <div class="container">
-      <h1><span>x</span>Cart in progress<span>x</span></h1>
-      <a href="index.html">Back to Home Page</a>
-    </div>
+  <main class="our-jackets page-in-progress">
+    <section class="welcome">
+      <div class="container">
+        <h1><span>x</span>Our Jackets in progress<span>x</span></h1>
+        <a href="../layout/index.html">Back to Home Page</a>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -58,7 +60,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 
 </html>

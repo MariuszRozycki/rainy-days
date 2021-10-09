@@ -1,3 +1,4 @@
+/* .login-container button | moving to log-in.html */
 let button = document.querySelector('.login-container button');
 
 button.addEventListener('click', () => {
@@ -5,29 +6,46 @@ button.addEventListener('click', () => {
 });
 
 
+/* .social-media | alert regarding to missing elements */
+let socialMedia = document.querySelectorAll('.social-media');
+
+for (let element of socialMedia) {
+  element.addEventListener('click', () => {
+    let message = element.name[0].toUpperCase() + element.name.slice(1) + ` isn't connected yet to website.`;
+    alert(message);
+  });
+}
 
 
-let youTube = document.querySelector('.youtube');
-let instagram = document.querySelector('.instagram');
-let facebook = document.querySelector('.facebook');
-let messenger = document.querySelector('.messenger');
-let twitter = document.querySelector('.twitter');
+/* .btn__show-iten | alert regarding to missing elements */
+let showItems = document.querySelectorAll('.btn__show-item');
 
-youTube.addEventListener('click', () => {
-  alert(`You have clicked icon of YouTube kanal of our shop, but website isn't ready yet!`);
+for (let item of showItems) {
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
+    alert(item.name);
+  });
+}
+
+/* .products .item | displaying more items i section */
+let buttonMoreItems = document.querySelector('.btn__more-items');
+buttonMoreItems.innerHTML = 'More items'
+let items = document.querySelectorAll('.item');
+
+for (let item of items) {
+  buttonMoreItems.addEventListener('click', () => {
+    item.classList.toggle('hide');
+  });
+}
+
+
+/* .products .item .more-items | changing text of button fron 'MORE ITEMS' to 'LESS ITEMS' */
+let flag = true;
+buttonMoreItems.addEventListener('click', function () {
+  flag = !flag;
+  flag ? this.innerHTML = 'more items' : this.innerHTML = 'less items';
 });
-instagram.addEventListener('click', () => {
-  alert(`You have clicked icon of Instagram of our shop, but website isn't ready yet!`);
-});
-facebook.addEventListener('click', () => {
-  alert(`You have clicked icon of Facebook website of our shop, but website isn't ready yet!`);
-});
-messenger.addEventListener('click', () => {
-  alert(`You have clicked icon of messenger of our shop, but messenger isn't connected yet!`);
-});
-twitter.addEventListener('click', () => {
-  alert(`You have clicked icon of Twitter, but Twitter account isn't ready yet!`);
-});
+
 
 
 
