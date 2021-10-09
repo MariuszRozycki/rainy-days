@@ -11,7 +11,7 @@ let socialMedia = document.querySelectorAll('.social-media');
 
 for (let element of socialMedia) {
   element.addEventListener('click', () => {
-    let message = element.name[0].toUpperCase() + element.name.slice(1) + ` isn't connected yet to website.`;
+    let message = element.id[0].toUpperCase() + element.id.slice(1) + ` isn't connected yet to website.`;
     alert(message);
   });
 }
@@ -23,7 +23,7 @@ let showItems = document.querySelectorAll('.btn__show-item');
 for (let item of showItems) {
   item.addEventListener('click', function (e) {
     e.preventDefault();
-    alert(item.name);
+    alert(`Website with item isn't ready jet.`);
   });
 }
 
