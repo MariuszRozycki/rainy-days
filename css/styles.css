@@ -14,7 +14,6 @@
 }
 
 body {
-  /* max-width: 1200px; */
   height: 100vh;
   margin: auto;
 }
@@ -499,26 +498,6 @@ footer {
     font-size: 2.7rem;
   }
 }
-
-/* @media (max-height: 500px) and (orientation: landscape) {
-  .welcome h1 {
-    font-size: 2rem;
-    top: 10px;
-  }
-  
-  .circle {
-    border-width: 17px;
-  }
-  
-  .circle-big {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .circle-small {
-    font-size: 1.3rem;
-  }
-} */
 
 @media (min-width:400px) {
   .products-wrapper {
