@@ -1,0 +1,88 @@
+/* main | home page */
+.welcome {
+  background-image: url('../../images/raindays-home.jpg');
+  width: 100%;
+  height: 75vh;
+  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.welcome::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 40vh;
+  position: absolute;
+  left: 0;
+  top: 35px;
+  background-color: hsla(0,0%,100%,0.7);
+}
+
+.welcome h1,
+.page-in-progress h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary-color);
+  position: relative;
+  top: 15px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  line-height: 120%;
+}
+
+.welcome h1 span,
+.page-in-progress h1 span {
+  font-weight: normal;
+  display: none;
+}
+
+.circle {
+  border-radius: 50%;
+  z-index: 1;
+  border-width: 25px;
+  border-style: solid;
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 10px 6px rgba(0, 0, 0, .2);
+}
+
+.circle-big {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  height: 230px;
+  border-color: hsla(0,0%,100%,0.9);
+}
+
+.circle-midle {
+  border-color: var(--primary-color);
+  box-shadow: var(--primary-shadow)
+}
+
+.circle-small {
+  background-color: var(--tertiary-color);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  line-height: 105%;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: var(--primary-shadow);
+  box-shadow: var(--primary-shadow);
+  transition: .2s;
+  cursor: pointer;
+}
+
+.circle-small:hover {
+  box-shadow: var(--secondary-shadow);
+}

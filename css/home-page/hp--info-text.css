@@ -1,0 +1,18 @@
+/* info-text | main | home page */
+.info-text > * {
+  color: var(--primary-color);
+}
+
+.info-text figure {
+  display: none;
+}
+
+.info-text figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.info-text p {
+  font-size: 1.3rem;
+  text-align: justify;
+}

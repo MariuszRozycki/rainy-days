@@ -1,0 +1,206 @@
+/* media queries | home page & page in progress */
+@media (min-width: 320px) {
+  .welcome h1,
+  .page-in-progress h1 {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width:400px) {
+  .products-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .item__product-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 600px) {
+
+  nav {
+    font-size: 0.9rem;
+  }
+
+  .main-nav label {
+    display: none;
+  }
+
+  .main-nav .main-nav__list {
+    position: static;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 5;
+    order: 1;
+  }
+
+  .main-nav__list li {
+    border-bottom: none;
+  }
+
+  .main-nav__list .active::after {
+    display: block;
+  }
+
+  .main-nav__list a {
+    padding: 0;
+    transition: .2s;
+  }
+
+  .main-nav__list a:hover {
+    color: var(--tertiary-color);
+  }
+  
+  .welcome h1,
+  .page-in-progress h1 {
+    display: block;
+    line-height: 140%;
+  }
+
+  .circle-big {
+    width: 250px;
+    height: 250px;
+  }
+
+  .circle-small {
+    font-size: 2rem;
+  }
+
+  .info-text figure {
+    display: block;
+    width: 200px;
+    float: left;
+    margin: 20px 20px 0 0;
+  }
+
+  .info-text p {
+    font-size: 1.6rem;
+  }
+
+  .social-media i {
+    font-size: 2.6rem;
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 700px) {
+  nav {
+    font-size: 1rem;
+  }
+
+  .welcome h1,
+  .page-in-progress h1 {
+    font-size: 3.2rem;
+  }
+
+  .circle {
+    border-width: 40px;
+  }
+
+  .circle-big {
+    width: 350px;
+    height: 350px;
+  }
+
+  .products-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .item__picture img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn__show-item {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media (min-width: 800px) {
+  header img {
+    max-width: 200px;
+  }
+
+  nav {
+    font-size: 1.2rem;
+  }
+
+  .login-container {
+    margin: 0 40px;
+  }
+
+  .login-container img {
+    display: block;
+    width: 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+
+  .circle {
+    border-width: 30px;
+  }
+
+  .circle-big {
+    width: 290px;
+    height: 290px;
+  }
+
+  .circle-small {
+    font-size: 2.2rem;
+  }
+
+  .social-media i:hover {
+    color: var(--tertiary-color);
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 900px) {
+  .welcome h1,
+  .page-in-progress h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .welcome {
+    height: 80vh;
+  }
+
+  .welcome h1 span,
+  .page-in-progress h1 span {
+    margin: 0 10px;
+    display: inline;
+  }
+
+  .circle {
+    border-width: 40px;
+  }
+
+  .circle-big {
+    top: 65%;
+    width: 350px;
+    height: 350px;
+  }
+
+  .circle-small {
+    font-size: 2.5rem;
+  }
+
+  .btn__show-item {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1000px) and (orientation: portrait) {
+  .welcome h1,
+  .page-in-progress h1 {
+    font-size: 6rem;
+  }
+
+  .circle-big {
+    width: 400px;
+    height: 400px;
+  }
+}  

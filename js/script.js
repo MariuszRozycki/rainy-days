@@ -10,7 +10,8 @@ button.addEventListener('click', () => {
 let socialMedia = document.querySelectorAll('.social-media');
 
 for (let element of socialMedia) {
-  element.addEventListener('click', () => {
+  element.addEventListener('click', function (e) {
+    e.preventDefault();
     let message = element.id[0].toUpperCase() + element.id.slice(1) + ` isn't connected yet to website.`;
     alert(message);
   });
@@ -39,8 +40,9 @@ for (let item of items) {
 }
 
 
-/* .products .item .more-items | changing text of button fron 'MORE ITEMS' to 'LESS ITEMS' */
+/* .products .item .more-items | changing text of button 'MORE ITEMS' to 'LESS ITEMS' & add jacket  */
 let flag = true;
+
 buttonMoreItems.addEventListener('click', function () {
   flag = !flag;
   flag ? this.innerHTML = 'more items' : this.innerHTML = 'less items';

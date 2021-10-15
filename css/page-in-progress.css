@@ -1,0 +1,13 @@
+/* page in progres | main */
+.page-in-progress a {
+  font-size: 1.8em;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  border: 5px solid var(--primary-color);
+  position: relative;
+  z-index: 4;
+  padding: 5px 10px;
+  top: 40px;
+  border-radius: 15px;
+  font-weight: 700;
+}

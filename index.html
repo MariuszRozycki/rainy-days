@@ -9,35 +9,39 @@
     content="Online shop with the best waterproff jackets for people they like outside activities.">
   <title>Rainy Days | Home Page</title>
   <script src="https://kit.fontawesome.com/136bcbc643.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/global/media-queries.css">
 </head>
 
 <body>
   <header>
     <div class="container">
-      <a href="index.html"><img src="../images/logo.png" alt="Logo of Rain Jacket company"></a>
+      <a href="index.html" title="Rainy Days | Home Page"><img src="../images/logo.png"
+          alt="Logo of Rain Jacket company"></a>
     </div>
   </header>
 
   <nav class="main-nav">
     <div class="container main-nav__container">
-      <div class="search-container">
-        <button type="button"><i class="fas fa-search"></i></button>
-        <input type="text" placeholder="Search...">
-      </div>
+      <form class="search-container" id="search" method="GET" action="search-index.html">
+        <input type="search" placeholder="Search..." name="search">
+        <button type="search"><i class="fas fa-search"></i></button>
+      </form>
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu">
       <ul class="main-nav__list">
-        <li class="active"><a class="active" href="#">Home</a></li>
-        <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
-        <li><a href="../layout/about.html">About</a></li>
-        <li><a href="../layout/contact.html">Contact</a></li>
+        <li class="active"><a class="active" href="#" title="Rainy Days | Home Page">Home</a></li>
+        <li><a href="../layout/our-jackets.html" title="Rainy Days | Our Jackets">Our Jackets</a></li>
+        <li><a href="../layout/about.html" title="Rainy Days | About">About</a></li>
+        <li><a href="../layout/contact.html" title="Rainy Days | Contact">Contact</a></li>
       </ul>
       <form class="login-container">
         <button class="btn btn_log-in" type="button">Log in</button>
-        <a href="layout/log-in.html"><img src="../images/login.svg" alt="Login alternative. Press to log in"></a>
+        <a href="layout/log-in.html" title="Rainy Days | Log In"><img src="../images/login.svg"
+            alt="Login alternative. Press to log in"></a>
       </form>
-      <a href="../layout/cart.html" class="shopping-cart"><i class="fas fa-shopping-cart"></i></a>
+      <a href="../layout/cart.html" title="Rainy Days | Cart" class="shopping-cart"><i
+          class="fas fa-shopping-cart"></i></a>
     </div>
   </nav>
 
@@ -48,7 +52,8 @@
         <h1 class="main-title"><span>x</span>Pushing the Comfort Zone<span>x</span></h1>
         <div class="circle circle-big">
           <div class="circle circle-midle">
-            <a href="../layout/choose-jacket.html" class="circle circle-small">Choose Jacket</a>
+            <a href="../layout/choose-jacket.html" title="Rainy Days | Choose Jacket" class="circle circle-small">Choose
+              Jacket</a>
           </div>
         </div>
       </div>
@@ -74,111 +79,117 @@
 
           <div class="item hide show">
             <div class="item__picture">
-              <img src="../images/jackets/woman-jackets/raincut-wtp.png" alt="Picture of woman's jacket Raincut WTP">
+              <img src="../images/jackets/smaller-women-jackets/raincut-wtp.png"
+                alt="Picture of woman's jacket Raincut WTP">
             </div>
             <h3 class="item__product-name">Raincut Wtp</h3>
             <p class="item__product-price">999 nok</p>
-            <a href="" class="btn btn__show-item">Show Item</a>
+            <a href="#" title="Raincut Wtp" class="btn btn__show-item">Show Item</a>
           </div>
 
           <div class="item hide show">
             <div class="item__picture">
-              <img src="../images/jackets/woman-jackets/sailing-5000.png" alt="Picture of woman's jacket Sailing 5000">
+              <img src="../images/jackets/smaller-women-jackets/sailing-5000.png"
+                alt="Picture of woman's jacket Sailing 5000">
             </div>
             <h3 class="item__product-name">Sailing 5000</h3>
             <p class="item__product-price">1099 nok</p>
-            <a href="" class="btn btn__show-item">Show Item</a>
+            <a href="#" title="Sailing 5000" class="btn btn__show-item">Show Item</a>
           </div>
 
           <div class="item hide show">
             <div class="item__picture">
-              <img src="../images/jackets/woman-jackets/mh-9000.png" alt="Picture of woman's jacket Mh 9000">
+              <img src="../images/jackets/smaller-women-jackets/mh-9000.png" alt="Picture of woman's jacket Mh 9000">
             </div>
             <h3 class="item__product-name">Raincut Wtp</h3>
             <p class="item__product-price">799 nok</p>
-            <a href="" class="btn btn__show-item">Show Item</a>
+            <a href="#" title="Raincut Wtp" class="btn btn__show-item">Show Item</a>
           </div>
 
           <div class="item hide show">
             <div class="item__picture">
-              <img src="../images/jackets/men-jackets/offshore-900.png" alt="Picture of man's jacket Offshore 900">
+              <img src="../images/jackets/smaller-mens-jackets/offshore-900.png"
+                alt="Picture of man's jacket Offshore 900">
             </div>
             <h3 class="item__product-name">Offshore 900</h3>
             <p class="item__product-price">999 nok</p>
-            <a href="" class="btn btn__show-item">Show Item</a>
+            <a href="#" title="Offshore 900" class="btn btn__show-item">Show Item</a>
           </div>
 
           <div class="item hide">
             <div class="item__picture">
-              <img src="../images/jackets/men-jackets/nh-100-raincut.png" alt="Picture of man's jacket Nh 100 Raincut">
+              <img src="../images/jackets/smaller-mens-jackets/nh-100-raincut.png"
+                alt="Picture of man's jacket Nh 100 Raincut">
             </div>
             <h3 class="item__product-name">Nh 100 Raincut</h3>
             <p class="item__product-price">799 nok</p>
-            <a href="" class="btn btn__show-item">Show Item</a>
+            <a href="#" title="Nh 100 Raincut" class="btn btn__show-item">Show Item</a>
           </div>
 
           <div class="item hide">
             <div class="item__picture">
-              <img src="../images/jackets/men-jackets/tour-jacket-outline.png"
+              <img src="../images/jackets/smaller-mens-jackets/tour-jacket-outline.png"
                 alt="Picture of man's jacket Tour Jacket Outlne">
             </div>
             <h3 class="item__product-name">Tour Outline</h3>
             <p class="item__product-price">1099 nok</p>
-            <a href="" class="btn btn__show-item">Show Item</a>
+            <a href="#" title="Tour Outline" class="btn btn__show-item">Show Item</a>
           </div>
 
           <div class="item hide">
             <div class="item__picture">
-              <img src="../images/jackets/raincoats/raincoat-forza.png" alt="Picture of Raincoat Forza">
+              <img src="../images/jackets/smaller-raincoats/raincoat-forza.png" alt="Picture of Raincoat Forza">
             </div>
             <h3 class="item__product-name">Raincoat Forza</h3>
             <p class="item__product-price">599 nok</p>
-            <a href="" class="btn btn__show-item">Show Item</a>
+            <a href="#" title="Raincoat Forza" class="btn btn__show-item">Show Item</a>
           </div>
 
           <div class="item hide">
             <div class="item__picture">
-              <img src="../images/jackets/raincoats/poncho-raincoat.png" alt="Picture of Poncho Raincoat">
+              <img src="../images/jackets/smaller-raincoats/poncho-raincoat.png" alt="Picture of Poncho Raincoat">
             </div>
             <h3 class="item__product-name">Poncho Raincoat</h3>
             <p class="item__product-price">500 nok</p>
-            <a href="" class="btn btn__show-item">Show Item</a>
+            <a href="#" title="Poncho Raincoat" class="btn btn__show-item">Show Item</a>
           </div>
 
           <div class="item hide">
             <div class="item__picture">
-              <img src="../images/jackets/raincoats/poncho-orange.png" alt="Picture of Poncho Orange">
+              <img src="../images/jackets/smaller-raincoats/poncho-orange.png" alt="Picture of Poncho Orange">
             </div>
             <h3 class="item__product-name">Poncho Orange</h3>
             <p class="item__product-price">499 nok</p>
-            <a href="" class="btn btn__show-item">Show Item</a>
+            <a href="#" title="Poncho Orange" class="btn btn__show-item">Show Item</a>
           </div>
 
           <div class="item hide">
             <div class="item__picture">
-              <img src="../images/jackets/raincoats/raincoat-triban.png" alt="Picture of Raincoat Triban">
+              <img src="../images/jackets/smaller-raincoats/raincoat-triban.png" alt="Picture of Raincoat Triban">
             </div>
             <h3 class="item__product-name">Raincoat Triban</h3>
             <p class="item__product-price">749 nok</p>
-            <a href="" class="btn btn__show-item">Show Item</a>
+            <a href="#" title="Raincoat Triban" class="btn btn__show-item">Show Item</a>
           </div>
 
           <div class="item hide">
             <div class="item__picture">
-              <img src="../images/jackets/men-jackets/rain-jacket-FH500.png" alt="Picture of Rain Jacket Fh 500">
+              <img src="../images/jackets/smaller-mens-jackets/rain-jacket-FH500.png"
+                alt="Picture of Rain Jacket Fh 500">
             </div>
             <h3 class="item__product-name">Rain Jacket Fh 500</h3>
             <p class="item__product-price">899 nok</p>
-            <a href="" class="btn btn__show-item">Show Item</a>
+            <a href="#" title="Rain Jacket Fh 500" class="btn btn__show-item">Show Item</a>
           </div>
 
           <div class="item hide">
             <div class="item__picture">
-              <img src="../images/jackets/men-jackets/rain-jacket-quechua.png" alt="Picture of Rain Jacket Quechua">
+              <img src="../images/jackets/smaller-mens-jackets/rain-jacket-quechua.png"
+                alt="Picture of Rain Jacket Quechua">
             </div>
             <h3 class="item__product-name">Rain Jacket Quechua</h3>
             <p class="item__product-price">799 nok</p>
-            <a href="" class="btn btn__show-item">Show Item</a>
+            <a href="#" title="Rain Jacket Quechua" class="btn btn__show-item">Show Item</a>
           </div>
 
         </div>
@@ -191,16 +202,21 @@
   <footer>
     <div class="container">
       <div class="wrapper-social-media">
-        <a href="#" class="social-media" id="youtube"><i class="fab fa-youtube"></i></a>
-        <a href="#" class="social-media" id="instagram"><i class=" fab fa-instagram"></i></a>
-        <a href="#" class="social-media" id="facebook"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="social-media" id="messenger"><i class=" fab fa-facebook-messenger"></i></a>
-        <a href="#" class="social-media" id="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" title="Youtube chanel of Rainy Days" class="social-media" id="youtube"><i
+            class="fab fa-youtube"></i></a>
+        <a href="#" title="Instagram account of Rainy Days" class="social-media" id="instagram"><i
+            class=" fab fa-instagram"></i></a>
+        <a href="#" title="Facebook website of Rainy Days" class="social-media" id="facebook"><i
+            class="fab fa-facebook"></i></a>
+        <a href="#" title="Messenger to Rainy Days" class="social-media" id="messenger"><i
+            class=" fab fa-facebook-messenger"></i></a>
+        <a href="#" title="Twitter account of Rainy Days" class="social-media" id="twitter"><i
+            class="fab fa-twitter"></i></a>
       </div>
     </div>
   </footer>
 
-  <script src="../script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

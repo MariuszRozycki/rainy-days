@@ -1,0 +1,150 @@
+/* nav */
+nav {
+  background-color: var(--primary-color);
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.main-nav__container {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav__container > * {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav__list li {
+  list-style: none;
+}
+
+#hamburger-menu,
+.main-nav__list,
+.login-container img {
+  display: none;
+} 
+
+#hamburger-menu:checked ~ .main-nav__list {
+  display: block;
+}
+
+.main-nav__list {
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 182px;
+  left: 0;
+  z-index: 9;
+  flex: 1;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.main-nav__list li {
+  border-bottom: 1px solid var(--secondary-color);
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.main-nav__list li:nth-last-of-type(1) {
+  border-bottom: none;
+}
+
+.main-nav__list a {
+  color: var(--secondary-color);
+  padding: 10px 20px;
+}
+
+a.active,
+.shopping-cart-active i {
+  color: var(--tertiary-color);
+}
+
+.main-nav__list .active::after {
+  background-color: var(--tertiary-color);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: '';
+  display: none;
+}
+
+.main-nav label {
+  order: 0;
+  flex: 1;
+  justify-content: center;
+  color: var(--secondary-color);
+  font-size: 1.7rem;
+}
+
+.search-container {
+  order: 1;
+  flex: 2;
+  background-color: var(--secondary-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.search-container input::placeholder {
+  color: var(--primary-color);
+}
+
+.search-container input {
+  width: 75%;  
+  margin-left: 10px;
+}
+
+.search-container input,
+.search-container button,
+.search-container button i,
+.btn_log-in {
+  border: none;
+  background-color: var(--secondary-color);
+  color:  var(--primary-color);
+  font-size: 1rem;
+}
+
+.search-container button {
+  cursor: pointer;
+}
+
+.btn_log-in {
+  padding: 5px 10px;
+  border-radius: 5px;
+  min-width: 80px;
+  transition: .2s;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.login-container .login-active,
+.btn_log-in:hover {
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+}
+
+
+.login-container {
+  order: 2;
+  flex: 1;
+  margin: 0 10px;
+  justify-content: center;
+}
+
+.shopping-cart {
+  order: 3;
+  flex: 1;
+  color: var(--secondary-color);
+  font-size: 2.0rem;
+}
+
+.shopping-cart i {
+  transition: .2s;
+}
+
+.shopping-cart i:hover {
+  color: var(--tertiary-color);
+}

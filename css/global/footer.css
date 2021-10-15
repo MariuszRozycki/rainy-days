@@ -1,0 +1,18 @@
+/* footer */
+footer {
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+.wrapper-social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media i {
+  color: var(--secondary-color);
+  margin: 0 10px;
+  font-size: 1.8rem;
+  transition: .2s;
+}
