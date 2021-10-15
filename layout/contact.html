@@ -22,10 +22,10 @@
 
   <nav class="main-nav">
     <div class="container main-nav__container">
-      <div class="search-container">
-        <button type="button"><i class="fas fa-search"></i></button>
-        <input type="text" placeholder="Search...">
-      </div>
+      <form class="search-container" id="search" method="GET" action="search-index.html">
+        <input type="search" placeholder="Search..." name="search">
+        <button type="search"><i class="fas fa-search"></i></button>
+      </form>
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu">
       <ul class="main-nav__list">
