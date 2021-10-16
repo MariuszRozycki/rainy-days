@@ -32,7 +32,8 @@ p,
 nav,
 .welcome,
 .circle-small, 
-a {
+a,
+button {
   font-family: 'Palanquin', sans-serif;
   text-decoration: none;
 }
