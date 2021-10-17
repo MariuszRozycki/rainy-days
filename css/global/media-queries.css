@@ -14,6 +14,25 @@
   .item__product-name {
     font-size: 0.9rem;
   }
+
+  .choose-jacket__products {
+    gap: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 500px) {
+
+  .choose-jacket__products {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .choose-jacket__name {
+    margin-top: 0;
+    font-size: inherit;
+  }
 }
 
 @media (min-width: 600px) {
@@ -81,6 +100,14 @@
     font-size: 2.6rem;
     margin: 0 16px;
   }
+
+  .sub-title span {
+    display: inline;
+  }
+
+  .choose-jacket__name {
+    font-size: 1.3rem;
+  }
 }
 
 @media (min-width: 700px) {
@@ -115,6 +142,9 @@
     font-size: 1.1rem;
   }
 
+  .choose-jacket__name {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 800px) {

@@ -1,7 +1,7 @@
 /* products | main | home page */
 .products {
   width: 100%;
-  background-image: url(../../images/rain-products-bcg.jpg);
+  background-image: url(../../images/bcg-drops.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
