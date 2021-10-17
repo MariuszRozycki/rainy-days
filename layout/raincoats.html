@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Online shop with the best waterproff jackets for people they like outside activities.">
-  <title>Rainy Days | About</title>
+  <title>Rainy Days | Raincoats</title>
   <script src="https://kit.fontawesome.com/136bcbc643.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/global/media-queries.css">
@@ -16,7 +16,7 @@
 <body>
   <header>
     <div class="container">
-      <a href="../index.html"><img src="../images/logo.png" alt="Logo of company Rainy Days."></a>
+      <a href="../index.html"><img src="../images/logo.png" alt="Logo of Rainy Days company"></a>
     </div>
   </header>
 
@@ -30,23 +30,28 @@
       <input type="checkbox" id="hamburger-menu">
       <ul class="main-nav__list">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
-        <li class="active"><a class="active" href="../layout/about.html">About</a></li>
+        <li class="active"><a class="active" href="../layout/our-jackets.html">Our Jackets</a></li>
+        <li><a href="../layout/about.html">About</a></li>
         <li><a href="../layout/contact.html">Contact</a></li>
       </ul>
       <form class="login-container">
         <button class="btn btn_log-in" type="button">Log in</button>
-        <a href="log-in.html"><img src="../images/login.svg" alt="Login alternative. Press to log in"></a>
+        <a href="../layout/log-in.html"><img src="../images/login.svg" alt="Login alternative. Press to log in"></a>
       </form>
       <a href="../layout/cart.html" class="shopping-cart"><i class="fas fa-shopping-cart"></i></a>
     </div>
   </nav>
 
-  <main class="about page-in-progress">
-    <section class="welcome">
+  <main class="choose-jacket">
+    <section class="splash">
       <div class="container">
-        <h1><span>x</span>About in progress<span>x</span></h1>
-        <a href="../index.html">Back to Home Page</a>
+        <ul class="choose-jacket__menu">
+          <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
+          <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+          <li class="choose-jacket__menu-active"><a href="">Raincoats</a></li>
+        </ul>
+
+        <div class="products-wrapper"></div>
       </div>
     </section>
   </main>
@@ -68,6 +73,8 @@
     </div>
   </footer>
 
+  <script src="../js/raincoats.js"></script>
+  <script src="../js/product-generator.js"></script>
   <script src="../js/script-product.js"></script>
 </body>
 
