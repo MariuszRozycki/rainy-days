@@ -44,8 +44,12 @@ a {
   display: inline-block;
 }
 
+li {
+  list-style: none;
+}
+
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
   padding: 30px 10px;
