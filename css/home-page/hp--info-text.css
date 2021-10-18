@@ -3,6 +3,10 @@
   color: var(--primary-color);
 }
 
+.info-text .sub-title {
+  text-align: center;
+}
+
 .info-text figure {
   display: none;
 }

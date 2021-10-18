@@ -18,17 +18,6 @@
   font-size: 1.2rem;
 }
 
-.about.welcome::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: hsla(0,0%,100%,0.7);
-}
-
 .link-to-jackets .circle-big {
   position: relative;
   top: 50%;

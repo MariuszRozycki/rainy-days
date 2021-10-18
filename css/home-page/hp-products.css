@@ -21,18 +21,16 @@
   background-color: hsla(0,0%,95%,0.9);
 }
 
+.products .container {
+  text-align: center;
+}
+
 .products .container > * {
   position: relative;
   top: 0;
   left: 0;
   z-index: 3;
   color: var(--primary-color);
-}
-
-.products__sub-title,
-.sub-title {
-  font-size: 2.2rem;
-  margin-bottom: 30px;
 }
 
 .products-wrapper {
@@ -53,6 +51,12 @@
 .item__product-name {
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+.item__product-name,
+.item__product-price,
+.btn__more-items {
+  text-align: center;
 }
 
 .item {

@@ -122,6 +122,26 @@
   .about p {
     font-size: 1.4rem;
   }
+
+  /* contact - media */
+  .contact {
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 30px;
+  }
+
+  .contact-adress {
+    text-align: left;
+  }
+
+  .contact-adress .sub-title {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .contact map {
+    height: 120%;
+  }
 }
 
 @media (min-width: 700px) {
@@ -227,7 +247,7 @@
 
 @media (min-width: 1000px) {
   .welcome {
-    height: 80vh;
+    min-height: 80vh;
   }
 
   .welcome h1 span,
