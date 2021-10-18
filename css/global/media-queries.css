@@ -139,9 +139,9 @@
     padding-top: 0;
   }
 
-  .contact map {
+  /* .contact map {
     height: 70vh;
-  }
+  } */
 }
 
 @media (min-width: 700px) {
