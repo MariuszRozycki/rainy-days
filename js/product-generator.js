@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const productsWrapper = document.querySelector('.products-wrapper');
 

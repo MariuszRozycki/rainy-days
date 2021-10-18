@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 /* setTimeout function to let jackets be created, before return elements */
 setTimeout(function () {
 

@@ -63,8 +63,8 @@
   border: 2px solid var(--primary-color);
   border-radius: 10px;
   padding: 8px;
-  box-shadow: var(--primary-shadow)
-
+  box-shadow: var(--primary-shadow);
+  background-color: var(--secondary-color);
 }
 
 .btn__show-item {

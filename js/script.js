@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /* .login-container button | moving to log-in.html */
 let button = document.querySelector('.login-container button');
