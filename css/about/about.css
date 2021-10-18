@@ -1,1 +1,36 @@
 /* about */
+.about .container > * {
+  color: var(--primary-color);
+}
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr minmax(0, 270px);
+}
+
+.about h2, 
+.about p {
+  text-align: left;
+}
+
+.about p {
+  font-size: 1.2rem;
+}
+
+.about.welcome::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: hsla(0,0%,100%,0.7);
+}
+
+.link-to-jackets .circle-big {
+  position: relative;
+  top: 50%;
+}
+
