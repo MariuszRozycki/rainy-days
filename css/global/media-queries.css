@@ -304,4 +304,31 @@
     width: 400px;
     height: 400px;
   }
-}  
+}
+
+@media (orientation: portrait) and (min-height: 1024px) {
+  .choose-jacket__products {
+    grid-template-columns: 1fr;
+  }
+
+  .choose-jacket__item {
+    width: 50%;
+    margin: auto;
+  }
+
+  .choose-jacket__name {
+    margin-top: -30px;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 1366px) {
+  .choose-jacket__item {
+    width: 35%;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 420px) {
+  .circle-big {
+    display: none;
+  }
+}
