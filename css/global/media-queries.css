@@ -4,9 +4,31 @@
   .page-in-progress h1 {
     font-size: 2.7rem;
   }
+
+  .search-container {
+    padding: 5px;
+  }
+
+  .search-container input, 
+  .search-container button, 
+  .search-container button i, 
+  .btn_log-in {
+    font-size: 0.9rem;
+  }
 }
 
 @media (min-width:400px) {
+  .search-container {
+    padding: 5px 10px;
+  }
+
+  .search-container input, 
+  .search-container button, 
+  .search-container button i, 
+  .btn_log-in {
+    font-size: 1rem;
+  }
+
   .products-wrapper {
     grid-template-columns: 1fr 1fr;
   }
@@ -139,9 +161,6 @@
     padding-top: 0;
   }
 
-  /* .contact map {
-    height: 70vh;
-  } */
 }
 
 @media (min-width: 700px) {
@@ -234,6 +253,10 @@
   }
   .choose-jacket .products-wrapper {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .btn__show-item {
+    padding: 3px 15px;
   }
 
 }
