@@ -19,6 +19,9 @@
 }
 
 .link-to-jackets .circle-big {
+  border: none;
+  width: 200px;
+  height: 200px;
   position: relative;
   top: 50%;
 }

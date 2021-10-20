@@ -3,6 +3,7 @@
   .welcome h1,
   .page-in-progress h1 {
     font-size: 2.7rem;
+    line-height: 120%;
   }
 
   .search-container {
@@ -44,16 +45,14 @@
 }
 
 @media (min-width: 500px) {
-
-  .choose-jacket__products {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 0;
+  .choose-jacket__item {
+    width: 70%;
+    margin: 0 auto;
   }
 
   .choose-jacket__name {
-    margin-top: 0;
-    font-size: inherit;
+    margin-top: -35px;
+    font-size: 1.3rem;
   }
 }
 
@@ -104,7 +103,7 @@
   }
 
   .circle-small {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 
   .info-text figure {
@@ -127,8 +126,14 @@
     display: inline;
   }
 
+  .choose-jacket__products {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-bottom: 0;
+  }
+
   .choose-jacket__name {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   .choose-jacket__menu li:nth-of-type(1),
@@ -161,6 +166,17 @@
     padding-top: 0;
   }
 
+  /* about */
+
+  .link-to-jackets .circle-big {
+    width: 250px;
+    height: 250px;
+  }
+
+  .link-to-jackets .circle {
+    border-width: 35px;
+  }
+
 }
 
 @media (min-width: 700px) {
@@ -170,7 +186,7 @@
 
   .welcome h1,
   .page-in-progress h1 {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
   }
 
   .circle {
@@ -200,17 +216,8 @@
   }
 
   .choose-jacket__name {
-    font-size: 1.5rem;
-  }
-
-  .link-to-jackets .circle {
-    border-width: 30px;
-  }
-
-  .link-to-jackets .circle-big {
-    width: 300px;
-    height: 300px;
-    top: 70%;
+    margin-top: -20px;
+    font-size: 1.1rem;
   }
 }
 
@@ -259,6 +266,15 @@
     padding: 3px 15px;
   }
 
+  .link-to-jackets .circle-big {
+    width: 300px;
+    height: 300px;
+  }
+
+  .link-to-jackets .circle {
+    border-width: 40px;
+  }
+
 }
 
 @media (min-width: 900px) {
@@ -280,33 +296,47 @@
   }
 
   .circle {
-    border-width: 40px;
+    border-width: 35px;
   }
 
   .circle-big {
     top: 65%;
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
   }
 
   .circle-small {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
+  }
+
+  .choose-jacket__name {
+    font-size: 1.5rem;
   }
 }
 
-@media (min-width: 1000px) and (orientation: portrait) {
+@media (orientation: portrait) and (min-width: 1024px) {
   .welcome h1,
   .page-in-progress h1 {
     font-size: 6rem;
   }
 
+  .welcome h1 span {
+    display: none;
+  }
+
+  .circle {
+    border-width: 40px;
+  }
+
   .circle-big {
-    width: 400px;
-    height: 400px;
+    width: 380px;
+    height: 380px;
   }
 }
 
 @media (orientation: portrait) and (min-height: 1024px) {
+
+
   .choose-jacket__products {
     grid-template-columns: 1fr;
   }
@@ -321,14 +351,48 @@
   }
 }
 
-@media (orientation: portrait) and (min-height: 1366px) {
+@media (min-width: 1024px) and (min-height: 1366px) {
+  .circle-small {
+    font-size: 2.8rem;
+  }
+
   .choose-jacket__item {
     width: 35%;
   }
 }
 
 @media (orientation: landscape) and (max-height: 420px) {
-  .circle-big {
-    display: none;
+  .welcome::after {
+    height: 80%;
+    top: 10%;
+    bottom: 10%;
+  }
+
+  .home-page .circle {
+    border: none;
+    border-radius: 0;
+  }
+
+  .home-page .circle-big {
+    width: auto;
+    height: auto;   
+  }
+
+  .home-page .circle-small {
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border: 5px solid;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 421px) and (max-height: 540px) {
+  .home-page .circle-big {
+    width: 230px;
+    height: 230px;
+  }
+
+  .home-page .circle {
+    border-width: 25px;
+    font-size: 1.5rem;
   }
 }
