@@ -42,11 +42,52 @@
     </div>
   </nav>
 
-  <main class="log-in page-in-progress">
-    <section class="welcome re-use">
-      <div class="container">
-      </div>
-    </section>
+  <main class="log-in welcome re-use">
+    <div class="container">
+      <section class="text-container">
+        <h2 class="sub-title">Log In</h2>
+        <form action="" method="" class="log-in-form">
+          <div>
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login">
+          </div>
+          <div>
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="login-email">
+          </div>
+          <div>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="password" minlength="8" required>
+          </div>
+          <input type="submit" value="Log In" title="Login website"></input>
+        </form>
+      </section>
+
+      <section class="log-in-remaining">
+        <p>Forgot login/e-mail or password <a href="#" title="password-remeiner">Click
+            here!</a></p>
+        <div>
+          <img src="../images/login-exclam.svg" alt="Exclamation mark symbol">
+          <p>If you don't have profile in our shop
+            yet <a href="" class="create-profile">create your profile</a> by clicking <a href=""
+              class="create-profile">here!</a></p>
+        </div>
+      </section>
+
+      <aside class="link-to-jackets">
+        <div class="registration">
+          <a href="../layout/our-jackets.html">Continue without registration? <span>Click here!</span></a>
+          <img class="arrow" src="../images/menu-arrow.svg" alt="Indicator to choose jacket website">
+        </div>
+        <div class="circle circle-big">
+          <div class="circle circle-midle">
+            <a href="../layout/our-jackets.html" title="Rainy Days | Choose Jacket" class="circle circle-small">Choose
+              Jacket</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
   </main>
 
   <footer>

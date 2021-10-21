@@ -7,7 +7,7 @@
   }
 
   .search-container {
-    padding: 5px;
+    padding: 5px 10px;
   }
 
   .search-container input, 
@@ -42,6 +42,11 @@
     gap: 100px;
     margin-bottom: 100px;
   }
+
+  /* log-in */
+  .log-in .circle-big {
+    top: 40%;
+  }
 }
 
 @media (min-width: 500px) {
@@ -54,10 +59,22 @@
     margin-top: -35px;
     font-size: 1.3rem;
   }
+
+  /* log-in */
+  .log-in-form div {
+    flex-direction: row;
+  }
+
+  .log-in-form div label {
+    width: 30%;
+  }
+
+  .log-in-form div input {
+    width: 70%;
+  }
 }
 
 @media (min-width: 600px) {
-
   nav {
     font-size: 0.9rem;
   }
@@ -118,7 +135,7 @@
   }
 
   .social-media i {
-    font-size: 2.6rem;
+    font-size: 1.9rem;
     margin: 0 16px;
   }
 
@@ -167,14 +184,48 @@
   }
 
   /* about */
-
   .link-to-jackets .circle-big {
+    top: 70%;
     width: 250px;
     height: 250px;
   }
 
   .link-to-jackets .circle {
     border-width: 35px;
+  }
+
+  /* log-in */
+  .log-in .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .log-in-remaining {
+    justify-content: center; 
+    text-align: left;
+    font-size: 1rem;
+    order: 1;
+    grid-column: -1/1;
+  }
+
+  .log-in-remaining div {
+    display: flex;
+    align-items: center;
+  }
+
+  .log-in-remaining img {
+    margin-right: 20px;
+  }
+
+  .log-in .circle-big {
+    width: 220px;
+    height: 220px;
+    top: 39%;
+  }
+
+  .log-in .circle-small {
+    font-size: 2rem;
   }
 
 }
@@ -218,6 +269,19 @@
   .choose-jacket__name {
     margin-top: -20px;
     font-size: 1.1rem;
+  }
+
+   /* log-in */
+   .log-in .circle-big {
+    top: 45%;
+  }
+
+  .log-in-form div label,
+  .log-in-form div input,
+  .log-in-remaining a,
+  .log-in-remaining p,
+  .log-in .registration a {
+    font-size: 1.4rem;
   }
 }
 
@@ -273,6 +337,12 @@
 
   .link-to-jackets .circle {
     border-width: 40px;
+  }
+
+   /* log-in */
+   .log-in .circle-big {
+    width: 250px;
+    height: 250px;
   }
 
 }

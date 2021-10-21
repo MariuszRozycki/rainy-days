@@ -1,1 +1,98 @@
-/* contact */
+/* log-in */
+.log-in .container > * {
+  z-index: 3;
+}
+
+.log-in .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.text-container > * {
+  text-align: left;
+}
+
+.log-in-form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.log-in-form div label {
+  width: 100%;
+  margin-right: 10px;
+}
+
+.log-in-form div input {
+  width: 100%;
+  border: 1px solid var(--primary-color);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .7);
+  padding: 5px 10px;
+}
+
+.log-in-form input[type="submit"] {
+  margin-top: 20px;
+  color: var(--primary-color);
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.log-in-remaining {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.log-in-remaining div {
+  margin: 20px 0;
+}
+
+.log-in-remaining img {
+  width: 30px;
+}
+
+.log-in-remaining a,
+.log-in .registration a span {
+  color: var(--primary-color);
+  border-bottom: 1px solid;
+  font-style: italic;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.log-in .registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.log-in-form div label,
+.log-in-form div input,
+.log-in-remaining a,
+.log-in-remaining p,
+.log-in .registration a {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.log-in .arrow {
+  margin-top: 20px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+.log-in .circle-big {
+  width: 180px;
+  height: 180px;
+  top:35%;
+}
+

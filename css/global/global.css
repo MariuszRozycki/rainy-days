@@ -55,7 +55,8 @@ li {
   text-align: center;
 }
 
-.btn {
+.btn,
+input[type="submit"] {
   background-color: var(--tertiary-color);
   color: var(--primary-color);
   font-weight: 700;
@@ -75,6 +76,10 @@ li {
   left: 0;
   top: 0;
   background-color: hsla(0,0%,100%,0.7);
+}
+
+.sub-title {
+  color: var(--primary-color);
 }
 
 .sub-title,
