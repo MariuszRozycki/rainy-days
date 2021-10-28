@@ -218,6 +218,10 @@
     margin-right: 20px;
   }
 
+  .log-in .link-to-jackets {
+    margin-top: 0;
+  }
+
   .log-in .circle-big {
     width: 220px;
     height: 220px;
