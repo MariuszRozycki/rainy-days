@@ -16,6 +16,12 @@
   .btn_log-in {
     font-size: 0.9rem;
   }
+
+  /* jacket-details */
+  .jacket-details .item__product-choose-size a {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (min-width:400px) {
@@ -47,6 +53,57 @@
   .log-in .circle-big {
     top: 40%;
   }
+
+  /* jacket details */
+  .choose-jacket__menu-active a {
+    font-size: 1.1rem;
+  }
+
+  .jacket-details .item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .jacket-details .item__picture {
+    grid-row: 1/3;
+    height: 250px;
+    align-self: center;
+  }
+
+  .jacket-details .item__product-description > * {
+    text-align: left;
+  }
+
+  .jacket-details .item__product-name,
+  .jacket-details .item__product-price {
+    font-size: 1.4rem;
+  }
+
+  .jacket-details .item__product-choose-size {
+    justify-content: flex-start; 
+  }
+
+  .jacket-details .item__product-choose-size li {
+    margin: 0 5px 0 0;
+  }
+
+  .jacket-details .item__product-choose-size a {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  .jacket-details .item__info {
+    grid-column: 2/3;
+  }
+
+  .jacket-details .item button {
+    grid-column: 2/3;
+    margin: 0 0 10px 0;
+    max-width: 200px;
+  }
+
 }
 
 @media (min-width: 500px) {
@@ -232,6 +289,50 @@
     font-size: 2rem;
   }
 
+   /* jacket details */
+   .choose-jacket__menu-active a {
+    font-size: 1.2rem;
+  }
+
+  .jacket-details .item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  .jacket-details .item__picture {
+    min-width: 210px;
+  }
+
+  .jacket-details .item__product-description > * {
+    text-align: left;
+  }
+
+  .jacket-details .item__product-description {
+    height: 100%;
+  }
+
+  .jacket-details .item__product-size {
+    margin-top: 70px;
+  }
+
+  .jacket-details .item__info {
+    grid-column: 3/4;
+    align-self: baseline;
+  }
+
+  .jacket-details .rating {
+    margin-left: -20px;
+  }
+
+  .jacket-details .reviews > li {
+    text-indent: -20px;
+  }
+
+  .jacket-details .item button {
+    grid-column: 3/4;
+  }
+
 }
 
 @media (min-width: 700px) {
@@ -286,6 +387,29 @@
   .log-in-remaining p,
   .log-in .registration a {
     font-size: 1.4rem;
+  }
+
+  /* jacket-details */
+  .jacket-details .item {
+    grid-template-columns: minmax(0, 230px) minmax(0, 700px) minmax(0, 400px);
+  }
+
+  .jacket-details .item__picture {
+    padding: 20px 0;
+  }
+
+  .jacket-details .item__product-choose-size a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .jacket-details .rating {
+    margin-left: 0;
+  }
+
+  .jacket-details .reviews > li {
+    text-indent: -5px;
   }
 }
 

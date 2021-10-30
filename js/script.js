@@ -21,14 +21,14 @@ for (let element of socialMedia) {
 
 
 /* .btn__show-iten | alert regarding to missing elements */
-let showItems = document.querySelectorAll('.btn__show-item');
+// let showItems = document.querySelectorAll('.btn__show-item');
 
-for (let item of showItems) {
-  item.addEventListener('click', function (e) {
-    e.preventDefault();
-    alert(`Website with item isn't ready jet.`);
-  });
-}
+// for (let item of showItems) {
+//   item.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     alert(`Website with item isn't ready jet.`);
+//   });
+// }
 
 /* .products .item | displaying more items i section */
 let buttonMoreItems = document.querySelector('.btn__more-items');

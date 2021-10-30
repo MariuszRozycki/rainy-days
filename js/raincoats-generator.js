@@ -3,9 +3,13 @@
 const productsWrapper = document.querySelector('.products-wrapper');
 
 for (let product of products) {
-  let productLink = `<a href="#" title="${product.name}" class="btn btn__show-item">Show Item</a>`;
-  productsWrapper.innerHTML +=
-    `<div class="item">
+
+  if (product.type === 'raincoats') {
+    let productLink = `<a href="../layout/jacket-details.html?id=${product.id}" id=${product.id} title="${product.name}" class="btn btn__show-item">Show Item</a>`;
+
+
+    productsWrapper.innerHTML +=
+      `<div class="item">
       <div class="item__picture">
         <img src="${product.image}" alt="Picture of ${product.name}">
       </div>
@@ -15,4 +19,5 @@ for (let product of products) {
         ${productLink}
       </div>  
   </div>`
+  }
 }

@@ -25,6 +25,9 @@
 /* log-in */
 @import url('login/login.css');
 
+/* jackets-details */
+@import url('our-jackets/jacket-details.css');
+
 /* page in progress */
 @import url('page-in-progress.css');
 

@@ -55,6 +55,7 @@
 
 .item__product-name,
 .item__product-price,
+.item__product-size,
 .btn__more-items {
   text-align: center;
 }
@@ -90,6 +91,8 @@
   font-weight: 900;
   font-size: 1.4rem;
 }
+
+
 
 .item__picture {
   width: 100%;

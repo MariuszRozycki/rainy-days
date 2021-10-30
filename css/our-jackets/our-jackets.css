@@ -65,6 +65,7 @@
 .choose-jacket__menu-active {
   border-bottom: 1px solid;
   font-weight: 700;
+  font-size: 0.8rem;
 }
 
 
@@ -75,7 +76,7 @@
 
 .menu-arrow {
   width: 40px;
-  margin: 5px 20px 0;
+  margin: 5px 10px;
 }
 
 .choose-jacket__item img:nth-of-type(2) {
