@@ -82,6 +82,7 @@
 
 .reviews > li {
   text-indent: -5px;
+  margin-left: 10px;
 }
 
 .reviews > li:before {
