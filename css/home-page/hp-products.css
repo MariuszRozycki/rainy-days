@@ -73,10 +73,6 @@
   box-shadow: var(--primary-shadow);
 }
 
-/* .item:nth-last-of-type(1) {
-  display: none;
-} */
-
 .btn__show-item {
   font-size: 1.2rem;
   box-shadow: var(--primary-shadow);
@@ -90,6 +86,10 @@
 
 .show {
   display: flex;
+}
+
+.item.hide > * {
+  display: none;
 }
 
 .item__product-price {

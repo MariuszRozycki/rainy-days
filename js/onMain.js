@@ -1,5 +1,4 @@
 const onMainContainer = document.querySelector('.on-main');
-console.log(onMainContainer);
 
 for (let product of products) {
   if (product.onMain) {
@@ -15,6 +14,31 @@ for (let product of products) {
           <p class="item__product-price">${product.price} nok</p>
         ${productLink}
         </div>  
-      </div>`
+      </div>`;
   }
 };
+
+/* .products .item | displaying more items i section */
+let buttonMoreItems = document.querySelector('.btn__more-items');
+buttonMoreItems.innerHTML = 'more items'
+
+/* .products .item .more-items | changing text of button 'MORE ITEMS' to 'LESS ITEMS' & add jacket  */
+const mainItems = document.querySelectorAll('.item');
+mainItems[0].classList.add('hide');
+mainItems[4].classList.add('hide');
+
+let flag = false;
+
+buttonMoreItems.addEventListener('click', function () {
+  flag = !flag;
+  flag ? this.innerHTML = 'hide items' : this.innerHTML = 'more items';
+
+  for (let item of mainItems) {
+    item.classList.remove('hide');
+  }
+
+  if (!flag) {
+    mainItems[0].classList.toggle('hide');
+    mainItems[4].classList.toggle('hide');
+  }
+});

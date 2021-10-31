@@ -20,3 +20,4 @@ for (let product of products) {
       </div>`
   }
 };
+
