@@ -1,4 +1,5 @@
 'use strict';
+
 /* setTimeout function to let jackets be created, before return elements */
 setTimeout(function () {
 
@@ -22,6 +23,7 @@ setTimeout(function () {
   }
 
 
+
   /* .btn__show-iten | alert regarding to missing elements */
   // let showItems = document.querySelectorAll('.btn__show-item');
 
@@ -32,6 +34,7 @@ setTimeout(function () {
   //   });
   // }
 }, 1000);
+
 
 
 

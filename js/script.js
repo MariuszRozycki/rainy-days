@@ -32,7 +32,7 @@ for (let element of socialMedia) {
 
 /* .products .item | displaying more items i section */
 let buttonMoreItems = document.querySelector('.btn__more-items');
-buttonMoreItems.innerHTML = 'More items'
+buttonMoreItems.innerHTML = 'show items'
 let items = document.querySelectorAll('.item');
 
 for (let item of items) {
@@ -47,7 +47,7 @@ let flag = true;
 
 buttonMoreItems.addEventListener('click', function () {
   flag = !flag;
-  flag ? this.innerHTML = 'more items' : this.innerHTML = 'less items';
+  flag ? this.innerHTML = 'show items' : this.innerHTML = 'hide items';
 });
 
 

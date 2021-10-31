@@ -33,6 +33,8 @@
   color: var(--primary-color);
 }
 
+.womens-jackets,
+.mens-jackets,
 .products-wrapper {
   display: grid;
   grid-template-columns: auto;
@@ -69,8 +71,11 @@
   border-radius: 10px;
   padding: 8px;
   box-shadow: var(--primary-shadow);
-  background-color: var(--secondary-color);
 }
+
+/* .item:nth-last-of-type(1) {
+  display: none;
+} */
 
 .btn__show-item {
   font-size: 1.2rem;
@@ -91,8 +96,6 @@
   font-weight: 900;
   font-size: 1.4rem;
 }
-
-
 
 .item__picture {
   width: 100%;

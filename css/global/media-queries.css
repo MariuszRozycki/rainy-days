@@ -117,6 +117,11 @@
     font-size: 1.3rem;
   }
 
+  .choose-jacket__menu li:nth-of-type(2),
+.choose-jacket__menu li:nth-of-type(3) {
+  display: flex;
+}
+
   /* log-in */
   .log-in-form div {
     flex-direction: row;
@@ -208,11 +213,6 @@
 
   .choose-jacket__name {
     font-size: 1rem;
-  }
-
-  .choose-jacket__menu li:nth-of-type(1),
-  .choose-jacket__menu li:nth-of-type(2) {
-    display: flex;
   }
 
   .about .container {

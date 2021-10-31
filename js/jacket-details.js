@@ -10,6 +10,7 @@ const params = new URLSearchParams(queryString);
 const productId = params.get("id");
 
 const product = products.find(({ id }) => id == productId);
+console.log(product);
 
 /* placeing a name of product got from queryString */
 menuDetail.innerHTML +=
@@ -68,6 +69,7 @@ ratingContainer.addEventListener('click', (event) => {
     classElement.add('active');
   }
 });
+
 
 
 
