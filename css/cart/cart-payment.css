@@ -1,3 +1,6 @@
+.cart-payment .splash {
+margin: 0 20px;
+}
 .cart-payment {
   width: 90%;
   margin: 0 auto;
@@ -10,6 +13,8 @@
 
 fieldset {
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .cart-payment h1 {
@@ -22,7 +27,7 @@ fieldset {
 .card-data,
 .owner-data {
   display: grid;
-  width: 100%;
+  width: 90%;
   grid-template-columns: 1fr;
   margin: 20px auto;
 }
@@ -31,15 +36,12 @@ fieldset {
 .owner-data {
   text-align: left;
 }
-
-.payment-method input {
-  display: none;
-}
-
 .payment-method div {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 60%;
+  gap: 5px;
 }
 
 .payment-method label,
@@ -67,7 +69,6 @@ fieldset {
 
 .card-data input[type="date"] {
   display:block;
-  width: 100%;
   font-family: 'Palanquin', sans-serif;
   color: var(--primary-color);
   cursor: pointer;
@@ -82,13 +83,7 @@ fieldset {
   object-fit: contain;
 }
 
-.cart-payment .buttons {
-  /* justify-content: center; */
-}
 
-.cart-payment .buttons .btn {
-  margin: 0 20px;
-}
 
 
 

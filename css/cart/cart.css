@@ -98,6 +98,7 @@ table td:nth-of-type(1) {
 }
 
 .buttons {
+  margin: 0 10px;
   padding: 0;
   display: flex;
   justify-content: space-between;

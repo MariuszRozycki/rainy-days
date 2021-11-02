@@ -149,13 +149,7 @@
 
   .cart-payment form {
     grid-template-rows: auto auto auto auto;
-  }
-
-  .cart .payment-method {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-    gap: 5px;
-  }
+  } 
 
   .payment-method label {
     flex-basis: 100%;
@@ -220,15 +214,14 @@
 
   /* cart-payment */
   .cart-payment .payment-method {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
     gap: 20px;
   }
 
-  .payment-method div {
+  .cart-payment .payment-method div {
     gap: 5px;
-  }  
-
-  .payment-method input {
-    display: block;
+    width: 100%;
   }
 }
 
