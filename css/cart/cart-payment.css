@@ -66,6 +66,7 @@ fieldset {
 }
 
 .card-data input[type="date"] {
+  width: 100%;
   font-family: 'Palanquin', sans-serif;
   color: var(--primary-color);
   cursor: pointer;
