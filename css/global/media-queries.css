@@ -175,7 +175,7 @@
 
   .choose-jacket__menu li:nth-of-type(2),
   .choose-jacket__menu li:nth-of-type(3) {
-  display: flex;
+    display: flex;
   }
 
   /* log-in */
