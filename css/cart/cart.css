@@ -97,13 +97,13 @@ table td:nth-of-type(1) {
   background-color: var(--tertiary-color);
 }
 
-.buttons ul {
+.buttons {
   padding: 0;
   display: flex;
   justify-content: space-between;
 }
 
-.buttons ul .btn {
+.buttons .btn {
   padding: 3px 30px;
   font-size: 0.7rem;
 }

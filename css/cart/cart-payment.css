@@ -74,7 +74,6 @@ fieldset {
 
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
-  /* min-height: 1.2em;  */
 }
 
 .payment-method label img {
@@ -82,4 +81,14 @@ fieldset {
   height: 100%;
   object-fit: contain;
 }
+
+.cart-payment .buttons {
+  /* justify-content: center; */
+}
+
+.cart-payment .buttons .btn {
+  margin: 0 20px;
+}
+
+
 

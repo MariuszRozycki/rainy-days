@@ -7,6 +7,13 @@ button.addEventListener('click', () => {
   location.href = '/layout/log-in.html';
 });
 
+/* button next .cart */
+let buttonNext = document.querySelector('button[type="submit"]');
+
+buttonNext.addEventListener('click', () => {
+  location.href = 'cart-payment.html';
+});
+
 
 /* .social-media | alert regarding to missing elements */
 let socialMedia = document.querySelectorAll('.social-media');
