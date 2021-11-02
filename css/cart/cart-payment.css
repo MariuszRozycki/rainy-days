@@ -65,12 +65,17 @@ fieldset {
   margin-top: 20px;
 }
 
-/* .card-data input[type="date"] {
+.card-data input[type="date"] {
+  display:block;
   width: 100%;
   font-family: 'Palanquin', sans-serif;
   color: var(--primary-color);
   cursor: pointer;
-} */
+
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  min-height: 1.2em; 
+}
 
 .payment-method label img {
   width: 50%;
