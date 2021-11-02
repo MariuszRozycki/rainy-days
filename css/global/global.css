@@ -33,7 +33,9 @@ nav,
 .welcome,
 .circle-small, 
 a,
-button {
+button,
+th,
+td {
   font-family: 'Palanquin', sans-serif;
   text-decoration: none;
   position: relative;

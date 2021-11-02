@@ -28,6 +28,9 @@
 /* jackets-details */
 @import url('our-jackets/jacket-details.css');
 
+/* cart */
+@import url('cart/cart.css');
+
 /* page in progress */
 @import url('page-in-progress.css');
 

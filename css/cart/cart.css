@@ -1,0 +1,81 @@
+.cart h1 {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.cart h1 span {
+  text-align: left;
+  position: relative;
+}
+
+.cart h1 span:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+table {
+  margin: 50px 0 0 0;
+  display: grid;
+}
+
+thead {
+  margin-bottom: 10px;
+}
+
+thead tr,
+tbody tr {
+  display: grid;
+  grid-template-columns: 20px 1fr repeat(3, 1fr) 30px;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  border: 1px solid; 
+  padding: 10px 5px;
+}
+
+table th,
+table td {
+  text-align: left;
+}
+
+table td:nth-of-type(1) {
+  text-align: center;
+}
+
+.cart tbody td:nth-of-type(2) img {
+  display: none;
+  width: 50px;
+  grid-row: 1/2;
+}
+
+.cart tbody td:nth-of-type(2) a {
+  justify-self: start;
+  align-self: center;
+  color: var(--primary-color);
+}
+
+.cart tbody td:nth-of-type(3) a,
+.cart tbody td:nth-of-type(6) {
+  width: 30px;
+  height: 30px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.cart tbody td:nth-of-type(6) {
+  background-color: var(--tertiary-color);
+}
+
+.cart ul {
+  padding: 0;
+}
