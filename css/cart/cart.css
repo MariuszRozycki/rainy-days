@@ -23,8 +23,13 @@ table {
   display: grid;
 }
 
-thead {
+thead,
+tbody {
   margin-bottom: 10px;
+}
+
+tfoot {
+  margin-bottom: 30px;
 }
 
 thead tr,
@@ -33,9 +38,25 @@ tbody tr {
   grid-template-columns: 20px 1fr repeat(3, 1fr) 30px;
   align-items: center;
   gap: 10px;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   border: 1px solid; 
   padding: 10px 5px;
+}
+
+tfoot tr {
+  display: flex;
+  justify-content: flex-end;
+  text-transform: uppercase;
+  border: 1px solid;
+  font-weight: 700; 
+}
+
+tfoot tr td:first-child {
+  padding-right: 20px;
+}
+
+tfoot tr td:nth-last-child(1) {
+  padding-right: 10px;
 }
 
 table th,
@@ -76,6 +97,17 @@ table td:nth-of-type(1) {
   background-color: var(--tertiary-color);
 }
 
-.cart ul {
+.buttons ul {
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons ul .btn {
+  padding: 3px 30px;
+  font-size: 0.7rem;
+}
+
+.buttons ul .btn-back {
+  background-color: var(--secondary-color);
 }

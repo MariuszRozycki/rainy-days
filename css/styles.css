@@ -31,6 +31,8 @@
 /* cart */
 @import url('cart/cart.css');
 
+@import url('cart/cart-payment.css');
+
 /* page in progress */
 @import url('page-in-progress.css');
 

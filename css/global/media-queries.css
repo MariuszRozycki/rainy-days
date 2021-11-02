@@ -1,4 +1,32 @@
 /* media queries | home page & page in progress */
+@media (max-width: 250px) {
+  .search-container {
+    display: none;
+  }
+
+  .social-media i {
+    font-size: 0.9rem;
+  }
+
+  .cart h1,
+  tfoot tr {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 280px) {
+  /* cart */
+  thead tr,
+  tbody tr {
+    font-size: 0.8rem; 
+  }
+
+  .cart h1,
+  tfoot tr td {
+    font-size: 1rem;
+  }
+}
+
 @media (min-width: 320px) {
   .welcome h1,
   .page-in-progress h1 {
@@ -27,7 +55,11 @@
   thead tr,
   tbody tr {
     font-size: 0.9rem; 
-}
+  }
+
+  .payment-method label {
+    flex-basis: 80%;
+  }
 }
 
 @media (min-width:400px) {
@@ -110,6 +142,24 @@
     max-width: 200px;
   }
 
+  /* cart-payment */
+  .cart-payment {
+    width: 100%;
+  }
+
+  .cart-payment form {
+    grid-template-rows: auto auto auto;
+  }
+
+  .cart .payment-method {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .payment-method label {
+    flex-basis: 100%;
+  }
 }
 
 @media (min-width: 500px) {
@@ -124,9 +174,9 @@
   }
 
   .choose-jacket__menu li:nth-of-type(2),
-.choose-jacket__menu li:nth-of-type(3) {
+  .choose-jacket__menu li:nth-of-type(3) {
   display: flex;
-}
+  }
 
   /* log-in */
   .log-in-form div {
@@ -162,6 +212,23 @@
     display: block;
     width: 40px;
     grid-row: 1/2;
+  }
+
+  .buttons ul .btn {
+    font-size: 0.8rem;
+  }
+
+  /* cart-payment */
+  .cart-payment .payment-method {
+    gap: 20px;
+  }
+
+  .payment-method div {
+    gap: 5px;
+  }  
+
+  .payment-method input {
+    display: block;
   }
 }
 
@@ -376,6 +443,28 @@
   .cart tbody td:nth-of-type(2) img {
     width: 50px;  
   }
+
+  tfoot tr td:nth-last-child(1) {
+    padding-right: 30px;
+  }
+
+  .buttons ul .btn {
+    font-size: 1rem;
+  }
+
+  /* cart-payment */
+  .cart-payment form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .payment-method {
+    grid-column: -1/1;
+  }
+
+  .card-data {
+    height: 350px;
+  }
 }
 
 @media (min-width: 700px) {
@@ -460,7 +549,7 @@
   tbody tr {
   display: grid;
   grid-template-columns: 20px 1fr repeat(3, 1fr) 100px;
-}
+  }
 
   .cart tbody td:nth-of-type(2) img {
    width: 70px;
@@ -471,6 +560,10 @@
     width: 40px;
     height: 40px;
     font-size: 1rem;
+  }
+
+  tfoot tr td:nth-last-child(1) {
+    padding-right: 60px;
   }
 }
 
@@ -535,7 +628,6 @@
   }
 
   /* cart */
-  /* cart */
   thead tr,
   tbody tr,
   td,
@@ -543,6 +635,19 @@
     font-size: 1.4rem;
   }
 
+  .card-data,
+  .owner-data {
+    width: 80%;
+    margin-top: 0;
+  }
+
+  .owner-data {
+    margin-right: 0;
+  }
+
+  .card-data {
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 900px) {
@@ -608,8 +713,6 @@
 }
 
 @media (orientation: portrait) and (min-height: 1024px) {
-
-
   .choose-jacket__products {
     grid-template-columns: 1fr;
   }

@@ -42,46 +42,80 @@
     </div>
   </nav>
 
-  <main class="cart">
+  <main class="cart cart-payment">
     <section class="splash">
       <div class="container">
-        <h1><span>List of items in your cart</span></h1>
+        <h1><span>Choose payment methode:</span></h1>
 
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Product</th>
-              <th>Size</th>
-              <th>Price</th>
-              <th>Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td><img src="../images/jackets/men-jackets/nh-100-raincut.png" alt="nh-100-raincut">
-                <a href="#">Tribord 300MB</a>
-              </td>
-              <td><a>XS</a></td>
-              <td>999 nok</td>
-              <td>1</td>
-              <td><i class="fas fa-trash-alt"></i></td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td>Price total:</td>
-              <td>999 nok</td>
-            </tr>
-          </tfoot>
-        </table>
+        <form>
+          <fieldset class="payment-method">
+
+            <div>
+              <input type="radio" name="payment" id="vipps">
+              <label for="vipps"><img src="../images/payment/vipps.svg" alt="Vipps symbol"></label>
+            </div>
+
+            <div>
+              <input type="radio" name="payment" id="maestro">
+              <label for="maestro"><img src="../images/payment/maestro.svg" alt="Maestro card symbol"></label>
+            </div>
+
+            <div>
+              <input type="radio" name="payment" id="mastercard">
+              <label for="mastercard"><img src="../images/payment/mastercard.svg" alt="Mastercard symbol"></label>
+            </div>
+
+            <div>
+              <input type="radio" name="payment" id="visa">
+              <label for="visa"><img src="../images/payment/visa.svg" alt="Visa symbol"></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="card-data">
+
+            <label for="card-number">Card number:</label>
+            <input type="number" name="card-data" id="card-number">
+
+            <label for="card-owner">Card owner:</label>
+            <input type="text" name="card-data" id="card-owner">
+
+            <label for="valid-thru">Valid-thru:</label>
+            <input type="date" name="card-data" id="valid-thru" value="dd.mm.year" min="2021-11-02">
+
+            <label for="cvv-code">CVV code:</label>
+            <input type="number" name="card-data" id="cvv-code">
+
+          </fieldset>
+
+          <fieldset class="owner-data">
+            <label for="name">Name:</label>
+            <input type="text" name="owner-data" id="name">
+
+            <label for="surname">Surname:</label>
+            <input type="text" name="owner-data" id="surname">
+
+            <label for="Address">Address:</label>
+            <input type="text" name="owner-data" id="address">
+
+            <label for="city">City:</label>
+            <input type="text" name="owner-data" id="city">
+
+            <label for="zip-code">Zip - code:</label>
+            <input type="text" name="owner-data" id="zip-code">
+
+            <label for="country">Country:</label>
+            <input type="text" name="owner-data" id="country">
+          </fieldset>
+        </form>
+
         <section class="buttons">
           <ul>
             <li><a class="btn btn-back" href="#">Back</a></li>
             <li><a class="btn" href="#">Next</a></li>
           </ul>
         </section>
+
+
       </div>
     </section>
   </main>
