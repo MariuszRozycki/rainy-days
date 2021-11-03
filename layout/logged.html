@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Online shop with the best waterproff jackets for people they like outside activities.">
-  <title>Rainy Days | Cart</title>
+  <title>Rainy Days | Logged</title>
   <script src="https://kit.fontawesome.com/136bcbc643.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/global/media-queries.css">
@@ -16,7 +16,7 @@
 <body>
   <header>
     <div class="container">
-      <a href="../index.html"><img src="../images/logo.png" alt="Logo of Rainy Days company"></a>
+      <a href="../index.html"><img src="../images/logo.png" alt="Logo of company Rainy Days."></a>
     </div>
   </header>
 
@@ -35,53 +35,31 @@
         <li><a href="../layout/contact.html">Contact</a></li>
       </ul>
       <form class="login-container">
-        <button class="btn btn_log-in" type="button">Log in</button>
-        <a href="../layout/log-in.html"><img src="../images/login.svg" alt="Login alternative. Press to log in"></a>
+        <button class="btn btn_log-in login-active" type="button">Log Ut</button>
+        <a href="log-in.html"><img src="../images/login.svg" alt="Login alternative. Press to log in"></a>
       </form>
-      <a href="../layout/cart.html" class="shopping-cart shopping-cart-active"><i class="fas fa-shopping-cart"></i></a>
+      <a href="../layout/cart.html" class="shopping-cart"><i class="fas fa-shopping-cart"></i></a>
     </div>
   </nav>
 
-  <main class="cart">
-    <section class="splash">
-      <div class="container">
-        <h1><span>List of items in your cart</span></h1>
-
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Product</th>
-              <th>Size</th>
-              <th>Price</th>
-              <th>Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td><img src="../images/jackets/men-jackets/nh-100-raincut.png" alt="nh-100-raincut">
-                <a href="#">Tribord 300MB</a>
-              </td>
-              <td><a>XS</a></td>
-              <td>999 nok</td>
-              <td>1</td>
-              <td><i class="fas fa-trash-alt"></i></td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td>Price total:</td>
-              <td>999 nok</td>
-            </tr>
-          </tfoot>
-        </table>
-        <section class="buttons">
-          <button class="btn btn-back" href="our-jackets.html">Back</button>
-          <button type="submit" class="btn">Next</button>
-        </section>
-      </div>
-    </section>
+  <main class="welcome logged re-use">
+    <div class="container">
+      <section class="text-container">
+        <h2 class="sub-title">Welcome Bjørn</h2>
+        <p class="text__paragraph">Now you are logged in to our shop.
+          Click the button on the right hands side and enjoy with shopping! :)
+        </p>
+        <p>Rainy Days Team</p>
+      </section>
+      <aside class="link-to-jackets">
+        <div class="circle circle-big">
+          <div class="circle circle-midle">
+            <a href="../layout/our-jackets.html" title="Rainy Days | Choose Jacket" class="circle circle-small">Choose
+              Jacket</a>
+          </div>
+        </div>
+      </aside>
+    </div>
   </main>
 
   <footer>

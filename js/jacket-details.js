@@ -54,7 +54,7 @@ productWrapper.innerHTML +=
       <li>Bera sisum sit dolor</li>
     </ul>
   </div>
-  <button class="btn">Add to cart</button>
+  <button id="add-to-cart" class="btn">Add to cart</button>
 </div>`
 
 /* container for rating & code for*/
@@ -70,6 +70,8 @@ ratingContainer.addEventListener('click', (event) => {
   }
 });
 
+const addToCartButton = document.querySelector('#add-to-cart');
+console.log(addToCartButton);
 
 
 

@@ -33,6 +33,7 @@
   border: 1px solid var(--primary-color);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, .7);
   padding: 5px 10px;
+  font-size: 1rem;
 }
 
 .log-in-form button[type="submit"] {
@@ -90,10 +91,20 @@
 .log-in-remaining a,
 .log-in-remaining p,
 .log-in .registration a {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--primary-color);
   font-weight: 600;
 }
+
+.log-in-form div input {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.log-in-form div input:focus {
+  color: var(--primary-color);
+}
+
 
 .log-in .arrow {
   margin-top: 20px;

@@ -7,13 +7,32 @@ button.addEventListener('click', () => {
   location.href = '/layout/log-in.html';
 });
 
+/* button LOG IN .log-in */
+if (document.querySelector('title').innerText === 'Rainy Days | Log In') {
+  let buttonLogIn = document.querySelector('button[value="Log In"]');
+
+  buttonLogIn.addEventListener('click', () => {
+    location.href = 'logged.html';
+  });
+}
+
+/* button LOG UT .log-in */
+if (document.querySelector('title').innerText === 'Rainy Days | Logged') {
+  let buttonLogIn = document.querySelector('button[value="Log In"]');
+
+  buttonLogIn.addEventListener('click', () => {
+    location.href = 'logg-in.html';
+  });
+}
+
 /* button next .cart */
-let buttonNext = document.querySelector('button[type="submit"]');
+if (document.querySelector('title').innerText === 'Rainy Days | Cart') {
+  let buttonNext = document.querySelector('button[type="submit"]');
 
-buttonNext.addEventListener('click', () => {
-  location.href = 'cart-payment.html';
-});
-
+  buttonNext.addEventListener('click', () => {
+    location.href = 'cart-payment.html';
+  });
+}
 
 /* .social-media | alert regarding to missing elements */
 let socialMedia = document.querySelectorAll('.social-media');

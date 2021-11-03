@@ -31,7 +31,11 @@
 /* cart */
 @import url('cart/cart.css');
 
+/* cart-payment */
 @import url('cart/cart-payment.css');
+
+/* logged */
+@import url('login/logged.css');
 
 /* page in progress */
 @import url('page-in-progress.css');

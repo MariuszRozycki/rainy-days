@@ -1,5 +1,9 @@
 /* media queries | home page & page in progress */
-@media (max-width: 250px) {
+@media (max-width: 279px) {
+  .main-nav label {
+    font-size: 1.3rem;
+  }
+
   .search-container {
     display: none;
   }
@@ -27,6 +31,11 @@
   }
 }
 
+@media (max-width: 319px) {
+  .container {
+    padding: 30px 5px;
+  }
+}
 @media (min-width: 320px) {
   .welcome h1,
   .page-in-progress h1 {
@@ -182,7 +191,7 @@
   }
 
   .log-in-form div input {
-    width: 70%;
+    width: 64%;
   }
 
   /* cart */
@@ -378,6 +387,16 @@
     font-size: 2rem;
   }
 
+  /* logged */
+  .logged .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .logged p {
+    font-size: 1.4rem;
+  }
+
    /* jacket details */
    .choose-jacket__menu-active a {
     font-size: 1.2rem;
@@ -507,11 +526,14 @@
   }
 
   .log-in-form div label,
-  .log-in-form div input,
   .log-in-remaining a,
   .log-in-remaining p,
   .log-in .registration a {
     font-size: 1.4rem;
+  }
+
+  .log-in-form div input {
+    font-size: 1rem;
   }
 
   /* jacket-details */

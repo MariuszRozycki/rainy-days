@@ -1,0 +1,32 @@
+/* about */
+.logged .container > * {
+  color: var(--primary-color);
+}
+
+.logged .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr minmax(0, 270px);
+}
+
+.logged h2, 
+.logged p {
+  text-align: left;
+}
+
+.logged p {
+  font-size: 1.2rem;
+}
+
+.logged p:nth-of-type(2) {
+  margin-top: 50px;
+}
+
+.link-to-jackets .circle-big {
+  border: none;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 50%;
+}
+
