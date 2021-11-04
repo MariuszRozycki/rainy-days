@@ -24,7 +24,7 @@
     <div class="container main-nav__container">
       <form class="search-container" id="search" method="GET" action="search-index.html">
         <input type="search" placeholder="Search..." name="search">
-        <button type="search"><i class="fas fa-search"></i></button>
+        <i class="fas fa-search"></i>
       </form>
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu">
@@ -45,15 +45,15 @@
   <main class="log-in welcome re-use">
     <div class="container">
       <section class="text-container">
-        <h2 class="sub-title">Log In</h2>
-        <form action="../php/log-in.php" method="" class="log-in-form" id="form">
+        <h1 class="top-title">Log In</h1>
+        <form action="../php/log-in.php" method="post" class="log-in-form" id="form">
           <div>
             <label for="login">Login:</label>
             <input type="text" id="login" name="login" required>
           </div>
           <div>
             <label for="email">E-mail:</label>
-            <input type="email" name="email" id="login-email" required>
+            <input type="email" name="email" id="email" required>
           </div>
           <div>
             <label for="pass">Password:</label>
@@ -63,16 +63,16 @@
         </form>
       </section>
 
-      <section class="log-in-remaining">
+      <div class="log-in-remaining">
         <p>Forgot login/e-mail or password <a href="#" title="password-remeiner">Click
             here!</a></p>
         <div>
           <img src="../images/login-exclam.svg" alt="Exclamation mark symbol">
           <p>If you don't have profile in our shop
-            yet <a href="" class="create-profile">create your profile</a> by clicking <a href=""
+            yet <a href="sign-up.html" class="create-profile">create your profile</a> by clicking <a href="sign-up.html"
               class="create-profile">here!</a></p>
         </div>
-      </section>
+      </div>
 
       <aside class="link-to-jackets">
         <div class="registration">

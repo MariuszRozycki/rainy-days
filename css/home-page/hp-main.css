@@ -22,8 +22,7 @@
   background-color: hsla(0,0%,100%,0.7);
 }
 
-.welcome h1,
-.page-in-progress h1 {
+.main-title {
   font-size: 3rem;
   text-align: center;
   font-weight: bold;

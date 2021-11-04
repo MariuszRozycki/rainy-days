@@ -1,14 +1,14 @@
-.cart h1 {
+.cart .top-title {
   text-align: left;
   text-transform: uppercase;
   font-size: 1rem;
 }
-.cart h1 span {
+.cart .top-title span {
   text-align: left;
   position: relative;
 }
 
-.cart h1 span:after {
+.cart .top-title span:after {
   content: "";
   display: block;
   width: 100%;
@@ -18,22 +18,22 @@
   left: 0;
 }
 
-table {
+.cart table {
   margin: 50px 0 0 0;
   display: grid;
 }
 
-thead,
-tbody {
+.cart thead,
+.cart tbody {
   margin-bottom: 10px;
 }
 
-tfoot {
+.cart tfoot {
   margin-bottom: 30px;
 }
 
-thead tr,
-tbody tr {
+.cart thead tr,
+.cart tbody tr {
   display: grid;
   grid-template-columns: 20px 1fr repeat(3, 1fr) 30px;
   align-items: center;
@@ -43,7 +43,7 @@ tbody tr {
   padding: 10px 5px;
 }
 
-tfoot tr {
+.cart tfoot tr {
   display: flex;
   justify-content: flex-end;
   text-transform: uppercase;
@@ -51,21 +51,26 @@ tfoot tr {
   font-weight: 700; 
 }
 
-tfoot tr td:first-child {
+.cart tfoot tr td:first-child {
   padding-right: 20px;
 }
 
-tfoot tr td:nth-last-child(1) {
+.cart tfoot tr td:nth-last-child(1) {
   padding-right: 10px;
 }
 
-table th,
-table td {
+.cart table th,
+.cart table td {
   text-align: left;
 }
 
-table td:nth-of-type(1) {
+.cart table td:nth-of-type(1) {
   text-align: center;
+}
+
+.cart thead th:nth-of-type(5),
+.cart tbody td:nth-of-type(5)  {
+  justify-self: center;
 }
 
 .cart tbody td:nth-of-type(2) img {
@@ -98,6 +103,7 @@ table td:nth-of-type(1) {
 }
 
 .buttons {
+
   margin: 0 10px;
   padding: 0;
   display: flex;
@@ -109,6 +115,6 @@ table td:nth-of-type(1) {
   font-size: 0.7rem;
 }
 
-.buttons ul .btn-back {
+.buttons .btn-back {
   background-color: var(--secondary-color);
 }

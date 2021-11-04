@@ -12,21 +12,21 @@
     font-size: 0.9rem;
   }
 
-  .cart h1,
-  tfoot tr {
+  .cart .top-title,
+  .cart tfoot tr {
     font-size: 0.8rem;
   }
 }
 
 @media (min-width: 280px) {
   /* cart */
-  thead tr,
-  tbody tr {
+  .cart thead tr,
+  .cart tbody tr {
     font-size: 0.8rem; 
   }
 
   .cart h1,
-  tfoot tr td {
+  .cart tfoot tr td {
     font-size: 1rem;
   }
 }
@@ -37,8 +37,7 @@
   }
 }
 @media (min-width: 320px) {
-  .welcome h1,
-  .page-in-progress h1 {
+  .main-title {
     font-size: 2.7rem;
     line-height: 120%;
   }
@@ -47,9 +46,8 @@
     padding: 5px 10px;
   }
 
-  .search-container input, 
-  .search-container button, 
-  .search-container button i, 
+  .search-container input,  
+  .search-container i, 
   .btn_log-in {
     font-size: 0.9rem;
   }
@@ -61,8 +59,8 @@
   }
 
   /* cart */
-  thead tr,
-  tbody tr {
+  .cart thead tr,
+  .cart tbody tr {
     font-size: 0.9rem; 
   }
 
@@ -77,9 +75,9 @@
   }
 
   .search-container input, 
-  .search-container button, 
-  .search-container button i, 
-  .btn_log-in {
+  .search-container i, 
+  .btn_log-in,
+  .btn_sign-up {
     font-size: 1rem;
   }
 
@@ -96,8 +94,9 @@
     margin-bottom: 100px;
   }
 
-  /* log-in */
-  .log-in .circle-big {
+  /* log-in, sign-up */
+  .log-in .circle-big,
+  .sign-up .circle-big {
     top: 40%;
   }
 
@@ -181,12 +180,15 @@
     display: flex;
   }
 
-  /* log-in */
-  .log-in-form div {
+  /* log-in, sign-up */
+
+  .log-in-form div,
+  .sign-up-form div {
     flex-direction: row;
   }
 
-  .log-in-form div label {
+  .log-in-form div label,
+  .sign-up-form div label {
     width: 30%;
   }
 
@@ -195,14 +197,10 @@
   }
 
   /* cart */
-  thead tr,
-  tbody tr {
-    font-size: 0.9rem; 
-  }
-
-  thead tr,
-  tbody tr { 
-    grid-template-columns: 20px 1fr repeat(3, 1fr) 35px;
+  .cart thead tr,
+  .cart tbody tr {
+    font-size: 0.9rem;
+    grid-template-columns: 20px 1fr repeat(3, 1fr) 35px; 
   }
 
   .cart tbody td:nth-of-type(2) {
@@ -268,8 +266,7 @@
     color: var(--tertiary-color);
   }
   
-  .welcome h1,
-  .page-in-progress h1 {
+  .main-title {
     display: block;
     line-height: 140%;
   }
@@ -349,14 +346,16 @@
     border-width: 35px;
   }
 
-  /* log-in */
-  .log-in .container {
+  /* log-in, sign-up */
+  .log-in .container,
+  .sign-up .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
 
-  .log-in-remaining {
+  .log-in-remaining,
+  .sign-up-remaining {
     justify-content: center; 
     text-align: left;
     font-size: 1rem;
@@ -364,26 +363,31 @@
     grid-column: -1/1;
   }
 
-  .log-in-remaining div {
+  .log-in-remaining div,
+  .sign-up-remaining div {
     display: flex;
     align-items: center;
   }
 
-  .log-in-remaining img {
+  .log-in-remaining img,
+  .sign-up-remaining img {
     margin-right: 20px;
   }
 
-  .log-in .link-to-jackets {
+  .log-in .link-to-jackets,
+  .sign-up .link-to-jackets {
     margin-top: 0;
   }
 
-  .log-in .circle-big {
+  .log-in .circle-big,
+  .sign-up .circle-big {
     width: 220px;
     height: 220px;
     top: 39%;
   }
 
-  .log-in .circle-small {
+  .log-in .circle-small,
+  .sign-up .circle-small {
     font-size: 2rem;
   }
 
@@ -442,13 +446,9 @@
   }
 
   /* cart */
-  thead tr,
-  tbody tr {
-    font-size: 1.1rem;
-  }
-
-  thead tr,
-  tbody tr { 
+  .cart thead tr,
+  .cart tbody tr {
+    font-size: 1.1rem; 
     grid-template-columns: 20px 1fr repeat(3, 1fr) 50px;
   }
 
@@ -456,7 +456,7 @@
     width: 50px;  
   }
 
-  tfoot tr td:nth-last-child(1) {
+  .cart tfoot tr td:nth-last-child(1) {
     padding-right: 30px;
   }
 
@@ -484,8 +484,7 @@
     font-size: 1rem;
   }
 
-  .welcome h1,
-  .page-in-progress h1 {
+  .main-title {
     font-size: 3.5rem;
   }
 
@@ -520,19 +519,25 @@
     font-size: 1.1rem;
   }
 
-   /* log-in */
-   .log-in .circle-big {
+   /* log-in, sign-up */
+   .log-in .circle-big,
+   .sign-up .circle-big {
     top: 45%;
   }
 
   .log-in-form div label,
   .log-in-remaining a,
   .log-in-remaining p,
-  .log-in .registration a {
+  .log-in .registration a,
+  .sign-up-form div label,
+  .sign-up-remaining a,
+  .sign-up-remaining p,
+  .sign-up .registration a {
     font-size: 1.4rem;
   }
 
-  .log-in-form div input {
+  .log-in-form div input,
+  .sign-up div input {
     font-size: 1rem;
   }
 
@@ -560,8 +565,8 @@
   }
 
   /* cart */
-  thead tr,
-  tbody tr {
+  .cart thead tr,
+  .cart tbody tr {
   display: grid;
   grid-template-columns: 20px 1fr repeat(3, 1fr) 100px;
   }
@@ -577,7 +582,7 @@
     font-size: 1rem;
   }
 
-  tfoot tr td:nth-last-child(1) {
+  .cart tfoot tr td:nth-last-child(1) {
     padding-right: 60px;
   }
 }
@@ -636,17 +641,18 @@
     border-width: 40px;
   }
 
-   /* log-in */
-   .log-in .circle-big {
+   /* log-in, sign-up */
+   .log-in .circle-big,
+   .sign-up .circle-big {
     width: 250px;
     height: 250px;
   }
 
   /* cart */
-  thead tr,
-  tbody tr,
-  td,
-  tr a {
+  .cart thead tr,
+  .cart tbody tr,
+  .cart td,
+  .cart tr a {
     font-size: 1.4rem;
   }
 
@@ -666,8 +672,7 @@
 }
 
 @media (min-width: 900px) {
-  .welcome h1,
-  .page-in-progress h1 {
+  .main-title {
     font-size: 4rem;
   }
 }
@@ -677,8 +682,7 @@
     min-height: 80vh;
   }
 
-  .welcome h1 span,
-  .page-in-progress h1 span {
+  .main-title span {
     margin: 0 10px;
     display: inline;
   }
@@ -708,12 +712,11 @@
 }
 
 @media (orientation: portrait) and (min-width: 1024px) {
-  .welcome h1,
-  .page-in-progress h1 {
+  .main-title {
     font-size: 6rem;
   }
 
-  .welcome h1 span {
+  .main-title span {
     display: none;
   }
 

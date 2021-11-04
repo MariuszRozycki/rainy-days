@@ -24,7 +24,7 @@
     <div class="container main-nav__container">
       <form class="search-container" id="search" method="GET" action="search-index.html">
         <input type="search" placeholder="Search..." name="search">
-        <button type="search"><i class="fas fa-search"></i></button>
+        <i class="fas fa-search"></i>
       </form>
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu">
@@ -45,7 +45,7 @@
   <main class="cart">
     <section class="splash">
       <div class="container">
-        <h1><span>List of items in your cart</span></h1>
+        <h1 class="top-title"><span>List of items in your cart</span></h1>
 
         <table>
           <thead>
@@ -55,6 +55,7 @@
               <th>Size</th>
               <th>Price</th>
               <th>Amount</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -73,6 +74,7 @@
             <tr>
               <td>Price total:</td>
               <td>999 nok</td>
+              <td></td>
             </tr>
           </tfoot>
         </table>

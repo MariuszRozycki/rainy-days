@@ -37,6 +37,9 @@
 /* logged */
 @import url('login/logged.css');
 
+/* sign-up */
+@import url('login/sign-up.css');
+
 /* page in progress */
 @import url('page-in-progress.css');
 

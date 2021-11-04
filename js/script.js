@@ -8,13 +8,13 @@ button.addEventListener('click', () => {
 });
 
 /* button LOG IN .log-in */
-if (document.querySelector('title').innerText === 'Rainy Days | Log In') {
-  let buttonLogIn = document.querySelector('button[value="Log In"]');
+// if (document.querySelector('title').innerText === 'Rainy Days | Log In') {
+//   let buttonLogIn = document.querySelector('button[value="Log In"]');
 
-  buttonLogIn.addEventListener('click', () => {
-    location.href = 'logged.html';
-  });
-}
+//   buttonLogIn.addEventListener('click', () => {
+//     location.href = 'logged.html';
+//   });
+// }
 
 /* button LOG UT .log-in */
 if (document.querySelector('title').innerText === 'Rainy Days | Logged') {

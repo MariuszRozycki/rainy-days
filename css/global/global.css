@@ -42,6 +42,10 @@ td {
   z-index: 3;
 }
 
+.top-title {
+  font-size: 2.2rem;
+}
+
 a {
   display: inline-block;
 }
@@ -58,7 +62,7 @@ li {
 }
 
 .btn,
-input[type="submit"] {
+button[type="submit"] {
   background-color: var(--tertiary-color);
   color: var(--primary-color);
   font-weight: 700;
@@ -84,10 +88,11 @@ input[type="submit"] {
   color: var(--primary-color);
 }
 
-.sub-title,
+.top-title,
 .products__sub-title {
   font-size: 2.2rem;
   margin-bottom: 30px;
+  color: var(--primary-color);
 }
 
 .products__sub-title {

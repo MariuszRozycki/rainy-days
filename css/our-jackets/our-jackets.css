@@ -22,8 +22,8 @@
   z-index: 2;
 }
 
-.sub-title span {
-  display: block;
+.all-kind-jackets .top-title {
+  margin-bottom: 15px;
 }
 
 .choose-jacket__products {
@@ -101,3 +101,4 @@
 .sub-title span {
   display: block;
 }
+

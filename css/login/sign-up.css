@@ -1,0 +1,121 @@
+/* log-up */
+.sign-up .container > * {
+  z-index: 3;
+}
+
+.sign-up .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.btn_sign-up {
+  min-width: 105px;
+}
+
+.text-container > * {
+  text-align: left;
+}
+
+.sign-up-form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.sign-up-form div label {
+  width: 100%;
+  margin-right: 10px;
+}
+
+.sign-up-form div input {
+  width: 100%;
+  border: 1px solid var(--primary-color);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .7);
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+.sign-up-form button[type="submit"] {
+  font-family: 'Palanquin', sans-serif;
+  background-color: var(--tertiary-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 20px;
+  color: var(--primary-color);
+  border-radius: 5px;
+  padding: 2px 15px;
+  text-transform: uppercase;
+  border: 2px solid;
+}
+
+.sign-up-remaining {
+  display: flex;
+  max-height: 250px;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.sign-up-remaining div {
+  margin: 20px 0;
+}
+
+.sign-up-remaining img {
+  width: 30px;
+}
+
+.sign-up-remaining a,
+.sign-up .registration a span {
+  color: var(--primary-color);
+  border-bottom: 1px solid;
+  font-style: italic;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.sign-up .link-to-jackets {
+  margin-top: -50px;
+}
+
+.sign-up .registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up-form div label,
+.sign-up-remaining a,
+.sign-up-remaining p,
+.sign-up .registration a {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.sign-up-form div input,
+.sign-up-form div input::placeholder {
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  outline-color: var(--tertiary-color);
+}
+
+.sign-up .arrow {
+  margin-top: 20px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+.sign-up .circle-big {
+  width: 180px;
+  height: 180px;
+  top:35%;
+}
+

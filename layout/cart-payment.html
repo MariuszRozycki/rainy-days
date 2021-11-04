@@ -24,7 +24,7 @@
     <div class="container main-nav__container">
       <form class="search-container" id="search" method="GET" action="search-index.html">
         <input type="search" placeholder="Search..." name="search">
-        <button type="search"><i class="fas fa-search"></i></button>
+        <i class="fas fa-search"></i>
       </form>
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu">
@@ -80,8 +80,7 @@
             <input type="text" name="card-data" id="card-owner">
 
             <label for="valid-thru">Valid-thru:</label>
-            <input type="date" value="dd-mm-yyyy" placeholder="dd-mm-yyyy" name="card-data" id="valid-thru"
-              min="2021-11-02" required>
+            <input type="date" name="card-data" id="valid-thru" min="2021-11-02" required>
 
             <label for="cvv-code">CVV code:</label>
             <input type="number" name="card-data" id="cvv-code">
@@ -95,7 +94,7 @@
             <label for="surname">Surname:</label>
             <input type="text" name="owner-data" id="surname">
 
-            <label for="Address">Address:</label>
+            <label for="address">Address:</label>
             <input type="text" name="owner-data" id="address">
 
             <label for="city">City:</label>
@@ -108,10 +107,10 @@
             <input type="text" name="owner-data" id="country">
           </fieldset>
 
-          <section class="buttons">
-            <button class="btn btn-back" href="cart.html">Back</button>
-            <button type="submit" class="btn" href="#">Next</button>
-          </section>
+          <div class="buttons">
+            <button class="btn btn-back">Back</button>
+            <button type="submit" class="btn">Next</button>
+          </div>
         </form>
 
       </div>

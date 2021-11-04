@@ -23,7 +23,7 @@ productWrapper.innerHTML +=
     <img src="${product.image}" alt="Picture of ${product.name}">
   </div>
   <div class="item__product-description">
-    <h3 class="item__product-name">${product.name}</h3>
+    <h1 class="item__product-name">${product.name}</h1>
     <p class="item__product-price">999 nok</p>
     <p class="item__product-size">Choose size:</p>
     <ul class="item__product-choose-size">

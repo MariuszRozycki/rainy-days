@@ -9,7 +9,7 @@
   grid-template-rows: 1fr minmax(0, 270px);
 }
 
-.about h2, 
+.about .top-title, 
 .about p {
   text-align: left;
 }

@@ -13,7 +13,7 @@ for (let product of products) {
           <img src="${product.image}" alt="Picture of ${product.name}">
         </div>
         <div>
-          <h3 class="item__product-name">${product.name}</h3>
+          <h1 class="item__product-name">${product.name}</h1>
           <p class="item__product-price">${product.price} nok</p>
         ${productLink}
         </div>  
