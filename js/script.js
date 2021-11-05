@@ -44,3 +44,4 @@ for (let element of socialMedia) {
     alert(message);
   });
 }
+

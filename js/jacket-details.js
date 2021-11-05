@@ -27,11 +27,11 @@ productWrapper.innerHTML +=
     <p class="item__product-price">999 nok</p>
     <p class="item__product-size">Choose size:</p>
     <ul class="item__product-choose-size">
-      <li><a>XS</a></li>
-      <li><a>S</a></li>
-      <li><a>M</a></li>
-      <li><a>L</a></li>
-      <li><a>XL</a></li>
+      <li><a class="item__size-button">XS</a></li>
+      <li><a class="item__size-button">S</a></li>
+      <li><a class="item__size-button">M</a></li>
+      <li><a class="item__size-button">L</a></li>
+      <li><a class="item__size-button">XL</a></li>
     </ul>
   </div>
   <div class="item__info">
@@ -54,7 +54,7 @@ productWrapper.innerHTML +=
       <li>Bera sisum sit dolor</li>
     </ul>
   </div>
-  <button id="add-to-cart" class="btn">Add to cart</button>
+  <button id="add-to-cart" class="btn">Add Item</button>
 </div>`
 
 /* container for rating & code for*/
@@ -70,8 +70,46 @@ ratingContainer.addEventListener('click', (event) => {
   }
 });
 
-const addToCartButton = document.querySelector('#add-to-cart');
-console.log(addToCartButton);
+
+/* change button text add to cart/remove from cart  */
+let flag = false;
+
+setTimeout(() => {
+  const addToCartButton = document.querySelector('#add-to-cart');
+  const cartContainer = document.querySelector('.shopping-cart');
+
+  addToCartButton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    flag = !flag;
+    flag ? addToCartButton.innerHTML = `Remove Item` : addToCartButton.innerHTML = `Add Item`;
+    let number = 0;
+    if (flag) {
+      cartContainer.innerHTML += `<div class="item-quantity">${number + 1}</div>`;
+      cartContainer.classList.add('item-in-cart');
+    } else if (!flag) {
+      cartContainer.classList.remove('item-in-cart');
+    };
+
+    let itemQuantity = document.querySelector('.item-quantity');
+
+    addToCartButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      itemQuantity.remove();
+    });
+  });
+
+  /* add colour to item__size-button after click */
+  let sizeButtons = document.querySelectorAll('.item__size-button');
+  console.log(sizeButtons);
+
+}, 500);
+
+
+
+
+
+
 
 
 

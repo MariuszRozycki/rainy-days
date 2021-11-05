@@ -93,3 +93,7 @@
 .jacket-details .item button {
   margin-bottom: 10px;
 }
+
+.item__size-button-bcg {
+  background-color: var(--tertiary-color);
+}
