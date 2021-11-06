@@ -54,6 +54,7 @@
 
 .choose-jacket__menu a {
   color: var(--primary-color);
+  font-size: 0.8rem;
 }
 
 .choose-jacket__menu-active {

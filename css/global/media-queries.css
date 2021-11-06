@@ -74,6 +74,15 @@
   }
 }
 
+@media (min-width: 360px) {
+  /* choose jacket */
+  .choose-jacket__menu a {
+    font-size: 1rem;
+  }
+}
+
+
+
 @media (min-width:400px) {
   .search-container {
     padding: 5px 10px;
@@ -104,6 +113,11 @@
   .sign-up .circle-big {
     top: 40%;
   }
+
+/* choose jacket */
+.choose-jacket__menu a {
+  font-size: 0.9rem;
+}
 
   /* jacket details */
   .choose-jacket__menu-active a {
