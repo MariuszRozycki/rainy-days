@@ -37,7 +37,7 @@
 }
 
 .log-in-form button[type="submit"] {
-  font-family: 'Palanquin', sans-serif;
+  font-family: var(--font-main);
   background-color: var(--tertiary-color);
   font-size: 1.2rem;
   font-weight: 700;

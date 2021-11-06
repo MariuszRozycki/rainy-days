@@ -115,7 +115,7 @@
   font-size: 1.3rem;
   letter-spacing: 1px;
   word-spacing: 6px;
-  font-family: 'Palanquin', sans-serif;
+  font-family: var(--font-main);
   box-shadow: var(--primary-shadow);
   transition: .2s;
 }

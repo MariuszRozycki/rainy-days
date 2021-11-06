@@ -75,6 +75,10 @@
 }
 
 @media (min-width: 360px) {
+  .btn,
+  button[type="submit"] {
+  font-size: 1rem;
+}
   /* choose jacket */
   .choose-jacket__menu a {
     font-size: 1rem;

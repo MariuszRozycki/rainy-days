@@ -4,7 +4,7 @@ margin: 0 20px;
 .cart-payment {
   width: 90%;
   margin: 0 auto;
-  font-family: 'Palanquin', sans-serif;
+  font-family: var(--font-main);
 }
 
 .cart-payment form {
@@ -69,7 +69,7 @@ fieldset {
 
 .card-data input[type="date"] {
   display:block;
-  font-family: 'Palanquin', sans-serif;
+  font-family: var(--font-main);
   color: var(--primary-color);
   cursor: pointer;
 
