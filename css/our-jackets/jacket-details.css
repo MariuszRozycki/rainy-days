@@ -43,6 +43,8 @@
 }
 
 .jacket-details .item__product-choose-size input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border-radius: 50%;
   width: 35px;
