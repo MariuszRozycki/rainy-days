@@ -26,11 +26,10 @@
   padding: 0;
 }
 
-.jacket-details .item__product-choose-size li {
-  margin:0 3px;
-}
-
-.jacket-details .item__product-choose-size a {
+.jacket-details .item__product-choose-size label {
+  position: relative;
+  top: 0;
+  left: 0; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,8 +37,22 @@
   height: 35px;
   border: 1px solid;
   border-radius: 50%;
-  /* font-weight: 700; */
+  font-weight: 700;
   font-size: 1.1rem;
+  margin:0 3px;
+}
+
+.jacket-details .item__product-choose-size input {
+  appearance: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  z-index: -999999999999;
+}
+
+input:checked {
+  background: var(--tertiary-color);
 }
 
 .rating {
@@ -92,8 +105,4 @@
 
 .jacket-details .item button {
   margin-bottom: 10px;
-}
-
-.item__size-button-bcg {
-  background-color: var(--tertiary-color);
 }

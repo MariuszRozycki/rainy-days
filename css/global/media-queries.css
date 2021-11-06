@@ -57,7 +57,8 @@
   }
 
   /* jacket-details */
-  .jacket-details .item__product-choose-size a {
+  .jacket-details .item__product-choose-size label,
+  .jacket-details .item__product-choose-size input {
     width: 40px;
     height: 40px;
   }
@@ -134,11 +135,12 @@
     justify-content: flex-start; 
   }
 
-  .jacket-details .item__product-choose-size li {
+  .jacket-details .item__product-choose-size label {
     margin: 0 5px 0 0;
   }
 
-  .jacket-details .item__product-choose-size a {
+  .jacket-details .item__product-choose-size label,
+  .jacket-details .item__product-choose-size input {
     width: 30px;
     height: 30px;
     font-size: 0.9rem;
@@ -554,7 +556,8 @@
     padding: 20px 0;
   }
 
-  .jacket-details .item__product-choose-size a {
+  .jacket-details .item__product-choose-size label,
+  .jacket-details .item__product-choose-size input {
     width: 40px;
     height: 40px;
     font-size: 1.1rem;

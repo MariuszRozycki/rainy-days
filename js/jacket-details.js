@@ -26,13 +26,31 @@ productWrapper.innerHTML +=
     <h1 class="item__product-name">${product.name}</h1>
     <p class="item__product-price">999 nok</p>
     <p class="item__product-size">Choose size:</p>
-    <ul class="item__product-choose-size">
-      <li><a class="item__size-button">XS</a></li>
-      <li><a class="item__size-button">S</a></li>
-      <li><a class="item__size-button">M</a></li>
-      <li><a class="item__size-button">L</a></li>
-      <li><a class="item__size-button">XL</a></li>
-    </ul>
+    <form class="item__product-choose-size">
+      
+    <label for="xs">XS<input id="xs" class="item__size-button" name="item__size-button" value="size-xs" type="radio">
+        </label>
+      
+        
+        <label for="s">S
+        <input id="s" class="item__size-button" name="item__size-button" value="size-s" type="radio">
+        </label>
+      
+
+        <label for="m">M
+        <input id="m" class="item__size-button" name="item__size-button" value="size-m" type="radio">
+        </label>
+      
+
+        <label for="l">L
+        <input id="l" class="item__size-button" name="item__size-button" value="size-l" type="radio">
+        </label>
+           
+        <label for="xl">XL
+        <input id="xl" class="item__size-button" name="item__size-button" value="size-xl" type="radio">
+        </label>
+      
+    </form>
   </div>
   <div class="item__info">
     <ul class="rating">
@@ -56,6 +74,11 @@ productWrapper.innerHTML +=
   </div>
   <button id="add-to-cart" class="btn">Add Item</button>
 </div>`
+
+/* <li><a class="item__size-button disable">S</a></li>
+      <li><a class="item__size-button disable">M</a></li>
+      <li><a class="item__size-button disable">L</a></li>
+      <li><a class="item__size-button disable">XL</a></li> */
 
 /* container for rating & code for*/
 const ratingContainer = document.querySelector('.rating');
@@ -98,11 +121,6 @@ setTimeout(() => {
       itemQuantity.remove();
     });
   });
-
-  /* add colour to item__size-button after click */
-  let sizeButtons = document.querySelectorAll('.item__size-button');
-  console.log(sizeButtons);
-
 }, 500);
 
 
