@@ -109,3 +109,7 @@ input:checked {
 .jacket-details .item button {
   margin-bottom: 10px;
 }
+
+.size-active {
+  background-color: var(--tertiary-color);
+}

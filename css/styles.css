@@ -34,6 +34,12 @@
 /* cart-payment */
 @import url('cart/cart-payment.css');
 
+/* cart-empty */
+@import url('cart/cart-empty.css');
+
+/* cart-succes */
+@import url('cart/cart-succes.css');
+
 /* logged */
 @import url('login/logged.css');
 

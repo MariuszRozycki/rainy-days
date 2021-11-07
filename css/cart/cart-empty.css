@@ -1,0 +1,16 @@
+.cart.cart-empty tbody tr {
+  grid-template-columns: 1fr;
+
+}
+
+.cart-empty tbody tr i {
+  display: none;
+}
+
+.cart-empty tbody tr a {
+  margin: 0 20px;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}

@@ -103,7 +103,6 @@
 }
 
 .buttons {
-
   margin: 0 10px;
   padding: 0;
   display: flex;
@@ -117,4 +116,8 @@
 
 .buttons .btn-back {
   background-color: var(--secondary-color);
+}
+
+.cart tbody a {
+  color: var(--primary-color);
 }

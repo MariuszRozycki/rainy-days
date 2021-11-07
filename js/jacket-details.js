@@ -75,12 +75,7 @@ productWrapper.innerHTML +=
   <button id="add-to-cart" class="btn">Add Item</button>
 </div>`
 
-/* <li><a class="item__size-button disable">S</a></li>
-      <li><a class="item__size-button disable">M</a></li>
-      <li><a class="item__size-button disable">L</a></li>
-      <li><a class="item__size-button disable">XL</a></li> */
-
-/* container for rating & code for*/
+/* container for rating */
 const ratingContainer = document.querySelector('.rating');
 const items = ratingContainer.querySelectorAll('.rating-item');
 

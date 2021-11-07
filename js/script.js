@@ -8,20 +8,40 @@ button.addEventListener('click', () => {
 });
 
 /* button LOG IN .log-in */
-// if (document.querySelector('title').innerText === 'Rainy Days | Log In') {
-//   let buttonLogIn = document.querySelector('button[value="Log In"]');
+if (document.querySelector('title').innerText === 'Rainy Days | Log In') {
+  let buttonLogIn = document.querySelector('button[value="Log In"]');
 
-//   buttonLogIn.addEventListener('click', () => {
-//     location.href = 'logged.html';
-//   });
-// }
+  buttonLogIn.addEventListener('click', () => {
+    location.href = 'logged.html';
+  });
+}
 
 /* button LOG UT .log-in */
 if (document.querySelector('title').innerText === 'Rainy Days | Logged') {
   let buttonLogIn = document.querySelector('button[value="Log In"]');
 
   buttonLogIn.addEventListener('click', () => {
-    location.href = 'logg-in.html';
+    location.href = 'log-in.html';
+  });
+}
+
+/* button SIGN UP in - shows place, where U are in shop | sign-up.html */
+if (document.querySelector('title').innerText === 'Rainy Days | Sign Up') {
+  let buttonSignUp = document.querySelector('.btn_sign-up');
+
+  buttonSignUp.addEventListener('click', () => {
+    console.log(buttonSignUp);
+    location.href = 'sign-up.html';
+  });
+}
+
+/* button CREATE PROFILE to sign up in shop | sign-up.html */
+if (document.querySelector('title').innerText === 'Rainy Days | Sign Up') {
+  let buttonSignUp = document.querySelector('button[value="Create Profile"]');
+
+  buttonSignUp.addEventListener('click', () => {
+    console.log(buttonSignUp);
+    location.href = 'log-in.html';
   });
 }
 
@@ -33,6 +53,42 @@ if (document.querySelector('title').innerText === 'Rainy Days | Cart') {
     location.href = 'cart-payment.html';
   });
 }
+
+/* button back.cart-payment */
+if (document.querySelector('title').innerText === 'Rainy Days | Cart Payment') {
+  let buttonBack = document.querySelector('.btn-back');
+
+  buttonBack.addEventListener('click', () => {
+    location.href = 'cart.html';
+  });
+}
+
+/* BACK btn-go-to-our-jackets from cart */
+if (document.querySelector('title').innerText === 'Rainy Days | Empty Cart' || document.querySelector('title').innerText === 'Rainy Days | Cart') {
+  const buttonToOurJackets = document.querySelector('.go-to-our-jackets');
+  console.log(buttonToOurJackets);
+  buttonToOurJackets.addEventListener('click', () => {
+    location.href = '/layout/our-jackets.html';
+  });
+}
+
+/* HOME .go-to-main-site from transaction accomplished */
+if (document.querySelector('title').innerText === 'Rainy Days | Cart Transaction Succesed') {
+  const home = document.querySelector('.go-to-main-site');
+  home.addEventListener('click', () => {
+    location.href = '../index.html';
+  });
+}
+
+/* NEXT Button from choose payment method*/
+if (document.querySelector('title').innerText === 'Rainy Days | Cart Payment') {
+  const buttonNext = document.querySelector('.next');
+  console.log(buttonNext);
+  buttonNext.addEventListener('click', () => {
+    location.href = '/layout/cart-succes.html';
+  });
+}
+
 
 /* .social-media | alert regarding to missing elements */
 let socialMedia = document.querySelectorAll('.social-media');

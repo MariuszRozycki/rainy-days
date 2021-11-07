@@ -243,6 +243,11 @@
     font-size: 0.8rem;
   }
 
+  /* empty-cart */
+  .cart-empty tbody tr i {
+    display: inline-block;
+  }
+
   /* cart-payment */
   .cart-payment .payment-method {
     grid-template-columns: 1fr 1fr 1fr 1fr;

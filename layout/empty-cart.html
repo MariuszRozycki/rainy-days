@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Online shop with the best waterproff jackets for people they like outside activities. | On this site you can read more informations about us!">
-  <title>Rainy Days | About</title>
+    content="Online shop with the best waterproff jackets for people they like outside activities. | Here U can see how look the empty cart!">
+  <title>Rainy Days | Empty Cart</title>
   <script src="https://kit.fontawesome.com/136bcbc643.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/global/media-queries.css">
@@ -16,7 +16,7 @@
 <body>
   <header>
     <div class="container">
-      <a href="../index.html"><img src="../images/logo.png" alt="Logo of company Rainy Days."></a>
+      <a href="../index.html"><img src="../images/logo.png" alt="Logo of Rainy Days company"></a>
     </div>
   </header>
 
@@ -31,35 +31,52 @@
       <ul class="main-nav__list">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
-        <li class="active"><a class="active" href="../layout/about.html">About</a></li>
+        <li><a href="../layout/about.html">About</a></li>
         <li><a href="../layout/contact.html">Contact</a></li>
       </ul>
       <form class="login-container">
         <button class="btn btn_log-in" type="button">Log in</button>
-        <a href="log-in.html"><img src="../images/login.svg" alt="Login alternative. Press to log in"></a>
+        <a href="../layout/log-in.html"><img src="../images/login.svg" alt="Login alternative. Press to log in"></a>
       </form>
-      <a href="../layout/cart.html" class="shopping-cart"><i class="fas fa-shopping-cart"></i></a>
+      <a href="../layout/cart.html" class="shopping-cart shopping-cart-active"><i class="fas fa-shopping-cart"></i></a>
     </div>
   </nav>
 
-  <main class="welcome about re-use">
-    <div class="container">
-      <section class="text-container">
-        <h1 class="top-title">About Us!</h1>
-        <p class="text__paragraph">You are on the website of online shop which one is selling jackets for men and
-          women aged 30 to 50 whose interests are: being outdoors, hiking, exploring, skiing, camping, canoeing. The
-          jackets are mid-range in price and emphasize durability and being suitable for a range of different weather
-          types ensuring customers are comfortable whatever adventure they go on.</p>
-      </section>
-      <aside class="link-to-jackets">
-        <div class="circle circle-big">
-          <div class="circle circle-midle">
-            <a href="../layout/our-jackets.html" title="Rainy Days | Choose Jacket" class="circle circle-small">Choose
-              Jacket</a>
-          </div>
-        </div>
-      </aside>
-    </div>
+  <main class="cart cart-empty">
+    <section class="splash">
+      <div class="container">
+        <h1 class="top-title">Your basket is empty!</h1>
+
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Product</th>
+              <th>Size</th>
+              <th>Price</th>
+              <th>Amount</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="fas fa-long-arrow-alt-right"></i><a href="/layout/our-jackets.html">Back to shopping! Click
+                  here!</a><i class="fas fa-long-arrow-alt-left"></i></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Price total:</td>
+              <td>0 nok</td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+        <section class="buttons">
+          <button class="btn btn-back go-to-our-jackets">Back</button>
+        </section>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -78,8 +95,8 @@
       </div>
     </div>
   </footer>
-
   <script src="../js/script.js"></script>
+  <script src="../js/products.js"></script>
 </body>
 
 </html>
