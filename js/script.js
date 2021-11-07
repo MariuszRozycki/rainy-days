@@ -80,10 +80,9 @@ if (document.querySelector('title').innerText === 'Rainy Days | Cart Transaction
   });
 }
 
-/* NEXT Button from choose payment method*/
+/* NEXT Button from choose payment method || comment 6 lines of code below to use html form options in cart-payment.html */
 if (document.querySelector('title').innerText === 'Rainy Days | Cart Payment') {
   const buttonNext = document.querySelector('.next');
-  console.log(buttonNext);
   buttonNext.addEventListener('click', () => {
     location.href = '/layout/cart-succes.html';
   });

@@ -47,11 +47,11 @@
       <div class="container">
         <h1><span>Choose payment methode:</span></h1>
 
-        <form>
+        <form action="/action_page.php" method="POST">
           <fieldset class="payment-method">
 
             <div>
-              <input type="radio" name="payment" id="vipps">
+              <input type="radio" name="payment" id="vipps" required>
               <label for="vipps"><img src="../images/payment/vipps.svg" alt="Vipps symbol"></label>
             </div>
 
@@ -74,16 +74,16 @@
           <fieldset class="card-data">
 
             <label for="card-number">Card number:</label>
-            <input type="number" name="card-data" id="card-number">
+            <input type="number" name="card-data" id="card-number" required>
 
             <label for="card-owner">Card owner:</label>
-            <input type="text" name="card-data" id="card-owner">
+            <input type="text" name="card-data" id="card-owner" required>
 
             <label for="valid-thru">Valid-thru:</label>
             <input type="date" name="card-data" id="valid-thru" min="2021-11-02" required>
 
             <label for="cvv-code">CVV code:</label>
-            <input type="number" name="card-data" id="cvv-code">
+            <input type="number" name="card-data" id="cvv-code" required>
 
           </fieldset>
 
