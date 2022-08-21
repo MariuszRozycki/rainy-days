@@ -1,6 +1,7 @@
 E-commerce. 
 This is a cross-study project I started in 2021. The goal was to deliver properly functioning, responsive webside for design project 
-made in Adobe XD https://xd.adobe.com/view/1e4b7d4a-f267-427b-8462-aa30890e59d8-4b18/ as a part of design study module.
+made in Adobe XD: 
+https://xd.adobe.com/view/1e4b7d4a-f267-427b-8462-aa30890e59d8-4b18/ as a part of design study module.
 Another assumptions were:
 - neat and semantic HTML
 - CSS should follow the DRY principle
