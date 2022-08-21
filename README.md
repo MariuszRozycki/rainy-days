@@ -1,5 +1,5 @@
 E-commerce (The project will be developed at the end of 2022). 
-This is a cross-study project I started in 2021. The goal was to deliver properly functioning, responsive webside for design project 
+This is a cross-study project I started in 2021. First assumption was to deliver properly functioning, responsive webside for design project 
 made in Adobe XD https://xd.adobe.com/view/1e4b7d4a-f267-427b-8462-aa30890e59d8-4b18/ as a part of design study module.
 Another assumptions were:
 - neat and semantic HTML
