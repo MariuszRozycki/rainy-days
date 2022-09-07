@@ -3,7 +3,7 @@
   --primary-color: #0A3641;
   --secondary-color: #fff;
   --tertiary-color: #C17E27;
-  
+
   --primary-shadow: 5px 10px 10px rgba(0, 0, 0, .4);
   --secondary-shadow: 0 0 0 0 rgba(0, 0, 0, .8);
   --font-main: 'Palanquin', sans-serif;
@@ -12,7 +12,7 @@
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 * {
@@ -32,7 +32,7 @@ h3,
 p,
 nav,
 .welcome,
-.circle-small, 
+.circle-small,
 a,
 button,
 th,
@@ -82,7 +82,7 @@ button[type="submit"] {
   position: absolute;
   left: 0;
   top: 0;
-  background-color: hsla(0,0%,100%,0.7);
+  background-color: hsla(0, 0%, 100%, 0.7);
 }
 
 .sub-title {

@@ -33,9 +33,10 @@
 
   <nav class="main-nav">
     <div class="container main-nav__container">
-      <form class="search-container" id="search" method="GET" action="search-index.html">
-        <input type="search" placeholder="Search..." name="search">
-        <i class="fas fa-search"></i>
+      <form class="search-container" method="GET" action="search-index.html">
+        <label for="search"></label>
+        <input id="search" type="search" placeholder="Search..." name="search">
+        <button type="submit"><i class="fas fa-search"></i></button>
       </form>
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu">
@@ -46,8 +47,9 @@
         <li><a href="../layout/contact.html">Contact</a></li>
       </ul>
       <form class="login-container">
-        <button class="btn btn_log-in login-active" type="button">Log in</button>
-        <a href="../layout/log-in.html"><img src="../images/login.svg" alt="Login alternative. Press to log in"></a>
+        <button type="submit" class="btn btn_log-in login-active">Log in</button>
+        <a href="layout/log-in.html" title="Rainy Days | Log In"><img src="../images/login.svg"
+            alt="Login alternative. Press to log in"></a>
       </form>
       <a href="../layout/cart.html" class="shopping-cart"><i class="fas fa-shopping-cart"></i></a>
     </div>

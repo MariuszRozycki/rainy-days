@@ -2,8 +2,10 @@
 
 /* .login-container button | moving to log-in.html */
 let button = document.querySelector('.login-container button');
+console.log(button);
 
-button.addEventListener('click', () => {
+button.addEventListener('click', (e) => {
+  e.preventDefault();
   location.href = '/layout/log-in.html';
 });
 
