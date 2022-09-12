@@ -1,22 +1,27 @@
 const onMainContainer = document.querySelector('.on-main');
 
-for (let product of products) {
-  if (product.onMain) {
-    let productLink = `<a href="../layout/jacket-details.html?id=${product.id}" id=${product.id} title="${product.name}" class="btn btn__show-item">Show Item</a>`;
+// creating function renderProductsOnMain()
+const renderProductsOnMain = () => {
+  products.forEach(product => {
+    if (product.onMain) {
+      let productLink = `<a href="../layout/jacket-details.html?id=${product.id}" id=${product.id} title="${product.name}" class="btn btn__show-item">Show Item</a>`;
 
-    onMainContainer.innerHTML +=
-      `<div class="item">
-          <div class="item__picture">
-          <img src="${product.image}" alt="Picture of ${product.name}">
+      onMainContainer.innerHTML += `
+        <div class="item">
+            <div class="item__picture">
+            <img src="${product.image}" alt="Picture of ${product.name}">
+          </div>
+          <div>
+            <h1 class="item__product-name">${product.name}</h1>
+            <p class="item__product-price">${product.price} nok</p>
+          ${productLink}
+          </div>  
         </div>
-        <div>
-          <h1 class="item__product-name">${product.name}</h1>
-          <p class="item__product-price">${product.price} nok</p>
-        ${productLink}
-        </div>  
-      </div>`;
-  }
-};
+      `;
+    }
+  });
+}
+renderProductsOnMain();
 
 /* .products .item | displaying more items i section */
 let buttonMoreItems = document.querySelector('.btn__more-items');

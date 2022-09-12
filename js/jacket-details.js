@@ -4,15 +4,14 @@ const menuDetail = document.querySelector('.choose-jacket__menu-detail');
 /* container for productWrapper */
 const productWrapper = document.querySelector('.products-wrapper');
 
-/* getting ID from url adress in location to choose product */
+/* getting ID from url address in location to choose product */
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const productId = params.get("id");
 
 const product = products.find(({ id }) => id == productId);
-console.log(product);
 
-/* placeing a name of product got from queryString */
+/* placing a name of product got from queryString */
 menuDetail.innerHTML +=
   `<a>${product.name}</a>`
 
@@ -27,30 +26,22 @@ productWrapper.innerHTML +=
     <p class="item__product-price">999 nok</p>
     <p class="item__product-size">Choose size:</p>
     <form class="item__product-choose-size">
-      
-    <label for="xs">XS<input id="xs" class="item__size-button" name="item__size-button" value="size-xs" type="radio">
-        </label>
-      
-        
-        <label for="s">S
+    <label for="xs">XS
+      <input id="xs" class="item__size-button" name="item__size-button" value="size-xs" type="radio">
+    </label>
+    <label for="s">S
         <input id="s" class="item__size-button" name="item__size-button" value="size-s" type="radio">
-        </label>
-      
-
-        <label for="m">M
+    </label>
+    <label for="m">M
         <input id="m" class="item__size-button" name="item__size-button" value="size-m" type="radio">
-        </label>
-      
-
-        <label for="l">L
+    </label>
+    <label for="l">L
         <input id="l" class="item__size-button" name="item__size-button" value="size-l" type="radio">
-        </label>
-           
-        <label for="xl">XL
+    </label>
+    <label for="xl">XL
         <input id="xl" class="item__size-button" name="item__size-button" value="size-xl" type="radio">
-        </label>
-      
-    </form>
+    </label>
+  </form>
   </div>
   <div class="item__info">
     <ul class="rating">
@@ -88,35 +79,144 @@ ratingContainer.addEventListener('click', (event) => {
   }
 });
 
+// Add product to cart code
 
-/* change button text add to cart/remove from cart  */
-let flag = false;
+// cart Array
+let cart = [];
 
-setTimeout(() => {
-  const addToCartButton = document.querySelector('#add-to-cart');
-  const cartContainer = document.querySelector('.shopping-cart');
+// Add product to cart code
+const addToCartButton = document.querySelector('#add-to-cart');
 
-  addToCartButton.addEventListener('click', (e) => {
-    e.preventDefault();
+// container for cart-details
+const cartDetails = document.querySelector('.list-of-products');
 
-    flag = !flag;
-    flag ? addToCartButton.innerHTML = `Remove Item` : addToCartButton.innerHTML = `Add Item`;
-    let number = 0;
-    if (flag) {
-      cartContainer.innerHTML += `<div class="item-quantity">${number + 1}</div>`;
-      cartContainer.classList.add('item-in-cart');
-    } else if (!flag) {
-      cartContainer.classList.remove('item-in-cart');
-    };
-
-    let itemQuantity = document.querySelector('.item-quantity');
-
-    addToCartButton.addEventListener('click', function (e) {
-      e.preventDefault();
-      itemQuantity.remove();
+const addToCart = () => {
+  // check if product already exists
+  if (cart.some(el => el.id === product.id)) {
+    null;
+    alert("Product already exists in cart")
+  } else {
+    // product destructure
+    cart.push({
+      ...product,
+      numberOfUnits: 1
     });
+  }
+  updateCart();
+}
+
+// create function updateCart()
+const updateCart = () => {
+  renderCartDetails();
+}
+
+addToCartButton.addEventListener('click', addToCart);
+
+// create renderCartItems()
+const renderCartDetails = () => {
+  cartDetails.innerHTML = "";
+  cart.forEach((item) => {
+    let productLink = `<a href="./jacket-details.html?id=${item.id}" id="${item.id}" title="${item.name}">Product: ${item.name}</a>`;
+    cartDetails.innerHTML += `
+    <thead>
+    <tr>
+      <th></th>
+      <th>Product</th>
+      <th>Size</th>
+      <th>Price</th>
+      <th class="amount">Amount</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="cart-order">
+      <td>1</td>
+    </tr>
+    <tr class="cart-product-details">
+      <td><img src="${item.image}" alt="${item.name}"></td>
+      <td>${productLink}</a></td>
+      <td>Size: <a>XS</a></td>
+      <td>Price: ${item.price}</td>
+    </tr>
+    <tr class="cart-number-of-units">
+      <td><button onclick="changeNumberOfUnits('plus', ${productId})">+</button></td>
+      <td>${item.numberOfUnits}</td>
+      <td><button onclick="changeNumberOfUnits('minus', ${productId})">-</button></td>
+    </tr>
+    <tr class="remove">
+      <td><a href="/layout/empty-cart.html"><i class="fas fa-trash-alt"></i></a></td>
+    </tr>
+  </tbody>
+  `
   });
-}, 500);
+};
+
+// change number of units
+const changeNumberOfUnits = (action, id) => {
+  event.preventDefault();
+  cart = cart.map(item => {
+    let numberOfUnits = item.numberOfUnits;
+
+    if (item.id === id) {
+      if (action === 'plus' && numberOfUnits < item.inStock) {
+        numberOfUnits++;
+      } else if (action === 'minus' && numberOfUnits > 1) {
+        numberOfUnits--;
+      }
+
+      return {
+        ...item,
+        numberOfUnits
+      }
+    }
+  });
+
+  updateCart();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// addToCartButton Old code
+/* change button text add to cart/remove from cart  */
+// let flag = false;
+
+// setTimeout(() => {
+//   const addToCartButton = document.querySelector('#add-to-cart');
+//   console.log("addToCartButton", addToCartButton);
+//   const cartContainer = document.querySelector('.shopping-cart');
+//   console.log("cartContainer", cartContainer);
+
+//   addToCartButton.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     flag = !flag;
+//     flag ? addToCartButton.innerHTML = `Remove Item` : addToCartButton.innerHTML = `Add Item`;
+//     let number = 0;
+//     if (flag) {
+//       cartContainer.innerHTML += `<div class="item-quantity">${number + 1}</div>`;
+//       cartContainer.classList.add('item-in-cart');
+//     } else if (!flag) {
+//       cartContainer.classList.remove('item-in-cart');
+//     };
+
+//     let itemQuantity = document.querySelector('.item-quantity');
+
+//     addToCartButton.addEventListener('click', function (e) {
+//       e.preventDefault();
+//       itemQuantity.remove();
+//     });
+//   });
+// }, 500);
 
 
 

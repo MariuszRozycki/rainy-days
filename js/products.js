@@ -5,7 +5,8 @@ let products = [
     image: '../images/jackets/woman-jackets/raincut-wtp.png',
     price: 999,
     type: 'womens-jacket',
-    onMain: true
+    onMain: true,
+    inStock: 10
   },
 
   {
@@ -14,7 +15,8 @@ let products = [
     image: '../images/jackets/woman-jackets/sailing-5000.png',
     price: 1099,
     type: 'womens-jacket',
-    onMain: true
+    onMain: true,
+    inStock: 10
   },
 
   {
@@ -22,7 +24,8 @@ let products = [
     name: 'MH 9000',
     image: '../images/jackets/woman-jackets/mh-9000.png',
     price: 799,
-    type: 'womens-jacket'
+    type: 'womens-jacket',
+    inStock: 10
   },
 
   {
@@ -30,7 +33,8 @@ let products = [
     name: 'Tour NH500',
     image: '../images/jackets/woman-jackets/tour-nh-500.png',
     price: 899,
-    type: 'womens-jacket'
+    type: 'womens-jacket',
+    inStock: 10
   },
 
   {
@@ -38,7 +42,8 @@ let products = [
     name: 'Tribord 300MB',
     image: '../images/jackets/woman-jackets/tribord-300-mb.png',
     price: 999,
-    type: 'womens-jacket'
+    type: 'womens-jacket',
+    inStock: 10
   },
 
   {
@@ -47,7 +52,8 @@ let products = [
     image: '../images/jackets/men-jackets/offshore-900.png',
     price: 999,
     type: 'mens-jackets',
-    onMain: true
+    onMain: true,
+    inStock: 10
   },
 
   {
@@ -56,7 +62,8 @@ let products = [
     image: '../images/jackets/men-jackets/nh-100-raincut.png',
     price: 799,
     type: 'mens-jackets',
-    onMain: true
+    onMain: true,
+    inStock: 10
   },
 
   {
@@ -64,7 +71,8 @@ let products = [
     name: 'Tour Jacket Outline',
     image: '../images/jackets/men-jackets/tour-jacket-outline.png',
     price: 1099,
-    type: 'mens-jackets'
+    type: 'mens-jackets',
+    inStock: 10
   },
 
   {
@@ -72,7 +80,8 @@ let products = [
     name: 'Rain Jacket FH 500',
     image: '../images/jackets/woman-jackets/tour-nh-500.png',
     price: 899,
-    type: 'mens-jackets'
+    type: 'mens-jackets',
+    inStock: 10
   },
 
   {
@@ -80,7 +89,8 @@ let products = [
     name: 'Rain Jacket Quechua',
     image: '../images/jackets/men-jackets/rain-jacket-quechua.png',
     price: 799,
-    type: 'mens-jackets'
+    type: 'mens-jackets',
+    inStock: 10
   },
 
   {
@@ -89,7 +99,8 @@ let products = [
     image: '../images/jackets/raincoats/raincoat-forza.png',
     price: 599,
     type: 'raincoat',
-    onMain: true
+    onMain: true,
+    inStock: 10
   },
 
   {
@@ -98,7 +109,8 @@ let products = [
     image: '../images/jackets/raincoats/poncho-raincoat.png',
     price: 499,
     type: 'raincoat',
-    onMain: true
+    onMain: true,
+    inStock: 10
   },
 
   {
@@ -106,7 +118,8 @@ let products = [
     name: 'Poncho Orange',
     image: '../images/jackets/raincoats/poncho-orange.png',
     price: 500,
-    type: 'raincoat'
+    type: 'raincoat',
+    inStock: 10
   },
 
   {
@@ -114,7 +127,8 @@ let products = [
     name: 'Raincoat Triban',
     image: '../images/jackets/raincoats/raincoat-triban.png',
     price: 749,
-    type: 'raincoat'
+    type: 'raincoat',
+    inStock: 10
   },
 
   {
@@ -122,6 +136,7 @@ let products = [
     name: 'Raincoat BWIN',
     image: '../images/jackets/raincoats/raincoat BWIN.png',
     price: 449,
-    type: 'raincoat'
+    type: 'raincoat',
+    inStock: 10
   }
 ];

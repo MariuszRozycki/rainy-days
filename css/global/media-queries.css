@@ -21,8 +21,7 @@
 @media (min-width: 280px) {
 
   /* cart */
-  .cart thead tr,
-  .cart tbody tr {
+  .cart thead tr {
     font-size: 0.8rem;
   }
 
@@ -66,8 +65,7 @@
   }
 
   /* cart */
-  .cart thead tr,
-  .cart tbody tr {
+  .cart thead tr {
     font-size: 0.9rem;
   }
 
@@ -178,6 +176,25 @@
     max-width: 200px;
   }
 
+  .cart tbody {
+    grid-template-columns: 20px 1fr 100px 50px;
+  }
+
+  .cart-number-of-units {
+    grid-column: 3/4;
+  }
+
+  .remove {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+
+  .cart-number-of-units,
+  .remove {
+    height: 60px;
+    align-self: flex-start;
+  }
+
   /* cart-payment */
   .cart-payment {
     width: 100%;
@@ -225,22 +242,21 @@
   }
 
   /* cart */
-  .cart thead tr,
-  .cart tbody tr {
-    font-size: 0.9rem;
+  .cart thead tr {
     grid-template-columns: 20px 1fr repeat(3, 1fr) 35px;
   }
 
-  .cart tbody td:nth-of-type(2) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+  .cart tbody {
+    grid-template-rows: 1fr;
   }
 
-  .cart tbody td:nth-of-type(2) img {
-    display: block;
-    width: 40px;
-    grid-row: 1/2;
+  .cart-product-details {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row: 1/3;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .buttons .btn {
@@ -483,14 +499,8 @@
   }
 
   /* cart */
-  .cart thead tr,
-  .cart tbody tr {
-    font-size: 1.1rem;
-    grid-template-columns: 20px 1fr repeat(3, 1fr) 50px;
-  }
-
-  .cart tbody td:nth-of-type(2) img {
-    width: 50px;
+  .cart thead tr {
+    grid-template-columns: 20px 1fr repeat(3, 1fr) 35px;
   }
 
   .cart tfoot tr td:nth-last-child(1) {
@@ -603,21 +613,8 @@
   }
 
   /* cart */
-  .cart thead tr,
-  .cart tbody tr {
-    display: grid;
-    grid-template-columns: 20px 1fr repeat(3, 1fr) 100px;
-  }
-
-  .cart tbody td:nth-of-type(2) img {
-    width: 70px;
-  }
-
-  .cart tbody td:nth-of-type(3) a,
-  .cart tbody td:nth-of-type(6) {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
+  .cart thead tr {
+    grid-template-columns: 20px 1fr repeat(3, 1fr) 35px;
   }
 
   .cart tfoot tr td:nth-last-child(1) {
@@ -689,7 +686,6 @@
 
   /* cart */
   .cart thead tr,
-  .cart tbody tr,
   .cart td,
   .cart tr a {
     font-size: 1.4rem;
@@ -742,11 +738,6 @@
 
   .choose-jacket__name {
     font-size: 1.5rem;
-  }
-
-  /* cart */
-  .cart tbody td:nth-of-type(2) img {
-    width: 80px;
   }
 }
 
