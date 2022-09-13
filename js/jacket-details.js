@@ -185,6 +185,10 @@ const renderSubtotal = () => {
   // subtotal container
   const subtotal = document.querySelector(".subtotal");
 
+  // cart container in nav
+  const cartContainer = document.querySelector('.shopping-cart');
+  console.log("cartContainer", cartContainer);
+
   let totalPrice = 0;
   let totalItems = 0;
 
@@ -200,6 +204,8 @@ const renderSubtotal = () => {
       <td>(Items: ${totalItems})</td>
     </tr>
   `
+
+  cartContainer.innerHTML += `<div class="item-quantity">${totalItems}</div>`
 }
 
 
