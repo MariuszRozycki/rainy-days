@@ -93,8 +93,7 @@ const cartDetails = document.querySelector('.list-of-products');
 const addToCart = () => {
   // check if product already exists
   if (cart.some(el => el.id === product.id)) {
-    null;
-    alert("Product already exists in cart")
+    changeNumberOfUnits('plus', product.id);
   } else {
     // product destructure
     cart.push({
@@ -102,18 +101,23 @@ const addToCart = () => {
       numberOfUnits: 1
     });
   }
+  console.log(cart);
   updateCart();
 }
 
 // create function updateCart()
 const updateCart = () => {
   renderCartDetails();
+  renderSubtotal();
 }
 
 addToCartButton.addEventListener('click', addToCart);
 
+
+
 // create renderCartItems()
 const renderCartDetails = () => {
+
   cartDetails.innerHTML = "";
   cart.forEach((item) => {
     let productLink = `<a href="./jacket-details.html?id=${item.id}" id="${item.id}" title="${item.name}">Product: ${item.name}</a>`;
@@ -147,13 +151,14 @@ const renderCartDetails = () => {
       <td><a href="/layout/empty-cart.html"><i class="fas fa-trash-alt"></i></a></td>
     </tr>
   </tbody>
+  <tfoot class="subtotal"></tfoot>
   `
   });
 };
 
 // change number of units
 const changeNumberOfUnits = (action, id) => {
-  event.preventDefault();
+  console.log(cart);
   cart = cart.map(item => {
     let numberOfUnits = item.numberOfUnits;
 
@@ -168,10 +173,33 @@ const changeNumberOfUnits = (action, id) => {
         ...item,
         numberOfUnits
       }
+
     }
   });
 
   updateCart();
+}
+
+// calculate & render subtotal
+const renderSubtotal = () => {
+  // subtotal container
+  const subtotal = document.querySelector(".subtotal");
+
+  let totalPrice = 0;
+  let totalItems = 0;
+
+  cart.forEach(item => {
+    totalPrice += item.price * item.numberOfUnits;
+    totalItems += item.numberOfUnits;
+  })
+
+  subtotal.innerHTML = `
+    <tr>
+      <td>Price total:</td>
+      <td>${totalPrice.toFixed(2)} nok</td>
+      <td>(Items: ${totalItems})</td>
+    </tr>
+  `
 }
 
 
