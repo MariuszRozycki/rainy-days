@@ -74,7 +74,6 @@ ratingContainer.addEventListener('click', (event) => {
   const classElement = event.target.classList;
   if (!classElement.contains('active')) {
     items.forEach(item => item.classList.remove('active'));
-    console.log(event.target.getAttribute("data-rate"));
     classElement.add('active');
   }
 });
@@ -101,7 +100,6 @@ const addToCart = () => {
       numberOfUnits: 1
     });
   }
-  console.log(cart);
   updateCart();
 }
 
@@ -148,17 +146,34 @@ const renderCartDetails = () => {
       <td><button onclick="changeNumberOfUnits('minus', ${productId})">-</button></td>
     </tr>
     <tr class="remove">
-      <td><a href="/layout/empty-cart.html"><i class="fas fa-trash-alt"></i></a></td>
+      <td><i class="fas fa-trash-alt"></i></td>
     </tr>
   </tbody>
-  <tfoot class="subtotal"></tfoot>
+  
   `
   });
+
+  // removeButton
+  const removeButton = document.querySelector(".remove");
+
+  // remove item from cart
+  const removeItem = () => {
+    cart = cart.filter(item => {
+      item.id !== product.id
+    });
+    updateCart();
+  }
+
+  if (removeButton === null) {
+    return null
+  } else {
+    removeButton.addEventListener('click', removeItem);
+  }
 };
 
 // change number of units
 const changeNumberOfUnits = (action, id) => {
-  console.log(cart);
+
   cart = cart.map(item => {
     let numberOfUnits = item.numberOfUnits;
 
@@ -180,14 +195,15 @@ const changeNumberOfUnits = (action, id) => {
   updateCart();
 }
 
-// calculate & render subtotal
-const renderSubtotal = () => {
-  // subtotal container
-  const subtotal = document.querySelector(".subtotal");
+// subtotal container
+const subtotal = document.querySelector(".subtotal");
+console.log("subtotal", subtotal);
 
-  // cart container in nav
-  const cartContainer = document.querySelector('.shopping-cart');
-  console.log("cartContainer", cartContainer);
+// cart container in nav
+const cartContainer = document.querySelector('.shopping-cart');
+
+// calculate subtotal
+const renderSubtotal = () => {
 
   let totalPrice = 0;
   let totalItems = 0;
