@@ -164,16 +164,37 @@ function renderProductInCart() {
   </tbody>
     `;
   });
-  // updateCart();
 }
 
 // updating cart
 function updateCart() {
   renderProductInCart();
 }
-updateCart();
-console.log(cart);
 
+
+function changeNumberOfUnits(action, id) {
+  cart.forEach(item => {
+    let numberOfUnits = item.numberOfUnits;
+
+    if (item.id === id) {
+      if (action === 'plus') {
+        item.numberOfUnits++
+      }
+
+      if (action === 'minus') {
+        item.numberOfUnits--;
+      }
+      updateCart();
+    }
+
+    return {
+      ...item,
+      numberOfUnits
+    }
+  });
+}
+
+updateCart();
 
 
 
