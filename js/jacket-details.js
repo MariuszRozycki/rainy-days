@@ -10,7 +10,6 @@ const product = products.find(({ id }) => id == productId);
 
 /* choose-jacket__menu */
 const chooseJacketMenu = document.querySelector(".choose-jacket__menu");
-console.log(chooseJacketMenu);
 
 if (product.type === 'mens-jackets') {
   chooseJacketMenu.innerHTML = `
@@ -107,6 +106,76 @@ ratingContainer.addEventListener('click', (event) => {
   }
 });
 
+const cart = JSON.parse(localStorage.getItem("CART")) || [];
+
+function addToCart() {
+  if (cart.some(item => item.id === product.id)) {
+    console.log("Product already exists!");
+  } else {
+    cart.push({
+      ...product,
+      numberOfUnits: 1
+    });
+    updateCart();
+  }
+
+  localStorage.setItem("CART", JSON.stringify(cart));
+
+}
+
+// Rendering product(s) in cart
+const productsInCart = document.querySelector(".list-of-products");
+
+function renderProductInCart() {
+  productsInCart.innerHTML = "";
+  cart.forEach((item, index) => {
+    let productLink = `<a href="./jacket-details.html?id=${item.id}" id="${item.id}" title="${item.name}">Product: ${item.name}</a>`;
+    productsInCart.innerHTML += `
+    <thead>
+    <tr>
+      <th></th>
+      <th>Product</th>
+      <th>Size</th>
+      <th>Price</th>
+      <th class="amount">Amount</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="cart-order">
+      <td>${++index}</td>
+    </tr>
+    <tr class="cart-product-details">
+      <td><img src="${item.image}" alt="${item.name}"></td>
+      <td>${productLink}</a></td>
+      <td>Size: <a>XS</a></td>
+      <td>Price: ${item.price}</td>
+    </tr>
+    <tr class="cart-number-of-units">
+      <td><button onclick="changeNumberOfUnits('plus', ${item.id})">+</button></td>
+      <td>${item.numberOfUnits}</td>
+      <td><button onclick="changeNumberOfUnits('minus', ${item.id})">-</button></td>
+    </tr>
+    <tr onclick="removeItem(${item.id})" class="remove">
+      <td><i class="fas fa-trash-alt"></i></td>
+    </tr>
+  </tbody>
+    `;
+  });
+  // updateCart();
+}
+
+// updating cart
+function updateCart() {
+  renderProductInCart();
+}
+updateCart();
+console.log(cart);
+
+
+
+
+
 
 
 
@@ -171,36 +240,36 @@ ratingContainer.addEventListener('click', (event) => {
 //   cartDetails.innerHTML = "";
 //   cart.forEach((item) => {
 //     let productLink = `<a href="./jacket-details.html?id=${item.id}" id="${item.id}" title="${item.name}">Product: ${item.name}</a>`;
-//     cartDetails.innerHTML += `
-//     <thead>
-//     <tr>
-//       <th></th>
-//       <th>Product</th>
-//       <th>Size</th>
-//       <th>Price</th>
-//       <th class="amount">Amount</th>
-//       <th></th>
-//     </tr>
-//   </thead>
-//   <tbody>
-//     <tr class="cart-order">
-//       <td>1</td>
-//     </tr>
-//     <tr class="cart-product-details">
-//       <td><img src="${item.image}" alt="${item.name}"></td>
-//       <td>${productLink}</a></td>
-//       <td>Size: <a>XS</a></td>
-//       <td>Price: ${item.price}</td>
-//     </tr>
-//     <tr class="cart-number-of-units">
-//       <td><button onclick="changeNumberOfUnits('plus', ${item.id})">+</button></td>
-//       <td>${item.numberOfUnits}</td>
-//       <td><button onclick="changeNumberOfUnits('minus', ${item.id})">-</button></td>
-//     </tr>
-//     <tr onclick="removeItem(${item.id})" class="remove">
-//       <td><i class="fas fa-trash-alt"></i></td>
-//     </tr>
-//   </tbody>
+  //   cartDetails.innerHTML += `
+  //   <thead>
+  //   <tr>
+  //     <th></th>
+  //     <th>Product</th>
+  //     <th>Size</th>
+  //     <th>Price</th>
+  //     <th class="amount">Amount</th>
+  //     <th></th>
+  //   </tr>
+  // </thead>
+  // <tbody>
+  //   <tr class="cart-order">
+  //     <td>1</td>
+  //   </tr>
+  //   <tr class="cart-product-details">
+  //     <td><img src="${item.image}" alt="${item.name}"></td>
+  //     <td>${productLink}</a></td>
+  //     <td>Size: <a>XS</a></td>
+  //     <td>Price: ${item.price}</td>
+  //   </tr>
+  //   <tr class="cart-number-of-units">
+  //     <td><button onclick="changeNumberOfUnits('plus', ${item.id})">+</button></td>
+  //     <td>${item.numberOfUnits}</td>
+  //     <td><button onclick="changeNumberOfUnits('minus', ${item.id})">-</button></td>
+  //   </tr>
+  //   <tr onclick="removeItem(${item.id})" class="remove">
+  //     <td><i class="fas fa-trash-alt"></i></td>
+  //   </tr>
+  // </tbody>
 //   `
 //   });
 // };
