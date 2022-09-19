@@ -110,11 +110,11 @@ ratingContainer.addEventListener('click', (event) => {
   }
 });
 
-const cart = JSON.parse(localStorage.getItem("CART")) || [];
+let cart = JSON.parse(localStorage.getItem("CART")) || [];
 
 function addToCart() {
   if (cart.some(item => item.id === product.id)) {
-    console.log("Product already exists!");
+    changeNumberOfUnits('plus', product.id);
   } else {
     cart.push({
       ...product,
@@ -122,6 +122,7 @@ function addToCart() {
     });
     updateCart();
   }
+
   localStorage.setItem("CART", JSON.stringify(cart));
 }
 
@@ -169,19 +170,20 @@ function renderProductInCart() {
 // updating cart
 function updateCart() {
   renderProductInCart();
+  renderSubtotal();
 }
 
-
+// function changeNumberOfUnits
 function changeNumberOfUnits(action, id) {
   cart.forEach(item => {
     let numberOfUnits = item.numberOfUnits;
 
     if (item.id === id) {
-      if (action === 'plus') {
+      if (action === 'plus' && numberOfUnits < item.inStock) {
         item.numberOfUnits++
       }
 
-      if (action === 'minus') {
+      if (action === 'minus' && numberOfUnits > 1) {
         item.numberOfUnits--;
       }
       updateCart();
@@ -192,186 +194,50 @@ function changeNumberOfUnits(action, id) {
       numberOfUnits
     }
   });
+
+  localStorage.setItem("CART", JSON.stringify(cart));
+}
+
+function removeItem(id) {
+
+  console.log(cart);
+  cart = cart.filter(item => item.id !== id);
+
+  updateCart();
+
+  localStorage.setItem("CART", JSON.stringify(cart));
+}
+
+// subtotal container
+const subtotal = document.querySelector(".subtotal");
+console.log(subtotal);
+
+// cart container in nav
+const cartContainer = document.querySelector('.shopping-cart');
+
+// calculate subtotal
+const renderSubtotal = () => {
+
+  let totalPrice = 0;
+  let totalItems = 0;
+
+  cart.forEach(item => {
+    totalPrice += item.price * item.numberOfUnits;
+    totalItems += item.numberOfUnits;
+  })
+
+  subtotal.innerHTML = `
+    <tr>
+      <td>Price total:</td>
+      <td>${totalPrice.toFixed(2)} nok</td>
+      <td>(Items: ${totalItems})</td>
+    </tr>
+  `
+
+  cartContainer.innerHTML += `<div class="item-quantity">${totalItems}</div>`
 }
 
 updateCart();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// First version doesn't work correctly
-// // Add product to cart code
-// // cart Array
-// let cart = JSON.parse(localStorage.getItem("CART")) || [];
-// console.log("cart", cart);
-
-// // Add product to cart code
-
-// // container for cart-details
-// const cartDetails = document.querySelector('.list-of-products');
-
-// function addToCart(id) {
-//   // check if product already exists
-//   console.log("id", id);
-//   if (cart.some(item => item.id === id)) {
-//     changeNumberOfUnits('plus', product.id);
-//   } else {
-//     // product destructure & adding new property "numberOfUnits" to product
-
-//     cart.push({
-//       ...product,
-//       numberOfUnits: 1
-//     });
-//   }
-//   updateCart();
-// }
-
-// // create function updateCart()
-// const updateCart = () => {
-//   renderCartDetails();
-//   renderSubtotal();
-
-//   // save cart to local storage
-//   localStorage.setItem("CART", JSON.stringify(cart));
-// }
-
-// // create renderCartDetails()
-// function renderCartDetails() {
-
-//   // working code but with problems
-//   cartDetails.innerHTML = "";
-//   cart.forEach((item) => {
-//     let productLink = `<a href="./jacket-details.html?id=${item.id}" id="${item.id}" title="${item.name}">Product: ${item.name}</a>`;
-  //   cartDetails.innerHTML += `
-  //   <thead>
-  //   <tr>
-  //     <th></th>
-  //     <th>Product</th>
-  //     <th>Size</th>
-  //     <th>Price</th>
-  //     <th class="amount">Amount</th>
-  //     <th></th>
-  //   </tr>
-  // </thead>
-  // <tbody>
-  //   <tr class="cart-order">
-  //     <td>1</td>
-  //   </tr>
-  //   <tr class="cart-product-details">
-  //     <td><img src="${item.image}" alt="${item.name}"></td>
-  //     <td>${productLink}</a></td>
-  //     <td>Size: <a>XS</a></td>
-  //     <td>Price: ${item.price}</td>
-  //   </tr>
-  //   <tr class="cart-number-of-units">
-  //     <td><button onclick="changeNumberOfUnits('plus', ${item.id})">+</button></td>
-  //     <td>${item.numberOfUnits}</td>
-  //     <td><button onclick="changeNumberOfUnits('minus', ${item.id})">-</button></td>
-  //   </tr>
-  //   <tr onclick="removeItem(${item.id})" class="remove">
-  //     <td><i class="fas fa-trash-alt"></i></td>
-  //   </tr>
-  // </tbody>
-//   `
-//   });
-// };
-
-// // remove item from cart
-// const removeItem = (id) => {
-//   console.log("id", id);
-
-
-//   cart = cart.filter(item => {
-//     console.log("id", item.id);
-//     id === item.id;
-//   });
-
-//   updateCart();
-// }
-
-// // change number of units
-// const changeNumberOfUnits = (action) => {
-//   console.log("cart in changeNumberOfUnits", cart);
-
-//   cart = cart.map(item => {
-//     let numberOfUnits = item.numberOfUnits;
-
-//     if (item.id === item.id) {
-//       if (action === 'plus' && numberOfUnits < item.inStock) {
-//         numberOfUnits++;
-//       } else if (action === 'minus' && numberOfUnits > 1) {
-//         numberOfUnits--;
-//       }
-
-//       return {
-//         ...item,
-//         numberOfUnits
-//       }
-
-//     }
-//   });
-//   updateCart();
-// }
-
-// // subtotal container
-// const subtotal = document.querySelector(".subtotal");
-
-// // cart container in nav
-// const cartContainer = document.querySelector('.shopping-cart');
-
-// // calculate subtotal
-// const renderSubtotal = () => {
-
-//   let totalPrice = 0;
-//   let totalItems = 0;
-
-//   cart.forEach(item => {
-//     totalPrice += item.price * item.numberOfUnits;
-//     totalItems += item.numberOfUnits;
-//   })
-
-//   subtotal.innerHTML = `
-//     <tr>
-//       <td>Price total:</td>
-//       <td>${totalPrice.toFixed(2)} nok</td>
-//       <td>(Items: ${totalItems})</td>
-//     </tr>
-//   `
-
-//   cartContainer.innerHTML += `<div class="item-quantity">${totalItems}</div>`
-// }
-
-// updateCart();
-
-
-
-
-
-
-
-
-
 
 
 
