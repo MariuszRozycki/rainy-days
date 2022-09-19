@@ -11,33 +11,37 @@ const product = products.find(({ id }) => id == productId);
 /* choose-jacket__menu */
 const chooseJacketMenu = document.querySelector(".choose-jacket__menu");
 
-if (product.type === 'mens-jackets') {
-  chooseJacketMenu.innerHTML = `
-  <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
-  <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
-  <li><a href="../layout/mens-jackets.html">Men's Jackets</a></li>
-  <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
-  <li class="choose-jacket__menu-active choose-jacket__menu-detail"><a>${product.name}</a></li>
-`;
-}
-if (product.type === 'womens-jacket') {
-  chooseJacketMenu.innerHTML = `
-  <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
-  <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
-  <li><a href="../layout/womens-jackets.html">Women's Jackets</a></li>
-  <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
-  <li class="choose-jacket__menu-active choose-jacket__menu-detail"><a>${product.name}</a></li>
+function chooseJacketMenuNav() {
+  if (product.type === 'mens-jackets') {
+    chooseJacketMenu.innerHTML = `
+    <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
+    <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+    <li><a href="../layout/mens-jackets.html">Men's Jackets</a></li>
+    <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+    <li class="choose-jacket__menu-active choose-jacket__menu-detail"><a>${product.name}</a></li>
   `;
+  }
+  if (product.type === 'womens-jacket') {
+    chooseJacketMenu.innerHTML = `
+    <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
+    <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+    <li><a href="../layout/womens-jackets.html">Women's Jackets</a></li>
+    <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+    <li class="choose-jacket__menu-active choose-jacket__menu-detail"><a>${product.name}</a></li>
+    `;
+  }
+  if (product.type === 'raincoat') {
+    chooseJacketMenu.innerHTML = `
+    <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
+    <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+    <li><a href="../layout/raincoats.html">Raincoats</a></li>
+    <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+    <li class="choose-jacket__menu-active choose-jacket__menu-detail"><a>${product.name}</a></li>
+    `;
+  }
 }
-if (product.type === 'raincoat') {
-  chooseJacketMenu.innerHTML = `
-  <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
-  <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
-  <li><a href="../layout/raincoats.html">Raincoats</a></li>
-  <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
-  <li class="choose-jacket__menu-active choose-jacket__menu-detail"><a>${product.name}</a></li>
-  `;
-}
+chooseJacketMenuNav();
+
 
 
 function renderProduct() {
@@ -118,9 +122,7 @@ function addToCart() {
     });
     updateCart();
   }
-
   localStorage.setItem("CART", JSON.stringify(cart));
-
 }
 
 // Rendering product(s) in cart
