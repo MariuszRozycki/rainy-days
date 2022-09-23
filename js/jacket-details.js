@@ -234,7 +234,6 @@ const renderSubtotal = () => {
     </tr>
   `
   for (let item of cartContainer) {
-    console.log(item);
     item.innerHTML += `<div class="item-quantity">${totalItems}</div>`
   }
 }
