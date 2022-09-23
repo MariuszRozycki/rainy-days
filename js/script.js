@@ -103,8 +103,13 @@ for (let element of socialMedia) {
 }
 
 // cart container in nav
-const cartContainer = document.querySelector('.shopping-cart');
-console.log("cartContainer", cartContainer);
-cartContainer.innerHTML += `<div class="item-quantity">${JSON.parse(localStorage.getItem("TOTAL_ITEMS"))}</div>`;
 
-console.log(JSON.parse(localStorage.getItem("TOTAL_ITEMS")));
+function generateItemsInCart() {
+  const cartContainer = document.querySelector('.shopping-cart');
+  if (JSON.parse(localStorage.getItem("TOTAL_ITEMS")) === null) {
+    return null;
+  } else {
+    cartContainer.innerHTML += `<div class="item-quantity">${JSON.parse(localStorage.getItem("TOTAL_ITEMS"))}</div>`;
+  }
+}
+generateItemsInCart();
