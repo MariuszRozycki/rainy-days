@@ -257,7 +257,7 @@
 
   .cart tbody {
     grid-template-rows: 1fr;
-    grid-template-columns: 20px 1fr 100px 50px;
+    grid-template-columns: 20px 1fr minmax(80px, auto) 50px;
   }
 
   .buttons .btn {
