@@ -10,7 +10,6 @@ const product = products.find(({ id }) => id == productId);
 
 /* choose-jacket__menu */
 const chooseJacketMenu = document.querySelector(".choose-jacket__menu");
-
 function renderNavProductDetails() {
 
   let productType = product.type;
@@ -45,7 +44,6 @@ function renderNavProductDetails() {
       `;
   }
 }
-renderNavProductDetails();
 
 function renderProduct() {
   /* placing product-detail html code & rating inside .product-wrapper */
@@ -99,19 +97,23 @@ function renderProduct() {
   <button onclick="addToCart(${product.id})" id="add-to-cart" class="btn">Add Item</button>
 </div>`
 }
-renderProduct();
 
-/* container for rating */
-const ratingContainer = document.querySelector('.rating');
-const items = ratingContainer.querySelectorAll('.rating-item');
+if (document.querySelector('title').innerText === 'Rainy Days | Jacket Details') {
+  renderNavProductDetails();
+  renderProduct();
 
-ratingContainer.addEventListener('click', (event) => {
-  const classElement = event.target.classList;
-  if (!classElement.contains('active')) {
-    items.forEach(item => item.classList.remove('active'));
-    classElement.add('active');
-  }
-});
+  /* container for rating */
+  const ratingContainer = document.querySelector('.rating');
+  const items = ratingContainer.querySelectorAll('.rating-item');
+
+  ratingContainer.addEventListener('click', (event) => {
+    const classElement = event.target.classList;
+    if (!classElement.contains('active')) {
+      items.forEach(item => item.classList.remove('active'));
+      classElement.add('active');
+    }
+  });
+}
 
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 
@@ -129,6 +131,7 @@ function addToCart() {
 
   localStorage.setItem("CART", JSON.stringify(cart));
 }
+
 
 // Rendering product(s) in cart
 const productsInCart = document.querySelector(".list-of-products");
@@ -233,12 +236,19 @@ const renderSubtotal = () => {
       <td>(Items: ${totalItems})</td>
     </tr>
   `
+
   for (let item of cartContainer) {
-    item.innerHTML += `<div class="item-quantity">${totalItems}</div>`
+    item.innerHTML += `<div class="item-quantity">${totalItems}</div>`;
   }
+
+  localStorage.setItem("TOTAL_ITEMS", JSON.stringify(totalItems));
 }
 
-updateCart();
+if (document.querySelector('title').innerText === 'Rainy Days | Jacket Details' || document.querySelector('title').innerText === 'Rainy Days | Cart') {
+  updateCart();
+}
+
+
 
 
 

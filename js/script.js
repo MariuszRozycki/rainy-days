@@ -102,3 +102,9 @@ for (let element of socialMedia) {
   });
 }
 
+// cart container in nav
+const cartContainer = document.querySelector('.shopping-cart');
+console.log("cartContainer", cartContainer);
+cartContainer.innerHTML += `<div class="item-quantity">${JSON.parse(localStorage.getItem("TOTAL_ITEMS"))}</div>`;
+
+console.log(JSON.parse(localStorage.getItem("TOTAL_ITEMS")));
