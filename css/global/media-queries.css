@@ -180,6 +180,14 @@
     grid-column: 3/4;
   }
 
+  .cart-number-of-units td:nth-child(1) {
+    order: 1;
+  }
+
+  .cart-number-of-units td:nth-child(3) {
+    order: 3;
+  }
+
   .remove {
     grid-column: 4/5;
     grid-row: 1/2;

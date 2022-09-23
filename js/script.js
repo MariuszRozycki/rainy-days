@@ -107,7 +107,7 @@ for (let element of socialMedia) {
 function generateItemsInCart() {
   const cartContainer = document.querySelector('.shopping-cart');
   if (JSON.parse(localStorage.getItem("TOTAL_ITEMS")) === null) {
-    return null;
+    return cartContainer.innerHTML = "";
   } else {
     cartContainer.innerHTML += `<div class="item-quantity">${JSON.parse(localStorage.getItem("TOTAL_ITEMS"))}</div>`;
   }
