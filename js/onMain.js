@@ -7,7 +7,7 @@ const renderProductsOnMain = () => {
       let productLink = `<a href="../layout/jacket-details.html?id=${product.id}" id=${product.id} title="${product.name}" class="btn btn__show-item">Show Item</a>`;
 
       onMainContainer.innerHTML += `
-        <div class="item">
+        <div class="item" onclick="location.href='../layout/jacket-details.html?id=${product.id}'">
             <div class="item__picture">
             <img src="${product.image}" alt="Picture of ${product.name}">
           </div>

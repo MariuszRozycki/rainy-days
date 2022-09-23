@@ -18,14 +18,14 @@
   position: absolute;
   left: 0;
   top: 0;
-  background-color: hsla(0,0%,95%,0.9);
+  background-color: hsla(0, 0%, 95%, 0.9);
 }
 
 .products .container {
   text-align: center;
 }
 
-.products .container > * {
+.products .container>* {
   position: relative;
   top: 0;
   left: 0;
@@ -88,7 +88,7 @@
   display: flex;
 }
 
-.item.hide > * {
+.item.hide>* {
   display: none;
 }
 
@@ -99,11 +99,11 @@
 
 .item__picture {
   width: 100%;
-  height: 250px;
+  height: 200px;
   text-align: center;
 }
 
-.item__picture img {
+.item .item__picture img {
   object-fit: contain;
   object-position: center;
   width: 100%;

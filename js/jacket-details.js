@@ -11,38 +11,41 @@ const product = products.find(({ id }) => id == productId);
 /* choose-jacket__menu */
 const chooseJacketMenu = document.querySelector(".choose-jacket__menu");
 
-function chooseJacketMenuNav() {
-  if (product.type === 'mens-jackets') {
-    chooseJacketMenu.innerHTML = `
-    <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
-    <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
-    <li><a href="../layout/mens-jackets.html">Men's Jackets</a></li>
-    <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
-    <li class="choose-jacket__menu-active choose-jacket__menu-detail"><a>${product.name}</a></li>
-  `;
-  }
-  if (product.type === 'womens-jacket') {
-    chooseJacketMenu.innerHTML = `
-    <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
-    <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
-    <li><a href="../layout/womens-jackets.html">Women's Jackets</a></li>
-    <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
-    <li class="choose-jacket__menu-active choose-jacket__menu-detail"><a>${product.name}</a></li>
+function renderNavProductDetails() {
+
+  let productType = product.type;
+
+  switch (productType) {
+    case 'mens-jackets':
+      chooseJacketMenu.innerHTML = `
+      <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
+      <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+      <li class="product-type"><a href="../layout/mens-jackets.html">Men's Jackets</a></li>
+      <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+      <li class="choose-jacket__menu-active choose-jacket__menu-detail"><a>${product.name}</a></li>
     `;
-  }
-  if (product.type === 'raincoat') {
-    chooseJacketMenu.innerHTML = `
-    <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
-    <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
-    <li><a href="../layout/raincoats.html">Raincoats</a></li>
-    <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
-    <li class="choose-jacket__menu-active choose-jacket__menu-detail"><a>${product.name}</a></li>
-    `;
+      break;
+
+    case 'womens-jacket':
+      chooseJacketMenu.innerHTML = `
+      <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
+      <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+      <li><a href="../layout/womens-jackets.html">Women's Jackets</a></li>
+      <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+      <li class="choose-jacket__menu-active choose-jacket__menu-detail"><a>${product.name}</a></li>
+      `;
+      break;
+    case 'raincoat':
+      chooseJacketMenu.innerHTML = `
+      <li><a href="../layout/our-jackets.html">Our Jackets</a></li>
+      <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+      <li><a href="../layout/raincoats.html">Raincoats</a></li>
+      <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+      <li class="choose-jacket__menu-active choose-jacket__menu-detail"><a>${product.name}</a></li>
+      `;
   }
 }
-chooseJacketMenuNav();
-
-
+renderNavProductDetails();
 
 function renderProduct() {
   /* placing product-detail html code & rating inside .product-wrapper */
@@ -120,6 +123,7 @@ function addToCart() {
       ...product,
       numberOfUnits: 1
     });
+
     updateCart();
   }
 
@@ -132,37 +136,36 @@ const productsInCart = document.querySelector(".list-of-products");
 function renderProductInCart() {
   productsInCart.innerHTML = "";
   cart.forEach((item, index) => {
-    let productLink = `<a href="./jacket-details.html?id=${item.id}" id="${item.id}" title="${item.name}">Product: ${item.name}</a>`;
+    let productLink = `<a href="./jacket-details.html?id=${item.id}" id="${item.id}" title="${item.name}">${item.name}</a>`;
     productsInCart.innerHTML += `
-    <thead>
+      <thead class="cart-header-title">
+      </thead>
+      <tbody>  
+      <tr class="cart-order">
+        <td>${++index}</td>
+      </tr>
+      <tr class="cart-product-details">
+        <td><img src="${item.image}" alt="${item.name}"></td>
+        <td>Product: <strong>${productLink}</strong></td>
+        <td>Size: <strong><a>XS</a></strong></td>
+        <td>Price: <strong>${item.price} kr</strong></td>
+      </tr>
+      <tr class="cart-number-of-units">
+        <td><button onclick="changeNumberOfUnits('minus', ${item.id})">-</button></td>
+        <td class="number">${item.numberOfUnits}</td>
+        <td><button onclick="changeNumberOfUnits('plus', ${item.id})">+</button></td>
+      </tr>
+      <tr onclick="removeItem(${item.id})" class="remove">
+        <td><i class="fas fa-trash-alt"></i></td>
+      </tr>
+    </tbody>
+    `;
+
+    const cartHeaderTitle = document.querySelector(".cart-header-title");
+    cartHeaderTitle.innerHTML = `
     <tr>
-      <th></th>
-      <th>Product</th>
-      <th>Size</th>
-      <th>Price</th>
-      <th class="amount">Amount</th>
-      <th></th>
+      <th>List of products in cart:</th>
     </tr>
-  </thead>
-  <tbody>
-    <tr class="cart-order">
-      <td>${++index}</td>
-    </tr>
-    <tr class="cart-product-details">
-      <td><img src="${item.image}" alt="${item.name}"></td>
-      <td>${productLink}</a></td>
-      <td>Size: <a>XS</a></td>
-      <td>Price: ${item.price}</td>
-    </tr>
-    <tr class="cart-number-of-units">
-      <td><button onclick="changeNumberOfUnits('plus', ${item.id})">+</button></td>
-      <td>${item.numberOfUnits}</td>
-      <td><button onclick="changeNumberOfUnits('minus', ${item.id})">-</button></td>
-    </tr>
-    <tr onclick="removeItem(${item.id})" class="remove">
-      <td><i class="fas fa-trash-alt"></i></td>
-    </tr>
-  </tbody>
     `;
   });
 }
@@ -199,12 +202,8 @@ function changeNumberOfUnits(action, id) {
 }
 
 function removeItem(id) {
-
-  console.log(cart);
   cart = cart.filter(item => item.id !== id);
-
   updateCart();
-
   localStorage.setItem("CART", JSON.stringify(cart));
 }
 
@@ -213,7 +212,8 @@ const subtotal = document.querySelector(".subtotal");
 console.log(subtotal);
 
 // cart container in nav
-const cartContainer = document.querySelector('.shopping-cart');
+const cartContainer = document.querySelectorAll('.shopping-cart');
+console.log(cartContainer);
 
 // calculate subtotal
 const renderSubtotal = () => {
@@ -233,8 +233,10 @@ const renderSubtotal = () => {
       <td>(Items: ${totalItems})</td>
     </tr>
   `
-
-  cartContainer.innerHTML += `<div class="item-quantity">${totalItems}</div>`
+  for (let item of cartContainer) {
+    console.log(item);
+    item.innerHTML += `<div class="item-quantity">${totalItems}</div>`
+  }
 }
 
 updateCart();

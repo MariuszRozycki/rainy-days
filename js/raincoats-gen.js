@@ -8,7 +8,7 @@ for (let product of products) {
 
   if (product.type === 'raincoat') {
     raincoatsProductsWrapper.innerHTML +=
-      `<div class="item">
+      `<div class="item" onclick="location.href='../layout/jacket-details.html?id=${product.id}'">
           <div class="item__picture">
           <img src="${product.image}" alt="Picture of ${product.name}">
         </div>
