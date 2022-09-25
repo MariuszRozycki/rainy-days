@@ -398,8 +398,14 @@
   /* contact - media */
   .contact {
     grid-template-columns: 30% 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(2, 1fr);
     row-gap: 30px;
+  }
+
+  .contact-form {
+    justify-self: center;
+    width: 85%;
+    grid-column: 1/3;
   }
 
   .contact-adress {

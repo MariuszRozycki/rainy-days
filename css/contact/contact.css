@@ -2,11 +2,11 @@
 .contact {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
   gap: 30px;
 }
 
-.contact > * {
+.contact>* {
   color: var(--primary-color);
   font-size: 1.2rem;
   text-align: center;
@@ -14,6 +14,10 @@
 
 .contact a {
   color: var(--primary-color);
+}
+
+.address {
+  font-weight: 700;
 }
 
 #mail {
@@ -24,19 +28,84 @@
   text-decoration: underline;
 }
 
+.contact map,
+#form {
+  position: relative;
+  z-index: 3;
+}
+
 .contact map {
   width: 100%;
   display: block;
-  position: relative;
-  z-index: 3;
   box-shadow: var(--primary-shadow);
   border: 1px solid;
   border-radius: 20px;
-  }
+}
 
 .contact iframe {
   display: block;
   width: 100%;
   height: 100%;
   border-radius: 20px;
+}
+
+
+/* contact form */
+#form {
+  font-size: 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#form label {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+#form label,
+#form input {
+  padding: 10px;
+}
+
+#form input {
+  margin: 2px 0;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+#form .form-error {
+  display: none;
+  margin: 2px 0 20px;
+  color: red;
+  font-weight: 600;
+}
+
+.success {
+  color: var(--primary-color);
+  border: 2px solid;
+  border-radius: 5px;
+  background-color: var(--tertiary-color);
+  font-weight: 600;
+  padding: 5px 10px;
+  margin: 25px 0 20px;
+}
+
+#form button {
+  margin: 20px auto;
+  display: block;
+  width: 200px;
+  padding: 10px 20px;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 2px solid;
+  border-radius: 5px;
+  font-size: 18px;
 }
