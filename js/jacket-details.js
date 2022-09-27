@@ -239,8 +239,9 @@ function removeItem(id, size) {
   cart = cart.filter(item => {
     console.log("item.size:", item.size);
     console.log("size.id:", size.id);
-    return item.size !== size.id;
-    // item.id !== id && 
+
+    return item.id !== id;
+    // && item.size !== size.id
   });
 
   updateCart();
