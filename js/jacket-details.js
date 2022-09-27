@@ -240,8 +240,8 @@ function removeItem(id, size) {
     console.log("item.size:", item.size);
     console.log("size.id:", size.id);
 
-    return item.id !== id;
-    // && item.size !== size.id
+    return item.size !== size.id;
+    // && item.id !== id
   });
 
   updateCart();
