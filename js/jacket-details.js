@@ -117,23 +117,49 @@ if (document.querySelector('title').innerText === 'Rainy Days | Jacket Details')
 
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 
-function addToCart() {
-  if (cart.some(item => item.id === product.id)) {
-    changeNumberOfUnits('plus', product.id);
-  } else {
-    cart.push({
-      ...product,
-      numberOfUnits: 1
-    });
+// size of item
+const sizeOfItem = document.querySelectorAll(".item__size-button");
+const itemProductSize = document.querySelector(".item__product-size");
+let size;
 
-    updateCart();
+sizeOfItem.forEach(item => {
+  item.addEventListener('click', () => {
+    size = item.id;
+    if (itemProductSize.classList.contains("failure")) {
+      itemProductSize.classList.remove("failure");
+    }
+    return size;
+  });
+});
+console.log(size);
+/* Add product to cart */
+function addToCart() {
+
+  console.log(size);
+  if (size === undefined) {
+    itemProductSize.classList.add("failure");
+    alert("Choose size!");
+    return null;
   }
 
+  if (cart.some(item => item.id === product.id && item.size === size)) {
+    // changeNumberOfUnits('plus', product.id, size);
+    alert("Product already exists in cart!");
+
+  }
+
+  else {
+    cart.push({
+      ...product,
+      numberOfUnits: 1,
+      size: size
+    });
+    updateCart();
+  }
   localStorage.setItem("CART", JSON.stringify(cart));
 }
 
-
-// Rendering product(s) in cart
+/* Rendering product(s) in cart */
 const productsInCart = document.querySelector(".list-of-products");
 
 function renderProductInCart() {
@@ -150,19 +176,21 @@ function renderProductInCart() {
       <tr class="cart-product-details">
         <td><img src="${item.image}" alt="${item.name}"></td>
         <td>Product: <strong>${productLink}</strong></td>
-        <td>Size: <strong><a>XS</a></strong></td>
+        <td>Size: <strong><a>${item.size}</a></strong></td>
         <td>Price: <strong>${item.price} kr</strong></td>
       </tr>
       <tr class="cart-number-of-units">
-        <td><button onclick="changeNumberOfUnits('minus', ${item.id})">-</button></td>
+        <td><button onclick="changeNumberOfUnits('minus', ${item.id}, ${item.size})">-</button></td>
         <td class="number">${item.numberOfUnits}</td>
-        <td><button onclick="changeNumberOfUnits('plus', ${item.id})">+</button></td>
+        <td><button onclick="changeNumberOfUnits('plus', ${item.id}, ${item.size})">+</button></td>
       </tr>
-      <tr onclick="removeItem(${item.id})" class="remove">
+      <tr onclick="removeItem(${item.id}, ${item.size})" class="remove">
         <td><i class="fas fa-trash-alt"></i></td>
       </tr>
     </tbody>
     `;
+    console.log(size);
+
 
     const cartHeaderTitle = document.querySelector(".cart-header-title");
     cartHeaderTitle.innerHTML = `
@@ -173,18 +201,20 @@ function renderProductInCart() {
   });
 }
 
-// updating cart
+/* updating cart */
 function updateCart() {
   renderProductInCart();
   renderSubtotal();
 }
 
-// function changeNumberOfUnits
-function changeNumberOfUnits(action, id) {
+/* function changeNumberOfUnits */
+function changeNumberOfUnits(action, id, size) {
+  size = size.id;
+
   cart.forEach(item => {
     let numberOfUnits = item.numberOfUnits;
 
-    if (item.id === id) {
+    if (item.id === id && item.size === size) {
       if (action === 'plus' && numberOfUnits < item.inStock) {
         item.numberOfUnits++
       }
@@ -204,21 +234,26 @@ function changeNumberOfUnits(action, id) {
   localStorage.setItem("CART", JSON.stringify(cart));
 }
 
-function removeItem(id) {
-  cart = cart.filter(item => item.id !== id);
+function removeItem(id, size) {
+  console.log(cart);
+  cart = cart.filter(item => {
+    console.log("item.size:", item.size);
+    console.log("size.id:", size.id);
+    return item.size !== size.id;
+    // item.id !== id && 
+  });
+
   updateCart();
   localStorage.setItem("CART", JSON.stringify(cart));
 }
 
-// subtotal container
+/* subtotal container */
 const subtotal = document.querySelector(".subtotal");
-console.log(subtotal);
 
-// cart container in nav
+/* cart container in nav */
 const cartContainer = document.querySelectorAll('.shopping-cart');
-console.log(cartContainer);
 
-// calculate subtotal
+/* calculate subtotal */
 const renderSubtotal = () => {
 
   let totalPrice = 0;

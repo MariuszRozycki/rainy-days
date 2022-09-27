@@ -77,31 +77,27 @@
             style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </map>
         <div class="contact-form">
-          <h2>Contact form</h2>
+          <h2>Send a message!</h2>
           <div id="message"></div>
-          <form id="form">
+          <form class="contact-us-form" id="form">
 
-            <label for="name">Name (required):
-              <input id="name" name="name">
-              <p class="form-error" id="name-error">Name is required!</p>
-            </label>
+            <label for="name">Name (required):</label>
+            <input id="name" name="name">
+            <p class="form-error" id="name-error">Name is required!</p>
 
-            <label for="subject">Subject (minimum 10 characters):
-              <input id="subject" name="Subject">
-              <p class="form-error" id="subject-error">Field must have minimum 10 characters!</p>
-            </label>
+            <label for="subject">Subject (minimum 10 characters):</label>
+            <textarea id="subject" name="Subject"></textarea>
+            <p class="form-error" id="subject-error">Field must have minimum 10 characters!</p>
 
-            <label for="email">Email:
-              <input id="email" name="email">
-              <p class="form-error" id="email-error">Write correct e-mail address</p>
-            </label>
+            <label for="email">Email:</label>
+            <input id="email" name="email">
+            <p class="form-error" id="email-error">Write correct e-mail address</p>
 
-            <label for="user-address">Address (minimum 10 characters):
-              <input id="user-address" name="user-address">
-              <p class="form-error" id="user-address--error">Field must have minimum 10 characters!</p>
-            </label>
+            <label for="user-address">Address (minimum 10 characters):</label>
+            <input id="user-address" name="user-address">
+            <p class="form-error" id="user-address--error">Field must have minimum 10 characters!</p>
 
-            <button>Submit</button>
+            <input type="submit" value="Submit"></submit>
           </form>
         </div>
       </section>

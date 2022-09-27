@@ -26,6 +26,10 @@
   padding: 0;
 }
 
+.jacket-details .failure {
+  color: red;
+}
+
 .jacket-details .item__product-choose-size label {
   position: relative;
   top: 0;
