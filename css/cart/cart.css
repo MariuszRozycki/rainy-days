@@ -136,6 +136,10 @@
   font-size: 1.2rem;
 }
 
+.shopping-cart.go-to-payment {
+  font-size: 1.0rem;
+}
+
 .cart .number {
   font-size: 1.3rem;
 }
