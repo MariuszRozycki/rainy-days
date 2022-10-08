@@ -46,17 +46,20 @@ function renderNavProductDetails() {
   }
 }
 
-/* placing product-detail html code & rating inside .product-wrapper */
+// product = productsList;
 
-productWrapper.innerHTML +=
-  `<div class="item">
+function renderProduct() {
+  /* placing product-detail html code & rating inside .product-wrapper */
+
+  productWrapper.innerHTML +=
+    `<div class="item">
   <div class="item__picture">
     <img src="${product.image}" alt="Picture of ${product.name}">
   </div>
   <div class="item__product-description">
     <h1 class="item__product-name">${product.name}</h1>
     <p class="item__product-price">999 nok</p>
-    <p class="item__product-size">Choose size:</p>
+    <p class="item__product-size">Size:</p>
     <form class="item__product-choose-size"></form>
   </div>
   <div class="item__info">
@@ -82,19 +85,21 @@ productWrapper.innerHTML +=
   <button onclick="addToCart(${product.id})" id="add-to-cart" class="btn">Add Item</button>
 </div>`
 
-/* sizesRender */
-const sizesContainer = document.querySelector(".item__product-choose-size");
+  /* sizesRender */
+  const sizesContainer = document.querySelector(".item__product-choose-size");
 
-for (let item of product.sizes) {
-  sizesContainer.innerHTML += `
-  <label for="${item}">${item}
-    <input id="${item}" class="item__size-button" name="item__size-button" type="radio">
+  for (let size of product.sizes) {
+    sizesContainer.innerHTML += `
+  <label for="${size}">${size}
+    <input id="${size}" class="item__size-button" name="item__size-button" type="radio">
   </label>
   `;
+  }
 }
 
 if (document.querySelector('title').innerText === 'Rainy Days | Jacket Details') {
   renderNavProductDetails();
+  renderProduct();
 
   /* container for rating */
   const ratingContainer = document.querySelector('.rating');
@@ -109,23 +114,31 @@ if (document.querySelector('title').innerText === 'Rainy Days | Jacket Details')
   });
 }
 
-// size of product item
-const sizeOfItem = document.querySelectorAll(".item__size-button");
-const itemProductSize = document.querySelector(".item__product-size");
+/* cart */
+let cart = JSON.parse(localStorage.getItem("CART")) || [];
+
+// size of item
 let size;
+function renderSizeOfItem(size) {
+  const sizeOfItem = document.querySelectorAll(".item__size-button");
+  console.log(sizeOfItem);
+  const itemProductSize = document.querySelector(".item__product-size");
 
-sizeOfItem.forEach(item => {
-  item.addEventListener('click', () => {
+  sizeOfItem.forEach(item => {
     console.log(item);
-    size = item.id;
-
-    if (itemProductSize.classList.contains("failure")) {
-      itemProductSize.classList.remove("failure");
-    }
-    size;
-    console.log(size);
+    item.addEventListener('click', () => {
+      size = item.id;
+      if (itemProductSize.classList.contains("failure")) {
+        itemProductSize.classList.remove("failure");
+      }
+      return size;
+    });
   });
-});
+}
+renderSizeOfItem();
+
+
+
 
 
 

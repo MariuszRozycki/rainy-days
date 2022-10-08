@@ -60,7 +60,18 @@
     <section class="splash">
       <div class="container">
         <h1 class="top-title"><span>List of items in your cart</span></h1>
-        <div class="products-wrapper jacket-details"></div>
+        <ul class="cart-nav choose-jacket__menu">
+          <li class="choose-jacket__menu-active"><a href="cart.html">Cart
+              <span class="mobile-step">(Step
+                1/3)</span></a>
+            <img onclick="location.href='cart-payment.html'" class="menu-arrow mobile-arrow"
+              src="../images/menu-arrow.svg" alt="Arrow inside menu">
+          </li>
+          <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+          <li class="product-type"><a href="cart-payment.html">Payment method</a></li>
+          <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+          <li class="choose-jacket__menu-detail"><a href="cart-success.html">Checked out</a></li>
+        </ul>
         <table class="list-of-products"></table>
         <table>
           <tfoot class="subtotal"></tfoot>
@@ -90,9 +101,9 @@
       </div>
     </div>
   </footer>
-  <!-- <script src="../js/script.js"></script> -->
+
   <script src="../js/products.js"></script>
-  <!-- <script src="../js/jacket-details.js"></script> -->
+  <script src="../js/jacket-details.js"></script>
   <script src="../js/cart.js"></script>
 </body>
 

@@ -1,7 +1,3 @@
-
-/* cart */
-let cart = JSON.parse(localStorage.getItem("CART")) || [];
-
 /* Add product to cart */
 function addToCart() {
   if (size === undefined) {
@@ -31,9 +27,6 @@ const productsInCart = document.querySelector(".list-of-products");
 function renderProductInCart() {
   productsInCart.innerHTML = "";
   cart.forEach((item, index) => {
-
-    console.log("item.id renderProductInCart()", item.id);
-
     let productLink = `<a href="./jacket-details.html?id=${item.id}" id="${item.id}" title="${item.name}">${item.name}</a>`;
 
     productsInCart.innerHTML += `
@@ -43,16 +36,16 @@ function renderProductInCart() {
       <tr class="cart-order">
         <td>${++index}</td>
       </tr>
-      <tr class="cart-product-details" onclick="location.href='../layout/jacket-details.html?id=${item.id}'">
+      <tr class="cart-product-details">
         <td><img src="${item.image}" alt="${item.name}"></td>
         <td>Product: <strong>${productLink}</strong></td>
         <td>Size: <strong><a class="size">${item.size}</a></strong></td>
         <td>Price: <strong>${item.price} kr</strong></td>
       </tr>
       <tr class="cart-number-of-units">
-        <td><button class="minus">-</button></td>
+        <td><button onclick="changeNumberOfUnits('minus', ${item.id}, ${item.size})">-</button></td>
         <td class="number">${item.numberOfUnits}</td>
-        <td><button class="plus">+</button></td>
+        <td><button onclick="changeNumberOfUnits('plus', ${item.id}, ${item.size})">+</button></td>
       </tr>
       <tr onclick="removeItem(${item.id}, ${item.size})" class="remove">
         <td><i class="fas fa-trash-alt"></i></td>
@@ -60,41 +53,12 @@ function renderProductInCart() {
     </tbody>
     `;
 
-    /* CART HEADER TITLE */
     const cartHeaderTitle = document.querySelector(".cart-header-title");
     cartHeaderTitle.innerHTML = `
     <tr>
       <th>List of products in cart:</th>
     </tr>
     `;
-
-    /* eventListener(s) in ProductInCart */
-    const plusButton = document.querySelectorAll('.plus');
-    const minusButton = document.querySelectorAll('.minus');
-
-    plusButton.forEach(el => {
-      el.addEventListener('click', () => {
-        {
-          for (let i = 1; i < cart.length; i++) {
-            console.log(cart[i]);
-          }
-        }
-      })
-    })
-
-
-    // changeNumberOfUnitsButton.forEach(el => {
-    //   el.addEventListener('click', () => {
-    //     if (el.classList.contains("plus")) {
-    //       console.log("plus");
-    //       changeNumberOfUnits('plus', item.id, item.size);
-    //     }
-    //     if (el.classList.contains("minus")) {
-    //       console.log("minus");
-    //       changeNumberOfUnits('minus', item.id, item.size);
-    //     }
-    //   });
-    // });
   });
 }
 
@@ -104,15 +68,12 @@ function updateCart() {
   renderSubtotal();
 }
 
-
 /* function changeNumberOfUnits */
 function changeNumberOfUnits(action, id, size) {
-  console.log("id in changeNumberOfUnits(): ", id);
-  console.log("size:", size);
+  console.log(id);
+  size = size.id;
 
   cart.forEach(item => {
-    console.log("item.size:", item.size);
-    console.log("item.id:", item.id);
     let numberOfUnits = item.numberOfUnits;
 
     if (item.id === id && item.size === size) {
@@ -125,7 +86,6 @@ function changeNumberOfUnits(action, id, size) {
       }
       updateCart();
     }
-    console.log(numberOfUnits);
 
     return {
       ...item,
@@ -178,10 +138,9 @@ const renderSubtotal = () => {
       <td>(Items: ${totalItems})</td>
     </tr>
   `
-  if (document.querySelector('title').innerText === 'Rainy Days | Jacket Details') {
-    for (let item of cartContainer) {
-      item.innerHTML += `<div class="item-quantity">${totalItems}</div>`;
-    }
+
+  for (let item of cartContainer) {
+    item.innerHTML += `<div class="item-quantity">${totalItems}</div>`;
   }
 
   localStorage.setItem("TOTAL_ITEMS", JSON.stringify(totalItems));

@@ -1,3 +1,20 @@
 .cart-succes .buttons {
   justify-content: flex-end;
 }
+
+/* cart-success--nav */
+.cart-success--nav li:nth-of-type(1),
+.cart-success--nav li:nth-of-type(2),
+.cart-success--nav li:nth-of-type(3),
+.cart-success--nav li:nth-of-type(4) {
+  display: none;
+}
+
+.cart-success--nav li:nth-of-type(5) {
+  display: flex;
+}
+
+/* cart-success list of products*/
+.cart.cart-success tbody {
+  grid-template-columns: 20px 2fr;
+}

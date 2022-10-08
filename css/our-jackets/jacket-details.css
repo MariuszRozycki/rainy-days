@@ -149,3 +149,7 @@ input:checked {
   display: flex;
   align-items: center;
 }
+
+.choose-jacket__menu li {
+  display: flex;
+}

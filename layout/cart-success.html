@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Online shop with the best waterproff jackets for people they like outside activities. | Transaction Succesed - mission accomplished">
-  <title>Rainy Days | Cart Transaction Succesed</title>
+    content="Online shop with the best waterproff jackets for people they like outside activities. | Transaction Success - mission accomplished">
+  <title>Rainy Days | Cart Transaction Success</title>
   <script src="https://kit.fontawesome.com/136bcbc643.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/global/media-queries.css">
@@ -56,39 +56,24 @@
     </div>
   </nav>
 
-  <main class="cart cart-succes">
+  <main class="cart cart-success">
     <section class="splash">
       <div class="container">
-        <h1 class="top-title"><span>Transaction Succesed</span></h1>
-
+        <h1 class="top-title"><span>Transaction Success!</span></h1>
+        <ul class="cart-success--nav choose-jacket__menu">
+          <li><a href="cart.html">Cart</a></li>
+          <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+          <li class="product-type"><a href="cart-payment.html">Payment method</a></li>
+          <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+          <li class="choose-jacket__menu-active choose-jacket__menu-detail">
+            <img onclick="location.href='cart-payment.html'" class="menu-arrow mobile-arrow mobile-arrow--back"
+              src="../images/menu-arrow.svg" alt="Arrow inside menu">
+            <a href="cart-success.html">Check out <span class="mobile-step">(Step 3/3)</span></a>
+          </li>
+        </ul>
+        <table class="list-of-products"></table>
         <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Product</th>
-              <th>Size</th>
-              <th>Price</th>
-              <th>Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td><img src="../images/jackets/men-jackets/nh-100-raincut.png" alt="nh-100-raincut">
-                <a href="/layout/tribord300MB.html">Tribord 300MB</a>
-              </td>
-              <td><a>XS</a></td>
-              <td>999 nok</td>
-              <td>1</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td>Price total:</td>
-              <td>999 nok</td>
-              <td></td>
-            </tr>
-          </tfoot>
+          <tfoot class="subtotal"></tfoot>
         </table>
         <section class="buttons">
           <button type="submit" class="btn go-to-main-site">Home</button>
@@ -115,6 +100,9 @@
   </footer>
   <script src="../js/script.js"></script>
   <script src="../js/products.js"></script>
+  <script src="../js/jacket-details.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/cart-success.js"></script>
 </body>
 
 </html>

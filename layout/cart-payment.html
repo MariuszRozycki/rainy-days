@@ -60,7 +60,19 @@
     <section class="splash">
       <div class="container">
         <h1><span>Choose payment methode:</span></h1>
-
+        <ul class="cart-payment--nav choose-jacket__menu">
+          <li><a href="cart.html">Cart</a></li>
+          <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+          <li class="product-type choose-jacket__menu-active">
+            <img onclick="location.href='cart.html'" class="menu-arrow mobile-arrow mobile-arrow--back"
+              src="../images/menu-arrow.svg" alt="Arrow inside menu">
+            <a href="cart-payment.html">Payment method <span class="mobile-step">(Step 2/3)</span></a>
+            <img onclick="location.href='cart-success.html'" class="menu-arrow mobile-arrow mobile-arrow--next"
+              src="../images/menu-arrow.svg" alt="Arrow inside menu">
+          </li>
+          <li><img class="menu-arrow" src="../images/menu-arrow.svg" alt="Arrow inside menu"></li>
+          <li class="choose-jacket__menu-detail"><a href="cart-success.html">Checked out</a></li>
+        </ul>
         <form action="/action_page.php" method="POST">
           <fieldset class="payment-method">
 

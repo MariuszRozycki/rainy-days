@@ -58,10 +58,18 @@ if (document.querySelector('title').innerText === 'Rainy Days | Cart') {
 
 /* button back.cart-payment */
 if (document.querySelector('title').innerText === 'Rainy Days | Cart Payment') {
-  let buttonBack = document.querySelector('.btn-back');
+  const buttonBack = document.querySelector('.btn-back');
 
   buttonBack.addEventListener('click', () => {
     location.href = 'cart.html';
+  });
+
+  /* button next .cart-payment */
+  const buttonNext = document.querySelector('.next');
+  console.log(buttonNext);
+
+  buttonNext.addEventListener('click', () => {
+    location.href = 'cart-success.html';
   });
 }
 
@@ -81,15 +89,6 @@ if (document.querySelector('title').innerText === 'Rainy Days | Cart Transaction
     location.href = '../index.html';
   });
 }
-
-/* NEXT Button from choose payment method || comment 6 lines of code below to use html form options in cart-payment.html */
-if (document.querySelector('title').innerText === 'Rainy Days | Cart Payment') {
-  const buttonNext = document.querySelector('.next');
-  buttonNext.addEventListener('click', () => {
-    location.href = '/layout/cart-succes.html';
-  });
-}
-
 
 /* .social-media | alert regarding to missing elements */
 let socialMedia = document.querySelectorAll('.social-media');

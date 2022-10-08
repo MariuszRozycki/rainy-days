@@ -194,3 +194,28 @@
 .cart tbody a {
   color: var(--primary-color);
 }
+
+/* cart-nav */
+.cart-nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cart ul a {
+  font-size: 0.8rem;
+}
+
+.cart .mobile-arrow {
+  width: 25px;
+}
+
+.cart .mobile-arrow--back {
+  transform: rotate(180deg);
+}
+
+.cart-nav li:nth-of-type(2),
+.cart-nav li:nth-of-type(3),
+.cart-nav li:nth-of-type(4),
+.cart-nav li:nth-of-type(5) {
+  display: none;
+}

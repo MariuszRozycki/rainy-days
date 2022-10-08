@@ -1,6 +1,7 @@
 .cart-payment .splash {
-margin: 0 20px;
+  margin: 0;
 }
+
 .cart-payment {
   width: 90%;
   margin: 0 auto;
@@ -21,7 +22,9 @@ fieldset {
   margin-bottom: 20px;
 }
 
-
+.cart-payment span {
+  display: block;
+}
 
 .payment-method,
 .card-data,
@@ -36,6 +39,7 @@ fieldset {
 .owner-data {
   text-align: left;
 }
+
 .payment-method div {
   display: flex;
   justify-content: center;
@@ -47,9 +51,10 @@ fieldset {
 .payment-method label,
 .card-data input,
 .owner-data input {
-  background-color: 	hsla(192, 73%, 15%, .2);
+  background-color: hsla(192, 73%, 15%, .2);
   padding: 5px 10px;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, .4);;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, .4);
+  ;
   width: 100%;
   height: 35px;
   margin: 5px auto;
@@ -68,7 +73,7 @@ fieldset {
 }
 
 .card-data input[type="date"] {
-  display:block;
+  display: block;
   font-family: var(--font-main);
   color: var(--primary-color);
   cursor: pointer;
@@ -83,7 +88,14 @@ fieldset {
   object-fit: contain;
 }
 
+/* cart-payment--nav */
+.cart-payment--nav li:nth-of-type(1),
+.cart-payment--nav li:nth-of-type(2),
+.cart-payment--nav li:nth-of-type(4),
+.cart-payment--nav li:nth-of-type(5) {
+  display: none;
+}
 
-
-
-
+.cart-payment--nav li:nth-of-type(3) {
+  display: flex;
+}
