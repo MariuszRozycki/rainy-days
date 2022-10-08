@@ -251,7 +251,6 @@
   }
 
   /* log-in, sign-up */
-
   .log-in-form div,
   .sign-up-form div {
     flex-direction: row;

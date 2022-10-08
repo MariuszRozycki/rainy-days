@@ -118,33 +118,6 @@ input:checked {
   background-color: var(--tertiary-color);
 }
 
-/* .list-of-products {
-  border: 2px solid var(--primary-color);
-  border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  height: auto;
-  transform: translate(-50%, -50%);
-  background-color: var(--secondary-color);
-}
-
-.list-of-products {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-}
-
-.list-of-products img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  border: 2px solid var(--primary-color);
-  border-radius: 10px;
-} */
-
 .total-price {
   display: flex;
   align-items: center;

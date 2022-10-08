@@ -119,13 +119,11 @@ let cart = JSON.parse(localStorage.getItem("CART")) || [];
 
 // size of item
 let size;
-function renderSizeOfItem(size) {
+function renderSizeOfItem() {
   const sizeOfItem = document.querySelectorAll(".item__size-button");
-  console.log(sizeOfItem);
   const itemProductSize = document.querySelector(".item__product-size");
 
   sizeOfItem.forEach(item => {
-    console.log(item);
     item.addEventListener('click', () => {
       size = item.id;
       if (itemProductSize.classList.contains("failure")) {
@@ -136,9 +134,3 @@ function renderSizeOfItem(size) {
   });
 }
 renderSizeOfItem();
-
-
-
-
-
-

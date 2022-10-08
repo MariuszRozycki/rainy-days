@@ -1,5 +1,6 @@
 /* Add product to cart */
 function addToCart() {
+  console.log(size);
   if (size === undefined) {
     itemProductSize.classList.add("failure");
     alert("Choose size!");
@@ -70,7 +71,6 @@ function updateCart() {
 
 /* function changeNumberOfUnits */
 function changeNumberOfUnits(action, id, size) {
-  console.log(id);
   size = size.id;
 
   cart.forEach(item => {

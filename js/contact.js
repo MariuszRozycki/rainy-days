@@ -1,6 +1,5 @@
 const form = document.querySelector("#form");
 const userName = document.querySelector("#name");
-console.log("userName", userName);
 const nameError = document.querySelector("#name-error");
 const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subject-error");
@@ -8,9 +7,8 @@ const email = document.querySelector("#email");
 const emailError = document.querySelector("#email-error");
 const userAddress = document.querySelector("#user-address");
 const userAddressError = document.querySelector("#user-address--error");
-const message = document.querySelector("#message"); console.log(message);
+const message = document.querySelector("#message");
 const itemDetails = document.querySelector(".item-details");
-const queryString = document.location.search;
 
 function validateForm(event) {
   event.preventDefault();

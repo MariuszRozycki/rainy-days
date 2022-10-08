@@ -117,7 +117,7 @@ let cart = JSON.parse(localStorage.getItem("CART")) || [];
 
 // size of item
 const sizeOfItem = document.querySelectorAll(".item__size-button");
-console.log(sizeOfItem);
+
 const itemProductSize = document.querySelector(".item__product-size");
 let size;
 

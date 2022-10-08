@@ -2,7 +2,6 @@
 
 /* .login-container button | moving to log-in.html */
 let button = document.querySelector('.login-container button');
-console.log(button);
 
 button.addEventListener('click', (e) => {
   e.preventDefault();
@@ -32,7 +31,6 @@ if (document.querySelector('title').innerText === 'Rainy Days | Sign Up') {
   let buttonSignUp = document.querySelector('.btn_sign-up');
 
   buttonSignUp.addEventListener('click', () => {
-    console.log(buttonSignUp);
     location.href = 'sign-up.html';
   });
 }
@@ -42,7 +40,6 @@ if (document.querySelector('title').innerText === 'Rainy Days | Sign Up') {
   let buttonSignUp = document.querySelector('button[value="Create Profile"]');
 
   buttonSignUp.addEventListener('click', () => {
-    console.log(buttonSignUp);
     location.href = 'log-in.html';
   });
 }
@@ -66,7 +63,6 @@ if (document.querySelector('title').innerText === 'Rainy Days | Cart Payment') {
 
   /* button next .cart-payment */
   const buttonNext = document.querySelector('.next');
-  console.log(buttonNext);
 
   buttonNext.addEventListener('click', () => {
     location.href = 'cart-success.html';
@@ -76,7 +72,7 @@ if (document.querySelector('title').innerText === 'Rainy Days | Cart Payment') {
 /* BACK btn-go-to-our-jackets from cart */
 if (document.querySelector('title').innerText === 'Rainy Days | Empty Cart' || document.querySelector('title').innerText === 'Rainy Days | Cart') {
   const buttonToOurJackets = document.querySelector('.go-to-our-jackets');
-  console.log(buttonToOurJackets);
+
   buttonToOurJackets.addEventListener('click', () => {
     location.href = '/layout/our-jackets.html';
   });
@@ -102,7 +98,6 @@ for (let element of socialMedia) {
 }
 
 // cart container in nav
-
 function generateItemsInCart() {
   const cartContainer = document.querySelector('.shopping-cart');
   if (JSON.parse(localStorage.getItem("TOTAL_ITEMS")) === null) {

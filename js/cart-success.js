@@ -1,5 +1,4 @@
 const listOfProductsCheckOut = document.querySelector('.list-of-products');
-console.log(product);
 
 cart.forEach((item, index) => {
   let productLink = `<a href="./jacket-details.html?id=${item.id}" id="${item.id}" title="${item.name}">${item.name}</a>`;
