@@ -79,8 +79,9 @@ if (document.querySelector('title').innerText === 'Rainy Days | Empty Cart' || d
 }
 
 /* HOME .go-to-main-site from transaction accomplished */
-if (document.querySelector('title').innerText === 'Rainy Days | Cart Transaction Succesed') {
+if (document.querySelector('title').innerText === 'Rainy Days | Cart Transaction Success') {
   const home = document.querySelector('.go-to-main-site');
+  console.log(home);
   home.addEventListener('click', () => {
     location.href = '../index.html';
   });

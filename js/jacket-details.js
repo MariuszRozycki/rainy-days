@@ -46,8 +46,6 @@ function renderNavProductDetails() {
   }
 }
 
-// product = productsList;
-
 function renderProduct() {
   /* placing product-detail html code & rating inside .product-wrapper */
 
@@ -119,18 +117,23 @@ let cart = JSON.parse(localStorage.getItem("CART")) || [];
 
 // size of item
 let size;
-function renderSizeOfItem() {
-  const sizeOfItem = document.querySelectorAll(".item__size-button");
-  const itemProductSize = document.querySelector(".item__product-size");
 
+const sizeOfItem = document.querySelectorAll(".item__size-button");
+const itemProductSize = document.querySelector(".item__product-size");
+
+function generateItemSize() {
   sizeOfItem.forEach(item => {
+
     item.addEventListener('click', () => {
       size = item.id;
       if (itemProductSize.classList.contains("failure")) {
         itemProductSize.classList.remove("failure");
       }
-      return size;
+      size;
     });
   });
 }
-renderSizeOfItem();
+
+size = generateItemSize();
+
+
