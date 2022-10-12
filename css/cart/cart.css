@@ -125,8 +125,14 @@
   grid-template-rows: 1fr;
 }
 
+.remove button {
+  border: none;
+  background-color: transparent;
+}
+
 .cart-number-of-units button,
-.remove {
+.remove,
+.remove button {
   cursor: pointer;
 }
 

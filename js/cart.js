@@ -47,8 +47,8 @@ function renderProductInCart() {
         <td class="number">${item.numberOfUnits}</td>
         <td><button id="increase" data-id=${item.id} data-size=${item.size}>+</button></td>
       </tr>
-      <tr onclick="removeItem(${item.id}, ${item.size})" class="remove">
-        <td><i class="fas fa-trash-alt"></i></td>
+      <tr class="remove" id="delete" data-id=${item.id} data-size=${item.size}>
+        <td><button><i class="fas fa-trash-alt"></i></button></td>
       </tr>
     </tbody>
     `;
@@ -62,6 +62,7 @@ function renderProductInCart() {
   });
 }
 
+/* changeNumberOfUnitsButtons() */
 function changeNumberOfUnitsButtons() {
   const reduceButtons = document.querySelectorAll("#reduce");
   const increaseButtons = document.querySelectorAll("#increase");
@@ -83,12 +84,24 @@ function changeNumberOfUnitsButtons() {
   })
 }
 
+function removeButtons() {
+  const removeButtons = document.querySelectorAll("#delete");
+  removeButtons.forEach(singleButton => {
+    singleButton.addEventListener('click', () => {
+      const id = singleButton.getAttribute("data-id");
+      const size = singleButton.getAttribute("data-size");
+      removeItem(id, size);
+    });
+  });
+}
+
+
 /* updating cart */
 function updateCart() {
   renderProductInCart();
   changeNumberOfUnitsButtons();
   renderSubtotal();
-
+  removeButtons();
 }
 
 /* function changeNumberOfUnits */
@@ -119,17 +132,24 @@ function changeNumberOfUnits(action, id, size) {
   localStorage.setItem("CART", JSON.stringify(cart));
 }
 
+/* removeItem() */
 function removeItem(id, size) {
+  console.log("id in removeItem", id);
+  console.log("size in removeItem", size);
+  console.log("------------------------");
 
   cart = cart.filter(item => {
-    if (item.size !== size.id) {
-      return item.size !== size.id;
+    console.log("item.id clicked in cart", item.id);
+    console.log("item.size clicked in cart", item.size);
+    console.log("------------------------");
+
+    if (item.size !== size) {
+      return item.size !== size;
     }
 
-    if (item.id !== id) {
-      return item.id !== id;
+    if (item.id != id) {
+      return item.id != id;
     }
-
   });
 
   updateCart();
