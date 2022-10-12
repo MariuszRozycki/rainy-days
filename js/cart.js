@@ -36,7 +36,7 @@ function renderProductInCart() {
       <tr class="cart-order">
         <td>${++index}</td>
       </tr>
-      <tr class="cart-product-details" onclick="location.href='../layout/jacket-details.html?id=${product.id}'">
+      <tr class="cart-product-details" onclick="location.href='../layout/jacket-details.html?id=${item.id}'">
         <td><img src="${item.image}" alt="${item.name}"></td>
         <td>Product: <strong>${productLink}</strong></td>
         <td>Size: <strong><a class="size">${item.size}</a></strong></td>
