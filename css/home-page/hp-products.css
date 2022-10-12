@@ -71,7 +71,6 @@
   border-radius: 10px;
   padding: 8px;
   box-shadow: var(--primary-shadow);
-  cursor: pointer;
 }
 
 .btn__show-item {

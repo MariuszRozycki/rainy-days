@@ -72,6 +72,7 @@ button[type="submit"] {
   border: 2px solid var(--primary-color);
   border-radius: 10px;
   text-align: center;
+  cursor: pointer;
 }
 
 .re-use.welcome::after {

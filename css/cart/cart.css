@@ -125,6 +125,11 @@
   grid-template-rows: 1fr;
 }
 
+.cart-number-of-units button,
+.remove {
+  cursor: pointer;
+}
+
 .cart img {
   width: 80px;
   height: 110px;
