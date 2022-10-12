@@ -158,6 +158,7 @@
 
 .fa-trash-alt {
   font-size: 30px;
+  color: var(--primary-color);
 }
 
 .cart tfoot {

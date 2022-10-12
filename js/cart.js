@@ -134,14 +134,7 @@ function changeNumberOfUnits(action, id, size) {
 
 /* removeItem() */
 function removeItem(id, size) {
-  console.log("id in removeItem", id);
-  console.log("size in removeItem", size);
-  console.log("------------------------");
-
   cart = cart.filter(item => {
-    console.log("item.id clicked in cart", item.id);
-    console.log("item.size clicked in cart", item.size);
-    console.log("------------------------");
 
     if (item.size !== size) {
       return item.size !== size;

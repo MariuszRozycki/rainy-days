@@ -100,3 +100,8 @@ button[type="submit"] {
 .products__sub-title {
   text-align: center;
 }
+
+.on-main .item,
+.our-jackets .item {
+  cursor: pointer;
+}
