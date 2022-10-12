@@ -84,6 +84,7 @@
   text-align: left;
 }
 
+.cart-product-details,
 .cart-product-details a {
   cursor: pointer;
 }

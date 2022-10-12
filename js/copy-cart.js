@@ -7,7 +7,7 @@ function addToCart() {
   }
 
   if (cart.some(item => item.id === product.id && item.size === size)) {
-    changeNumberOfUnits('plus', product.id, size);
+    alert("Product already exists in cart!");
   }
 
   else {
@@ -27,6 +27,7 @@ const productsInCart = document.querySelector(".list-of-products");
 function renderProductInCart() {
   productsInCart.innerHTML = "";
   cart.forEach((item, index) => {
+    console.log(item);
     let productLink = `<a href="./jacket-details.html?id=${item.id}" id="${item.id}" title="${item.name}">${item.name}</a>`;
 
     productsInCart.innerHTML += `
@@ -36,16 +37,16 @@ function renderProductInCart() {
       <tr class="cart-order">
         <td>${++index}</td>
       </tr>
-      <tr class="cart-product-details" onclick="location.href='../layout/jacket-details.html?id=${product.id}'">
+      <tr class="cart-product-details">
         <td><img src="${item.image}" alt="${item.name}"></td>
         <td>Product: <strong>${productLink}</strong></td>
         <td>Size: <strong><a class="size">${item.size}</a></strong></td>
         <td>Price: <strong>${item.price} kr</strong></td>
       </tr>
       <tr class="cart-number-of-units">
-        <td><button id="reduce" data-id=${item.id} data-size=${item.size}>-</button></td>
+        <td><button onclick="changeNumberOfUnits('minus', ${item.id}, ${item.size})">-</button></td>
         <td class="number">${item.numberOfUnits}</td>
-        <td><button id="increase" data-id=${item.id} data-size=${item.size}>+</button></td>
+        <td><button onclick="changeNumberOfUnits('plus', ${item.id}, ${item.size})">+</button></td>
       </tr>
       <tr onclick="removeItem(${item.id}, ${item.size})" class="remove">
         <td><i class="fas fa-trash-alt"></i></td>
@@ -62,43 +63,21 @@ function renderProductInCart() {
   });
 }
 
-function changeNumberOfUnitsButtons() {
-  const reduceButtons = document.querySelectorAll("#reduce");
-  const increaseButtons = document.querySelectorAll("#increase");
-
-  reduceButtons.forEach(singleButton => {
-    singleButton.addEventListener('click', () => {
-      const id = singleButton.getAttribute("data-id");
-      const size = singleButton.getAttribute("data-size");
-      changeNumberOfUnits('minus', id, size);
-    })
-  });
-
-  increaseButtons.forEach(singleButton => {
-    singleButton.addEventListener('click', () => {
-      const id = singleButton.getAttribute("data-id");
-      const size = singleButton.getAttribute("data-size");
-      changeNumberOfUnits('plus', id, size);
-    })
-  })
-}
-
 /* updating cart */
 function updateCart() {
   renderProductInCart();
-  changeNumberOfUnitsButtons();
   renderSubtotal();
-
 }
 
 /* function changeNumberOfUnits */
 function changeNumberOfUnits(action, id, size) {
-  console.log(size);
+  console.log(product);
+  size = size.id;
 
   cart.forEach(item => {
     let numberOfUnits = item.numberOfUnits;
 
-    if (item.id == id && item.size === size) {
+    if (item.id === id && item.size === size) {
       if (action === 'plus' && numberOfUnits < item.inStock) {
         item.numberOfUnits++
       }

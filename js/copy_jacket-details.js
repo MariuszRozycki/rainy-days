@@ -129,13 +129,12 @@ function generateItemSize() {
       if (itemProductSize.classList.contains("failure")) {
         itemProductSize.classList.remove("failure");
       }
-      console.log(size);
       return size;
     });
   });
 }
 
-generateItemSize();
-
+size = generateItemSize();
+console.log("size - function generateItemSize()", size);
 
 
