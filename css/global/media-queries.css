@@ -243,6 +243,11 @@
     width: 80%;
     margin: 0 auto;
   }
+
+  .choose-jacket__menu li:nth-of-type(2),
+  .choose-jacket__menu li:nth-of-type(3) {
+    display: flex;
+  }
 }
 
 @media (min-width: 500px) {

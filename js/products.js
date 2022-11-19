@@ -155,3 +155,4 @@ let products = [
     sizes: ['xs', 's', 'm', 'l', 'xl']
   }
 ];
+
