@@ -77,12 +77,14 @@ function createCart() {
       cart.forEach((item, index) => {
         let productLink = `<a href="./jacket-details.html?id=${item.id}" id="${item.id}" title="${item.name}">${item.name}</a>`;
 
-        const itemImg = item.images.map(img => img.src); // productImg
-        const itemPrice = item.prices.price; // productPrice
+        item.images.forEach(img => {
+          const itemImg = img.src
+          // productImg
+          const itemPrice = item.prices.price; // productPrice
 
-        console.log(item.numberOfUnits);
+          console.log(item.numberOfUnits);
 
-        productsInCart.innerHTML += `
+          productsInCart.innerHTML += `
           <thead class="cart-header-title">
           </thead>
           <tbody>
@@ -106,12 +108,13 @@ function createCart() {
           </tbody>
           `;
 
-        const cartHeaderTitle = document.querySelector(".cart-header-title");
-        cartHeaderTitle.innerHTML = `
+          const cartHeaderTitle = document.querySelector(".cart-header-title");
+          cartHeaderTitle.innerHTML = `
           <tr>
             <th>List of products in cart:</th>
           </tr>
           `;
+        });
       });
     }
 
