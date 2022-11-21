@@ -1,11 +1,16 @@
+/* CART */
+setTimeout(() => createCart(), 1500);
+
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
+const loaderWrapper = document.querySelector(".loader-wrapper");
 
 function createCart() {
-
-  async function getProducts(url) {
+  async function getProduct(url) {
     // data from REST API
     const response = await fetch(url);
     const products = await response.json();
+
+    loaderWrapper.style.display = "none";
 
     /* getting ID from url address in location to choose product */
     const queryString = document.location.search;
@@ -13,13 +18,6 @@ function createCart() {
     const productId = params.get("id");
 
     let product = products.find(({ id }) => id == productId);
-
-
-
-    const productName = product.name; // productName
-    const productPrice = product.prices.price;
-    const productImg = product.images.map(img => img.src); // productImg
-    const productType = product.categories.map(el => el.slug); // productType
 
     // size of item
     const sizeOfItem = document.querySelectorAll(".item__size-button");
@@ -34,7 +32,6 @@ function createCart() {
           if (itemProductSize.classList.contains("failure")) {
             itemProductSize.classList.remove("failure");
           }
-          console.log(size);
           return size;
         });
       });
@@ -59,6 +56,7 @@ function createCart() {
       else {
         cart.push({
           ...product,
+          productId: product.id,
           numberOfUnits: 1,
           size
         });
@@ -66,7 +64,11 @@ function createCart() {
       }
       localStorage.setItem("CART", JSON.stringify(cart));
     }
-    buttonAddItem.addEventListener('click', buttonAddItemHandler);
+
+    if (document.querySelector('title').innerText === 'Rainy Days | Jacket Details') {
+      buttonAddItem.addEventListener('click', buttonAddItemHandler);
+    }
+
 
     /* Rendering product(s) in cart */
     const productsInCart = document.querySelector(".list-of-products");
@@ -78,11 +80,8 @@ function createCart() {
         let productLink = `<a href="./jacket-details.html?id=${item.id}" id="${item.id}" title="${item.name}">${item.name}</a>`;
 
         item.images.forEach(img => {
-          const itemImg = img.src
-          // productImg
+          const itemImg = img.src // productImg
           const itemPrice = item.prices.price; // productPrice
-
-          console.log(item.numberOfUnits);
 
           productsInCart.innerHTML += `
           <thead class="cart-header-title">
@@ -150,7 +149,6 @@ function createCart() {
         });
       });
     }
-
 
     /* updating cart */
     function updateCart() {
@@ -242,12 +240,16 @@ function createCart() {
     if (document.querySelector('title').innerText === 'Rainy Days | Jacket Details' || document.querySelector('title').innerText === 'Rainy Days | Cart') {
       updateCart();
     }
-
   }
-  getProducts(detailUrl);
+  getProduct(url);
 }
 
-console.log(cart);
+
+
+
+
+
+
 
 
 

@@ -4,22 +4,28 @@ const baseUrl = "https://mariuszrozycki.info/rainy-days/wp-json/wc/store/product
 
 async function getProducts(url) {
   // data from REST API
-  const response = await fetch(url);
-  const products = await response.json();
+  try {
+    const response = await fetch(url);
+    const products = await response.json();
 
-  products.forEach(product => {
-    const productPrice = product.prices.price; // productPrice
+    onMainContainer.innerHTML = "";
 
-    const productId = product.id; // productId
-    const productName = product.name; // productName
-    const productImg = product.images.map(img => img.src); // productImg
+    products.forEach(product => {
+      const productPrice = product.prices.price; // productPrice
 
-    product.attributes.map(attribute => {
-      const productOnMain = attribute.name === "onMain"; // productOnMain
+      const productId = product.id; // productId
+      const productName = product.name; // productName
+      const productImg = product.images.map(img => img.src); // productImg
 
-      renderProductsOnMain(productOnMain, productId, productName, productImg, productPrice);
-    })
-  });
+      product.attributes.map(attribute => {
+        const productOnMain = attribute.name === "onMain"; // productOnMain
+        renderProductsOnMain(productOnMain, productId, productName, productImg, productPrice);
+      })
+    });
+  }
+  catch (err) {
+    onMainContainer.innerHTML = `<p class="bad-error">Some technical issue occurred. Please contact service. Call to 939 28 270</p>`;
+  }
 
   /* .products .item .more-items */
   const mainItems = document.querySelectorAll('.item');
@@ -56,13 +62,13 @@ const renderProductsOnMain = (productOnMain, productId, productName, productImg,
 
     onMainContainer.innerHTML += `
         <div class="item" onclick="location.href='../layout/jacket-details.html?id=${productId}'">
-            <div class="item__picture">
+          <div class="item__picture">
             <img src="${productImg}" alt="Picture of ${productName}">
           </div>
           <div>
             <h1 class="item__product-name">${productName}</h1>
             <p class="item__product-price">${productPrice} nok</p>
-          ${productLink}
+            ${productLink}
           </div>  
         </div>
       `;

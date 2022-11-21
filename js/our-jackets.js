@@ -3,18 +3,25 @@ const baseUrl = "https://mariuszrozycki.info/rainy-days/wp-json/wc/store/product
 
 async function getProducts(url) {
   // data from REST API
-  const response = await fetch(url);
-  const products = await response.json();
+  try {
+    const response = await fetch(url);
+    const products = await response.json();
 
-  products.forEach(product => {
-    const productPrice = product.prices.price; // productPrice
+    ourJacketsContainer.innerHTML = "";
 
-    const productId = product.id; // productId
-    const productName = product.name; // productName
-    const productImg = product.images.map(img => img.src); // productImg
+    products.forEach(product => {
+      const productPrice = product.prices.price; // productPrice
 
-    renderProductsOnOurJackets(productId, productName, productImg, productPrice);
-  });
+      const productId = product.id; // productId
+      const productName = product.name; // productName
+      const productImg = product.images.map(img => img.src); // productImg
+
+      renderProductsOnOurJackets(productId, productName, productImg, productPrice);
+    });
+  }
+  catch (err) {
+    ourJacketsContainer.innerHTML = `<p class="bad-error">Some technical issue occurred. Please contact service. Call to 939 28 270</p>`;
+  }
 }
 getProducts(baseUrl);
 

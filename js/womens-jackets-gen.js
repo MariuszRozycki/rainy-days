@@ -6,6 +6,8 @@ async function getProducts(url) {
   const response = await fetch(url);
   const products = await response.json();
 
+  womenProductsWrapper.innerHTML = "";
+
   products.forEach(product => {
     const productPrice = product.prices.price; // productPrice
 
