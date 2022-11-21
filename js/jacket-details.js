@@ -21,9 +21,9 @@ function createJacketDetails() {
 
       const productSize = product.variations.map(el => el.attributes.map(el => el.value));
 
-      const productName = product.name; // productName
-      const productImg = product.images.map(img => img.src); // productImg
-      const productType = product.categories.map(el => el.slug); // productType
+      const productName = product.name;
+      const productImg = product.images.map(img => img.src);
+      const productType = product.categories.map(el => el.slug);
 
       if (document.querySelector('title').innerText === 'Rainy Days | Jacket Details') {
         renderNavProductDetails(productType, productName);

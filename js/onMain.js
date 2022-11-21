@@ -11,14 +11,13 @@ async function getProducts(url) {
     onMainContainer.innerHTML = "";
 
     products.forEach(product => {
-      const productPrice = product.prices.price; // productPrice
-
-      const productId = product.id; // productId
-      const productName = product.name; // productName
-      const productImg = product.images.map(img => img.src); // productImg
+      const productPrice = product.prices.price;
+      const productId = product.id;
+      const productName = product.name;
+      const productImg = product.images.map(img => img.src);
 
       product.attributes.map(attribute => {
-        const productOnMain = attribute.name === "onMain"; // productOnMain
+        const productOnMain = attribute.name === "onMain";
         renderProductsOnMain(productOnMain, productId, productName, productImg, productPrice);
       })
     });

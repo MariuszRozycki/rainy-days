@@ -2,6 +2,7 @@
 setTimeout(() => createCart(), 1500);
 
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
+
 const loaderWrapper = document.querySelector(".loader-wrapper");
 
 function createCart() {
@@ -10,7 +11,10 @@ function createCart() {
     const response = await fetch(url);
     const products = await response.json();
 
-    loaderWrapper.style.display = "none";
+    if (document.querySelector('title').innerText === 'Rainy Days | Cart') {
+      loaderWrapper.style.display = "none";
+    }
+
 
     /* getting ID from url address in location to choose product */
     const queryString = document.location.search;
@@ -74,14 +78,13 @@ function createCart() {
     const productsInCart = document.querySelector(".list-of-products");
 
     function renderProductInCart() {
-      console.log("cart in renderProductInCart", cart);
       productsInCart.innerHTML = "";
       cart.forEach((item, index) => {
         let productLink = `<a href="./jacket-details.html?id=${item.id}" id="${item.id}" title="${item.name}">${item.name}</a>`;
 
         item.images.forEach(img => {
-          const itemImg = img.src // productImg
-          const itemPrice = item.prices.price; // productPrice
+          const itemImg = img.src;
+          const itemPrice = item.prices.price;
 
           productsInCart.innerHTML += `
           <thead class="cart-header-title">
@@ -165,8 +168,6 @@ function createCart() {
         let numberOfUnits = item.numberOfUnits;
         let stockQuantity = 10;
 
-        console.log(item.id);
-        console.log(id);
         if (item.id == id && item.size === size) {
           if (action === 'plus' && numberOfUnits < stockQuantity) {
             item.numberOfUnits++
@@ -205,38 +206,6 @@ function createCart() {
       localStorage.setItem("CART", JSON.stringify(cart));
     }
 
-    /* subtotal container */
-    const subtotal = document.querySelector(".subtotal");
-
-    /* cart container in nav */
-    const cartContainer = document.querySelectorAll('.shopping-cart');
-
-    /* calculate subtotal */
-    const renderSubtotal = () => {
-
-      let totalPrice = 0;
-      let totalItems = 0;
-
-      cart.forEach(item => {
-        totalPrice += item.prices.price * item.numberOfUnits;
-        totalItems += item.numberOfUnits;
-      })
-
-      subtotal.innerHTML = `
-      <tr>
-        <td>Price total:</td>
-        <td>${totalPrice.toFixed(2)} nok</td>
-        <td>(Items: ${totalItems})</td>
-      </tr>
-      `
-
-      for (let item of cartContainer) {
-        item.innerHTML += `<div class="item-quantity">${totalItems}</div>`;
-      }
-
-      localStorage.setItem("TOTAL_ITEMS", JSON.stringify(totalItems));
-    }
-
     if (document.querySelector('title').innerText === 'Rainy Days | Jacket Details' || document.querySelector('title').innerText === 'Rainy Days | Cart') {
       updateCart();
     }
@@ -244,12 +213,34 @@ function createCart() {
   getProduct(url);
 }
 
+/* subtotal container */
+const subtotal = document.querySelector(".subtotal");
 
+/* cart container in nav */
+const cartContainer = document.querySelectorAll('.shopping-cart');
 
+/* calculate subtotal */
+function renderSubtotal() {
 
+  let totalPrice = 0;
+  let totalItems = 0;
 
+  cart.forEach(item => {
+    totalPrice += item.prices.price * item.numberOfUnits;
+    totalItems += item.numberOfUnits;
+  })
 
+  subtotal.innerHTML = `
+   <tr>
+     <td>Price total:</td>
+     <td>${totalPrice.toFixed(2)} nok</td>
+     <td>(Items: ${totalItems})</td>
+   </tr>
+   `
 
+  for (let item of cartContainer) {
+    item.innerHTML += `<div class="item-quantity">${totalItems}</div>`;
+  }
 
-
-
+  localStorage.setItem("TOTAL_ITEMS", JSON.stringify(totalItems));
+}
