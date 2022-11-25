@@ -7,6 +7,7 @@ async function getProducts(url) {
   try {
     const response = await fetch(url);
     const products = await response.json();
+    console.log(products);
 
     onMainContainer.innerHTML = "";
 

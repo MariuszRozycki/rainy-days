@@ -9,19 +9,11 @@ function createCart() {
   async function getProduct(url) {
     // data from REST API
     const response = await fetch(url);
-    const products = await response.json();
+    const product = await response.json();
 
     if (document.querySelector('title').innerText === 'Rainy Days | Cart') {
       loaderWrapper.style.display = "none";
     }
-
-
-    /* getting ID from url address in location to choose product */
-    const queryString = document.location.search;
-    const params = new URLSearchParams(queryString);
-    const productId = params.get("id");
-
-    let product = products.find(({ id }) => id == productId);
 
     // size of item
     const sizeOfItem = document.querySelectorAll(".item__size-button");
@@ -210,7 +202,7 @@ function createCart() {
       updateCart();
     }
   }
-  getProduct(url);
+  getProduct(detailUrl);
 }
 
 /* subtotal container */

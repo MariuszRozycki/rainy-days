@@ -1,22 +1,23 @@
 /* container for productWrapper */
 const productWrapper = document.querySelector('.products-wrapper');
 
-/* getting ID from url address in location to choose product */
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const productId = params.get("id");
-console.log(productId);
-
-const detailUrl = `https://mariuszrozycki.info/rainy-days/wp-json/wc/store/products/${productId}`;
+const url = "https://mariuszrozycki.info/rainy-days/wp-json/wc/store/products?per_page=100";
 
 function createJacketDetails() {
   async function getProduct(url) {
     // data from REST API
     try {
       const response = await fetch(url);
-      const product = await response.json();
+      const products = await response.json();
 
       productWrapper.innerHTML = " ";
+
+      /* getting ID from url address in location to choose product */
+      const queryString = document.location.search;
+      const params = new URLSearchParams(queryString);
+      const productId = params.get("id");
+
+      let product = products.find(({ id }) => id == productId);
       console.log(product);
 
       const productSize = product.variations.map(el => el.attributes.map(el => el.value));
@@ -48,7 +49,7 @@ function createJacketDetails() {
   }
 
   if (document.querySelector('title').innerText === 'Rainy Days | Jacket Details') {
-    getProduct(detailUrl);
+    getProduct(url);
   }
 
   /* choose-jacket__menu */
