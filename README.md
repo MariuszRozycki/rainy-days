@@ -43,5 +43,11 @@ To built this project I used:
 ## Getting started
 ---
 ### Installing
-Clone repo to check a code:
-''
+Clone repo to check a code:<br>
+```
+https://github.com/MariuszRozycki/rainy-days
+```
+
+## Live site <br>
+1. https://mariuszrozycki.info/rainy-days (one.com --> Netlify)
+2. https://zealous-colden-45315d.netlify.app (Netlify)
