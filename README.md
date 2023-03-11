@@ -45,7 +45,7 @@ To built this project I used:
 ### Installing
 Clone repo to check a code:<br>
 ```
-https://github.com/MariuszRozycki/rainy-days
+git clone https://github.com/MariuszRozycki/rainy-days
 ```
 
 ## Live site <br>
