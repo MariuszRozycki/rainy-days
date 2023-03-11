@@ -1,5 +1,8 @@
 Website address: https://eloquent-kirch-5ccaf7.netlify.app/
 
+![rainy-days_wide_screen](https://user-images.githubusercontent.com/55709542/224489555-88a6fee7-0a9d-4d48-9c28-689c2e209ba0.jpg)
+
+
 E-commerce (The project will be developed at the end of 2022). 
 This is a cross-study project I started in 2021. First assumption was to deliver properly functioning, responsive webside for design project 
 made in Adobe XD https://xd.adobe.com/view/1e4b7d4a-f267-427b-8462-aa30890e59d8-4b18/ as a part of design study module.
