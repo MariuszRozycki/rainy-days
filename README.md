@@ -42,7 +42,7 @@ To built this project I used:
 - worked with Visual Studio Code
 
 ## Getting started
----
+
 ### Installing
 Clone repo to check a code:<br>
 ```
