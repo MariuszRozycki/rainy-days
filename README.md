@@ -54,7 +54,7 @@ git clone https://github.com/MariuszRozycki/rainy-days
 
 
 ### Contact
-Mariusz Rozycki <br>
+Mariusz Rozycki: <br>
 Portfolio: https://mariuszrozycki.info/portfolio <br>
 Portfolio-contact: https://mariuszrozycki.info/portfolio/layout/contact.html <br>
 Linkedin: https://www.linkedin.com/in/mariusz-rozycki <br>
