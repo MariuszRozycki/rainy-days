@@ -38,7 +38,8 @@ To built this project I used:
 - HTML, CSS, JS,
 - WordPress REST API,
 - one.com web host,
-- worked with Visual Studio Code.
+- worked with Visual Studio Code,
+- website deployed on Netlify
 
 ## Getting started
 
