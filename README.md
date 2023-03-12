@@ -1,4 +1,7 @@
 # RAINY DAYS e-commerce project
+## Live site <br>
+[Rainy Days Live Site](https://zealous-colden-45315d.netlify.app)
+
 ![rainy-days_wide_screen](https://user-images.githubusercontent.com/55709542/224489852-e6bfb476-777e-4cca-bd62-f9006c302c60.jpg)<br>
 E-commerce project (The project is developed constantly and will be until end of study). 
 This is a cross-study project I started in 2021.
@@ -47,4 +50,9 @@ git clone https://github.com/MariuszRozycki/rainy-days
 ```
 
 ## Live site <br>
-[Go to Live Site](https://zealous-colden-45315d.netlify.app)
+[Rainy Days Live Site](https://zealous-colden-45315d.netlify.app)
+
+
+### Contact
+Mariusz Rozycki
+<marius.front@gmail.com>
