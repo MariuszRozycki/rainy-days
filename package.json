@@ -1,0 +1,19 @@
+{
+  "name": "rainy-days",
+  "version": "0.0.1",
+  "description": "E-commerce project (The project is developed constantly and will be until the end of study). This is a cross-study project I started in 2021.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariuszRozycki/rainy-days.git"
+  },
+  "author": "Mariusz Rozycki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariuszRozycki/rainy-days/issues"
+  },
+  "homepage": "https://github.com/MariuszRozycki/rainy-days#readme"
+}
