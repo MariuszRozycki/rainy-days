@@ -7,7 +7,7 @@ const params = new URLSearchParams(queryString);
 const productId = params.get("id");
 console.log(productId);
 
-const detailUrl = `https://mariuszrozycki.info/rainy-days/wp-json/wc/store/products/${productId}`;
+export const detailUrl = `https://mariuszrozycki.info/rainy-days/wp-json/wc/store/products/${productId}`;
 
 function createJacketDetails() {
   async function getProduct(url) {

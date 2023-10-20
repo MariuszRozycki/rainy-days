@@ -1,3 +1,5 @@
+import { detailUrl } from "./jacket-details.mjs";
+
 /* CART */
 setTimeout(() => createCart(), 1500);
 
@@ -7,7 +9,8 @@ const loaderWrapper = document.querySelector(".loader-wrapper");
 
 function createCart() {
   async function getProduct(url) {
-    // data from REST API
+    console.log(url);
+    //   // data from REST API
     const response = await fetch(url);
     const product = await response.json();
 
@@ -202,6 +205,7 @@ function createCart() {
       updateCart();
     }
   }
+
   getProduct(detailUrl);
 }
 
